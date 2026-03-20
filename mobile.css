@@ -1,18 +1,60 @@
+/* =========================
+   CONTROLE DE VISÃO
+========================= */
+
 #asces-web {
   display: none !important;
 }
 
 #asces-app {
   display: block !important;
-}#asces-dashboard-app-final {
+}
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+#asces-dashboard-app-final {
     padding: 0 !important;
     border-radius: 0 !important;
     background: #ffffff !important;
 }
+
+
+/* =========================
+   BOTÕES CENTRALIZADOS
+========================= */
 
 #section-recursos a {
     display: block;
     width: 90%;
     margin: 0 auto 15px auto;
     text-align: center;
+}
+
+
+/* =========================
+   REMOVER BORDA DO MOODLE APP
+========================= */
+
+#asces-app ion-card,
+#asces-app ion-card-content,
+#asces-app .card,
+#asces-app .item,
+#asces-app .block_html,
+#asces-app .core-block-content {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+
+/* =========================
+   GARANTIA EXTRA (ANDROID)
+========================= */
+
+ion-content {
+    --background: transparent !important;
 }
