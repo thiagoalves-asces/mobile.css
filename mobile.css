@@ -5,3 +5,15 @@
 #asces-app {
   display: block !important;
 }
+#asces-dashboard-app-final {
+    padding: 12px !important;
+    background: #f4f7f9 !important;
+}
+
+#section-recursos a {
+    display: block;
+    width: 85%;
+    max-width: 320px;
+    margin: 0 auto 15px auto;
+    text-align: center;
+}
