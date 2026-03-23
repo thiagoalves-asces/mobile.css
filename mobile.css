@@ -2,14 +2,13 @@
    CONTROLE DE VISÃO
 ========================= */
 
-#asces-web {
+.asces-web {
   display: none !important;
 }
 
-#asces-app {
+.asces-app {
   display: block !important;
 }
-
 
 /* =========================
    CONTAINER PRINCIPAL
