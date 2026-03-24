@@ -16,7 +16,7 @@
 
 #asces-dashboard-app-final {
     padding: 0 !important;
-    border-radius: 0 !important;
+    border-radius: 12px !important;
     background: #ffffff !important;
 }
 
@@ -62,14 +62,24 @@ ion-content {
    AJUSTES VISUAIS DA DISCIPLINA (APP)
 ========================= */
 
+#asces-app-disciplina .app-botoes a i {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+#asces-app-disciplina .app-botoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
 #asces-app-disciplina .app-botoes a {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
 
-    width: 92%;
-    margin: 12px auto;
     padding: 14px 16px;
 
     text-align: center;
@@ -81,10 +91,8 @@ ion-content {
 
     border-radius: 12px;
 
-    /* 🎨 Gradiente padrão Moove */
     background: linear-gradient(135deg, #167ac6, #0f5fa5);
 
-    /* 💡 Profundidade */
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 
     transition: all 0.2s ease;
