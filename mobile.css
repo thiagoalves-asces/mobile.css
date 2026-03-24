@@ -57,3 +57,40 @@
 ion-content {
     --background: transparent !important;
 }
+
+/* =========================
+   AJUSTES VISUAIS DA DISCIPLINA (APP)
+========================= */
+
+#asces-app-disciplina .app-botoes a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    width: 92%;
+    margin: 12px auto;
+    padding: 14px 16px;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    /* 🎨 Gradiente padrão Moove */
+    background: linear-gradient(135deg, #167ac6, #0f5fa5);
+
+    /* 💡 Profundidade */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+
+    transition: all 0.2s ease;
+}
+
+#asces-app-disciplina .app-botoes a:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
