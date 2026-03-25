@@ -62,15 +62,10 @@ ion-content {
    AJUSTES VISUAIS DA DISCIPLINA (APP)
 ========================= */
 
-#asces-app-disciplina .app-botoes a i {
-    font-size: 16px;
-    color: #ffffff;
-}
-
 #asces-app-disciplina .app-botoes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 10px;
 }
 
@@ -79,6 +74,9 @@ ion-content {
     align-items: center;
     justify-content: center;
     gap: 8px;
+
+    width: 48%;
+    margin-bottom: 10px;
 
     padding: 14px 16px;
 
@@ -96,9 +94,4 @@ ion-content {
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 
     transition: all 0.2s ease;
-}
-
-#asces-app-disciplina .app-botoes a:active {
-    transform: scale(0.98);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
