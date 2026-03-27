@@ -96,46 +96,6 @@ ion-content {
     transition: all 0.2s ease;
 }
 
-
-/* =========================
-   Ajuste de - FIX COLAPSO MOODLE APP (disciplinas colapsando banner nos recursos)
-========================= */
-
-/* Remove limite de altura */
-.core-format-text,
-.core-format-text.collapsed {
-  max-height: none !important;
-  height: auto !important;
-}
-
-/* Remove corte de conteúdo */
-.activity-description .no-overflow,
-.no-overflow {
-  overflow: visible !important;
-}
-
-/* Remove fade branco */
-.core-format-text::after,
-.activity-description::after {
-  display: none !important;
-  background: none !important;
-}
-
-/* Remove clamp de linhas (Android/iOS) */
-.core-format-text,
-.activity-description {
-  display: block !important;
-  -webkit-line-clamp: unset !important;
-  -webkit-box-orient: unset !important;
-}
-
-/* Remove botão "ver mais" */
-.show-more,
-.core-show-more {
-  display: none !important;
-}
-
-/* Garante expansão total */
 .activity-description,
 .core-format-text {
   white-space: normal !important;
