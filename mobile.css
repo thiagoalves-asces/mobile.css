@@ -63,4 +63,128 @@ ion-content {
    AJUSTES VISUAIS DA DISCIPLINA (APP)
 ========================= */
 
-/*sem ajustes*/
+/* =========================
+   BASE / CONTAINER
+========================= */
+
+.asces-bg {
+    background: linear-gradient(135deg, #167ac6 0%, #0d47a1 100%);
+    border-radius:16px;
+    position:relative;
+    overflow:hidden;
+    font-family:'Segoe UI', sans-serif;
+}
+
+/* =========================
+   BARRA PADRÃO
+========================= */
+
+.asces-bar {
+    height:8px;
+    width:100%;
+    background: linear-gradient(
+        to right,
+        #1976d2 0%,
+        #1976d2 28%,
+        #1565c0 28%,
+        #1565c0 50%,
+        #0d47a1 50%,
+        #0d47a1 65%,
+        #ff9800 65%,
+        #ff9800 82%,
+        #ff6f00 82%,
+        #ff6f00 100%
+    );
+}
+
+/* =========================
+   CONTAINER INTERNO
+========================= */
+
+.asces-container {
+    width:100%;
+    padding:40px 15px;
+    display:flex;
+    justify-content:center;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.asces-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
+    gap:18px;
+    width:100%;
+    max-width:1000px;
+}
+
+/* =========================
+   BOTÃO PADRÃO
+========================= */
+
+.asces-btn {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+    padding:22px;
+    border-radius:14px;
+    color:#fff;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:600;
+    aspect-ratio:1;
+
+    background:linear-gradient(135deg,
+        rgba(255,255,255,0.35) 0%,
+        rgba(255,255,255,0.08) 35%,
+        rgba(13,71,161,0.35) 100%
+    );
+
+    border:1px solid rgba(255,255,255,0.3);
+
+    box-shadow:
+        0 6px 18px rgba(0,0,0,0.25),
+        inset 0 1px 0 rgba(255,255,255,0.4);
+
+    transition:all 0.15s ease;
+}
+
+/* =========================
+   BLOCO INFO (banner / recurso)
+========================= */
+
+.asces-card {
+    background:rgba(255,255,255,0.1);
+    border-radius:10px;
+    backdrop-filter:blur(10px);
+    border-left:4px solid rgba(249,115,22,0.9);
+}
+
+/* =========================
+   TEXTO PADRÃO
+========================= */
+
+.asces-text {
+    color:rgba(255,255,255,0.95);
+    font-size:13px;
+    line-height:1.4;
+}
+
+/* =========================
+   LOGO OVERLAY
+========================= */
+
+.asces-logo {
+    position:absolute;
+    right:15px;
+    bottom:25px;
+    pointer-events:none;
+    z-index:2;
+    font-family:'Montserrat', sans-serif;
+    line-height:1.02;
+    opacity:0.9;
+}
