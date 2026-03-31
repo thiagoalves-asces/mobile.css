@@ -132,7 +132,7 @@ ion-content {
     gap:12px;
     padding:22px;
     border-radius:14px;
-    color:#fff;
+    color:#fffff;
     text-decoration:none;
     font-size:12px;
     font-weight:600;
@@ -151,6 +151,11 @@ ion-content {
         inset 0 1px 0 rgba(255,255,255,0.4);
 
     transition:all 0.15s ease;
+}
+
+.asces-btn:active {
+    transform: scale(0.94);
+    filter: brightness(0.9);
 }
 
 /* =========================
