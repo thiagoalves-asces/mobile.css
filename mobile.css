@@ -132,7 +132,7 @@ ion-content {
     gap:12px;
     padding:22px;
     border-radius:14px;
-    color:#fffff;
+    color:#fff;
     text-decoration:none;
     font-size:12px;
     font-weight:600;
@@ -153,9 +153,23 @@ ion-content {
     transition:all 0.15s ease;
 }
 
+.asces-btn {
+    transition: all 0.15s ease;
+}
+
 .asces-btn:active {
     transform: scale(0.94);
     filter: brightness(0.9);
+}
+
+.asces-btn {
+    color: #fff;
+    text-decoration: none;
+}
+
+.asces-btn {
+    color: #fff;
+    text-decoration: none;
 }
 
 /* =========================
