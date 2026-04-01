@@ -167,9 +167,8 @@ ion-content {
     text-decoration: none;
 }
 
-.asces-btn {
-    color: #fff;
-    text-decoration: none;
+.asces-btn svg {
+    stroke: currentColor;
 }
 
 /* =========================
