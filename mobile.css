@@ -203,3 +203,90 @@ ion-content {
     line-height:1.02;
     opacity:0.9;
 }
+
+/* =====================================================
+1. LIMPEZA DE ELEMENTOS TÉCNICOS
+===================================================== */
+
+body.mobile #page-grade-report-user-index .aggregation,
+body.mobile #page-grade-report-user-index .aggregationcoef,
+body.mobile #page-grade-report-user-index .dimmed_text,
+body.mobile #page-grade-report-user-index .smallinfo,
+body.mobile #page-grade-report-user-index .gradeitemdescription {
+    display: none !important;
+}
+
+/* =====================================================
+2. CATEGORIAS (HIERARQUIA)
+===================================================== */
+
+body.mobile #page-grade-report-user-index .category {
+    font-weight: 700;
+    font-size: 15px;
+    color: #0c4e9c;
+    background: #f1f6fb;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+/* =====================================================
+3. ITENS DE ATIVIDADE
+===================================================== */
+
+body.mobile #page-grade-report-user-index .itemname {
+    font-size: 14px;
+    color: #333;
+}
+
+/* =====================================================
+4. NOTAS (DESTAQUE PRINCIPAL)
+===================================================== */
+
+body.mobile #page-grade-report-user-index .grade {
+    font-weight: 700;
+    font-size: 17px; /* leve aumento pra mobile */
+    color: #0d47a1;
+}
+
+/* =====================================================
+5. ZEBRADO (VERSÃO SEGURA MOBILE)
+===================================================== */
+
+body.mobile #page-grade-report-user-index table tr:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+
+/* =====================================================
+6. REMOÇÃO DE HOVER (INÚTIL NO MOBILE)
+===================================================== */
+
+body.mobile #page-grade-report-user-index table tr:hover {
+    background-color: transparent !important;
+}
+
+/* =====================================================
+7. ITENS MENOS RELEVANTES
+===================================================== */
+
+body.mobile #page-grade-report-user-index .hidden,
+body.mobile #page-grade-report-user-index .dimmed {
+    opacity: 0.6;
+}
+
+/* =====================================================
+8. ESPAÇAMENTO
+===================================================== */
+
+body.mobile #page-grade-report-user-index td,
+body.mobile #page-grade-report-user-index th {
+    padding: 10px 8px;
+}
+
+/* =====================================================
+9. TABELA RESPONSIVA
+===================================================== */
+
+body.mobile #page-grade-report-user-index table {
+    width: 100%;
+    border-collapse: collapse;
+}
