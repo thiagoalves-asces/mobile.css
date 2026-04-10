@@ -207,7 +207,7 @@ ion-content {
 
 
 /* =====================================================
-🎨 1. BRANDING GLOBAL (LIGHT MODE)
+🎨 1. BRANDING GLOBAL (LIGHT MODE - APP)
 ===================================================== */
 :root {
   --ion-color-primary: #0C4E9C;
@@ -218,4 +218,10 @@ ion-content {
 ion-button[color="success"] {
   --background: #0C4E9C;
   --color: #ffffff;
+}
+
+/* indicação de aba de uso */
+ion-segment-button.segment-button-checked {
+  color: #0C4E9C !important;
+  --indicator-color: #0C4E9C !important;
 }
