@@ -205,60 +205,60 @@ ion-content {
 }
 
 /* =========================================
-APLICAR SOMENTE NA TELA DE NOTAS
+ESCOPO: SOMENTE PÁGINA DE NOTAS
 ========================================= */
-page-core-grades,
-core-grades,
-core-grade-item {
-    
-    /* nada aqui ainda, só escopo */
-}
 
-/* =========================================
-ITEM DE NOTA
-========================================= */
-page-core-grades core-grade-item,
-core-grades core-grade-item {
-
-    border-bottom: 1px solid #eee;
-    padding: 8px 0;
+ion-content[class*="grade"] ion-item,
+ion-content[class*="grades"] ion-item {
+    --padding-start: 12px;
+    --inner-padding-end: 12px;
+    --min-height: 48px;
 }
 
 /* =========================================
 NOME DA ATIVIDADE
 ========================================= */
-core-grade-item .item-name,
-core-grade-item .gradeitemname {
-    font-size: 14px !important;
+
+ion-content[class*="grade"] ion-item h2,
+ion-content[class*="grade"] ion-item span {
+    font-size: 14px;
     color: #333 !important;
 }
 
 /* =========================================
-NOTA (O QUE IMPORTA)
+NOTA (AGORA FUNCIONA DE VERDADE)
 ========================================= */
-core-grade-item .grade,
-core-grade-item .gradevalue {
-    font-weight: 700 !important;
+
+ion-content[class*="grade"] ion-note,
+ion-content[class*="grade"] .core-grades-grade {
     font-size: 16px !important;
+    font-weight: 700 !important;
     color: #0d47a1 !important;
 }
 
 /* =========================================
-REMOVE TEXTOS SECUNDÁRIOS
+CATEGORIAS
 ========================================= */
-core-grade-item small,
-core-grade-item .feedback,
-core-grade-item .grade-description {
-    display: none !important;
+
+ion-content[class*="grade"] ion-item-divider {
+    --background: #f1f6fb;
+    color: #0c4e9c !important;
+    font-weight: 700;
 }
 
 /* =========================================
-CATEGORIAS (UNIDADE I etc)
+ZEBRADO REAL (IONIC)
 ========================================= */
-core-grades .category,
-core-grades ion-item-divider {
-    font-weight: 700 !important;
-    font-size: 15px !important;
-    color: #0c4e9c !important;
-    background: #f1f6fb !important;
+
+ion-content[class*="grade"] ion-item:nth-child(even) {
+    --background: #f8f9fa;
+}
+
+/* =========================================
+REMOVER LIXO VISUAL
+========================================= */
+
+ion-content[class*="grade"] p,
+ion-content[class*="grade"] small {
+    display: none !important;
 }
