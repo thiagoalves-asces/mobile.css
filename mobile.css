@@ -210,7 +210,10 @@ ion-content {
 
 body.mobile .dimmed,
 body.mobile .dimmed_text,
-body.mobile .smallinfo {
+body.mobile .smallinfo 
+#page-grade-report-user-index .aggregation,
+#page-grade-report-user-index .aggregationcoef,
+#page-grade-report-user-index .gradeitemdescription {
     display: none !important;
 }
 
@@ -259,6 +262,19 @@ body.mobile .item-category {
     border-radius: 6px;
     padding: 6px 8px;
     display: block;
+}
+
+/* =====================================================
+5. ESTRUTURA VISUAL DAS CATEGORIAS
+Dá hierarquia visual (ex: Unidade I, Unidade II)
+===================================================== */
+
+body.mobile .page-grade-report-user-index .category {
+    font-weight: 700;
+    font-size: 16px;
+    color: #0c4e9c;
+    background: #f1f6fb;
+    border-radius: 6px;
 }
 
 /* =====================================================
