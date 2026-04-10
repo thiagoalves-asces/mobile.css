@@ -205,7 +205,7 @@ ion-content {
 }
 
 /* =========================================
-BASE (COMPATÍVEL COM APP MODERNO)
+BASE (COMPATÍVEL COM APP MODERNO notas)
 ========================================= */
 html.ionic8 {
 
@@ -216,35 +216,47 @@ html.ionic8 {
 }
 
 /* =========================================
-1. LIMPEZA DE INFORMAÇÕES SECUNDÁRIAS
+FORÇA BASE (PEGA QUALQUER ITEM DE NOTA)
 ========================================= */
-html.ionic8 ion-item small,
-html.ionic8 ion-item .item-note:not(:last-child) {
+html.ionic8 ion-item {
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* =========================================
+TEXTO PRINCIPAL (NOME DA ATIVIDADE)
+========================================= */
+html.ionic8 ion-item ion-label {
+    font-size: 14px !important;
+    color: #333 !important;
+}
+
+/* =========================================
+REMOVE TEXTOS SECUNDÁRIOS (tentativa real)
+========================================= */
+html.ionic8 ion-item ion-label p,
+html.ionic8 ion-item ion-label small {
     display: none !important;
 }
 
 /* =========================================
-2. NOME DA ATIVIDADE (ESQUERDA)
+NOTA (PEGA ÚLTIMO ELEMENTO DO ITEM)
 ========================================= */
-html.ionic8 ion-item h2,
-html.ionic8 ion-item .item-heading {
-    font-size: 14px !important;
-    color: #333 !important;
-    font-weight: 500;
+html.ionic8 ion-item {
+    display: flex;
+    justify-content: space-between;
 }
 
-/* =========================================
-3. NOTA (DIREITA - FOCO)
-========================================= */
-html.ionic8 ion-item ion-note,
-html.ionic8 ion-item ion-badge {
+/* Força último elemento (nota) */
+html.ionic8 ion-item > *:last-child {
     font-weight: 700 !important;
     font-size: 16px !important;
     color: #0d47a1 !important;
 }
 
 /* =========================================
-4. CATEGORIAS (UNIDADE I, II...)
+CATEGORIAS (UNIDADE I etc)
 ========================================= */
 html.ionic8 ion-item-divider {
     font-weight: 700 !important;
@@ -254,23 +266,8 @@ html.ionic8 ion-item-divider {
 }
 
 /* =========================================
-5. ESPAÇAMENTO (CONFORTO VISUAL)
+ZEBRADO (AGORA FUNCIONA MELHOR)
 ========================================= */
-html.ionic8 ion-item {
-    --inner-padding-top: 8px;
-    --inner-padding-bottom: 8px;
-}
-
-/* =========================================
-6. SEPARAÇÃO VISUAL LEVE
-========================================= */
-html.ionic8 ion-item {
-    border-bottom: 1px solid #f1f1f1;
-}
-
-/* =========================================
-7. ÍCONES MAIS SUAVES
-========================================= */
-html.ionic8 ion-item ion-icon {
-    opacity: 0.7;
+html.ionic8 ion-list ion-item:nth-child(odd) {
+    background: #f8f9fa;
 }
