@@ -209,31 +209,13 @@ ion-content {
 /* =====================================================
 🎨 1. BRANDING GLOBAL (LIGHT MODE)
 ===================================================== */
-
 :root {
-
-  /* SUBSTITUI VERDE (SUCCESS) → AZUL */
-  --ion-color-success: #0C4E9C;
-  --ion-color-success-rgb: 12,78,156;
-  --ion-color-success-contrast: #ffffff;
-  --ion-color-success-shade: #0a4589;
-  --ion-color-success-tint: #245faa;
+  --ion-color-primary: #0C4E9C;
+  --ion-color-primary-rgb: 12,78,156;
 }
 
-/* =====================================================
-🔘 2. BOTÕES (FORÇANDO PADRÃO VISUAL)
-===================================================== */
-
-/* Botões gerais */
-ion-button {
+/* só onde estava verde */
+ion-button[color="success"] {
   --background: #0C4E9C;
   --color: #ffffff;
-  --border-radius: 10px;
-  font-weight: 600;
 }
-
-/* Botões que ainda usam success */
-ion-button[color="success"] {
-  --background: #0C4E9C !important;
-}
-
