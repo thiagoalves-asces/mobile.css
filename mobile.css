@@ -205,69 +205,60 @@ ion-content {
 }
 
 /* =========================================
-BASE (COMPATÍVEL COM APP MODERNO notas)
+APLICAR SOMENTE NA TELA DE NOTAS
 ========================================= */
-html.ionic8 {
-
-/* melhora leitura geral */
---ion-item-background: #ffffff;
---ion-text-color: #333;
-
+page-core-grades,
+core-grades,
+core-grade-item {
+    
+    /* nada aqui ainda, só escopo */
 }
 
 /* =========================================
-FORÇA BASE (PEGA QUALQUER ITEM DE NOTA)
+ITEM DE NOTA
 ========================================= */
-html.ionic8 ion-item {
-    --inner-padding-top: 10px;
-    --inner-padding-bottom: 10px;
+page-core-grades core-grade-item,
+core-grades core-grade-item {
+
     border-bottom: 1px solid #eee;
+    padding: 8px 0;
 }
 
 /* =========================================
-TEXTO PRINCIPAL (NOME DA ATIVIDADE)
+NOME DA ATIVIDADE
 ========================================= */
-html.ionic8 ion-item ion-label {
+core-grade-item .item-name,
+core-grade-item .gradeitemname {
     font-size: 14px !important;
     color: #333 !important;
 }
 
 /* =========================================
-REMOVE TEXTOS SECUNDÁRIOS (tentativa real)
+NOTA (O QUE IMPORTA)
 ========================================= */
-html.ionic8 ion-item ion-label p,
-html.ionic8 ion-item ion-label small {
-    display: none !important;
-}
-
-/* =========================================
-NOTA (PEGA ÚLTIMO ELEMENTO DO ITEM)
-========================================= */
-html.ionic8 ion-item {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* Força último elemento (nota) */
-html.ionic8 ion-item > *:last-child {
+core-grade-item .grade,
+core-grade-item .gradevalue {
     font-weight: 700 !important;
     font-size: 16px !important;
     color: #0d47a1 !important;
 }
 
 /* =========================================
+REMOVE TEXTOS SECUNDÁRIOS
+========================================= */
+core-grade-item small,
+core-grade-item .feedback,
+core-grade-item .grade-description {
+    display: none !important;
+}
+
+/* =========================================
 CATEGORIAS (UNIDADE I etc)
 ========================================= */
-html.ionic8 ion-item-divider {
+core-grades .category,
+core-grades ion-item-divider {
     font-weight: 700 !important;
     font-size: 15px !important;
     color: #0c4e9c !important;
     background: #f1f6fb !important;
-}
-
-/* =========================================
-ZEBRADO (AGORA FUNCIONA MELHOR)
-========================================= */
-html.ionic8 ion-list ion-item:nth-child(odd) {
-    background: #f8f9fa;
 }
