@@ -205,101 +205,104 @@ ion-content {
 }
 
 /* =====================================================
-1. LIMPEZA DE ELEMENTOS EXTRAS
+1. LIMPEZA DE TEXTOS SECUNDÁRIOS ABA - NOTAS
 ===================================================== */
 
-body.mobile .dimmed,
-body.mobile .dimmed_text,
-body.mobile .smallinfo 
-#page-grade-report-user-index .aggregation,
-#page-grade-report-user-index .aggregationcoef,
-#page-grade-report-user-index .gradeitemdescription {
+body.mobile .item .item-note,
+body.mobile .item .item-text-wrap small {
     display: none !important;
 }
 
 /* =====================================================
-2. ESTRUTURA DAS LINHAS (PADRÃO IONIC)
+2. NOME DOS ITENS (ESQUERDA)
 ===================================================== */
 
-body.mobile ion-item,
-body.mobile .item {
-    font-size: 14px;
-    padding-top: 8px;
-    padding-bottom: 8px;
-}
-
-/* =====================================================
-3. NOME DAS ATIVIDADES
-===================================================== */
-
-body.mobile .itemname,
-body.mobile .item-title {
+body.mobile .item .item-title,
+body.mobile .item .item-inner span {
     font-size: 14px;
     color: #333;
 }
 
 /* =====================================================
-4. NOTAS (FOCO PRINCIPAL)
+3. NOTA (DIREITA) — FOCO PRINCIPAL
 ===================================================== */
 
-body.mobile .grade,
-body.mobile .item-grade {
+body.mobile .item .item-note,
+body.mobile .item .note,
+body.mobile .item .item-end {
     font-weight: 700;
-    font-size: 17px;
-    color: #0d47a1;
+    font-size: 16px;
+    color: #0d47a1 !important;
 }
 
 /* =====================================================
-5. CATEGORIAS (SE EXISTIREM)
+4. CATEGORIAS (PASTAS TIPO "Unidade I")
 ===================================================== */
 
-body.mobile .category,
-body.mobile .item-category {
+body.mobile .item-divider,
+body.mobile .item.category {
     font-weight: 700;
     font-size: 15px;
     color: #0c4e9c;
-    background: #f1f6fb;
+    background: #f1f6fb !important;
     border-radius: 6px;
-    padding: 6px 8px;
-    display: block;
+    margin-top: 6px;
 }
 
 /* =====================================================
-5. ESTRUTURA VISUAL DAS CATEGORIAS
-Dá hierarquia visual (ex: Unidade I, Unidade II)
+5. LINHAS (ESTILO GERAL)
 ===================================================== */
 
-body.mobile .page-grade-report-user-index .category {
-    font-weight: 700;
-    font-size: 16px;
-    color: #0c4e9c;
-    background: #f1f6fb;
-    border-radius: 6px;
-}
-
-/* =====================================================
-6. ZEBRADO SIMPLES (IONIC SAFE)
-===================================================== */
-
-body.mobile ion-item:nth-child(odd),
-body.mobile .item:nth-child(odd) {
-    background-color: #f8f9fa;
-}
-
-/* =====================================================
-7. AJUSTE DE TABELAS (QUANDO EXISTIR)
-===================================================== */
-
-body.mobile .core-table,
-body.mobile table {
-    width: 100%;
+body.mobile ion-item,
+body.mobile .item {
+    --inner-padding-top: 8px;
+    --inner-padding-bottom: 8px;
     font-size: 14px;
 }
 
 /* =====================================================
-8. ESPAÇAMENTO GERAL
+6. ZEBRADO SUAVE (FUNCIONA NO IONIC)
 ===================================================== */
 
-body.mobile .item-inner {
-    padding: 8px 10px;
+body.mobile ion-item:nth-of-type(odd) {
+    background: #f8f9fa;
+}
+
+/* =====================================================
+7. ÍCONES (DEIXAR MAIS SUAVE)
+===================================================== */
+
+body.mobile ion-item ion-icon,
+body.mobile .item ion-icon {
+    opacity: 0.7;
+}
+
+/* =====================================================
+8. TOTAL (LINHAS COM ∑)
+===================================================== */
+
+body.mobile .item:has(.icon:contains("∑")) {
+    font-weight: 700;
+}
+
+/* =====================================================
+OCULTAR PÁGINA INICIAL NO MOODLE APP
+===================================================== */
+
+/* Container principal da página inicial */
+body.mobile page-core-sitehome,
+body.mobile .core-sitehome,
+body.mobile .sitehome {
+    display: none !important;
+}
+
+/* Conteúdo interno vazio */
+body.mobile .core-sitehome-content,
+body.mobile .course-content {
+    display: none !important;
+}
+
+/* Evita espaço em branco */
+body.mobile ion-content {
+    --background: #ffffff;
 }
