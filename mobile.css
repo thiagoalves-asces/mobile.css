@@ -204,105 +204,73 @@ ion-content {
     opacity:0.9;
 }
 
-/* =====================================================
-1. LIMPEZA DE TEXTOS SECUNDÁRIOS ABA - NOTAS
-===================================================== */
+/* =========================================
+BASE (COMPATÍVEL COM APP MODERNO)
+========================================= */
+html.ionic8 {
 
-body.mobile .item .item-note,
-body.mobile .item .item-text-wrap small {
+/* melhora leitura geral */
+--ion-item-background: #ffffff;
+--ion-text-color: #333;
+
+}
+
+/* =========================================
+1. LIMPEZA DE INFORMAÇÕES SECUNDÁRIAS
+========================================= */
+html.ionic8 ion-item small,
+html.ionic8 ion-item .item-note:not(:last-child) {
     display: none !important;
 }
 
-/* =====================================================
-2. NOME DOS ITENS (ESQUERDA)
-===================================================== */
-
-body.mobile .item .item-title,
-body.mobile .item .item-inner span {
-    font-size: 14px;
-    color: #333;
+/* =========================================
+2. NOME DA ATIVIDADE (ESQUERDA)
+========================================= */
+html.ionic8 ion-item h2,
+html.ionic8 ion-item .item-heading {
+    font-size: 14px !important;
+    color: #333 !important;
+    font-weight: 500;
 }
 
-/* =====================================================
-3. NOTA (DIREITA) — FOCO PRINCIPAL
-===================================================== */
-
-body.mobile .item .item-note,
-body.mobile .item .note,
-body.mobile .item .item-end {
-    font-weight: 700;
-    font-size: 16px;
+/* =========================================
+3. NOTA (DIREITA - FOCO)
+========================================= */
+html.ionic8 ion-item ion-note,
+html.ionic8 ion-item ion-badge {
+    font-weight: 700 !important;
+    font-size: 16px !important;
     color: #0d47a1 !important;
 }
 
-/* =====================================================
-4. CATEGORIAS (PASTAS TIPO "Unidade I")
-===================================================== */
-
-body.mobile .item-divider,
-body.mobile .item.category {
-    font-weight: 700;
-    font-size: 15px;
-    color: #0c4e9c;
+/* =========================================
+4. CATEGORIAS (UNIDADE I, II...)
+========================================= */
+html.ionic8 ion-item-divider {
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    color: #0c4e9c !important;
     background: #f1f6fb !important;
-    border-radius: 6px;
-    margin-top: 6px;
 }
 
-/* =====================================================
-5. LINHAS (ESTILO GERAL)
-===================================================== */
-
-body.mobile ion-item,
-body.mobile .item {
+/* =========================================
+5. ESPAÇAMENTO (CONFORTO VISUAL)
+========================================= */
+html.ionic8 ion-item {
     --inner-padding-top: 8px;
     --inner-padding-bottom: 8px;
-    font-size: 14px;
 }
 
-/* =====================================================
-6. ZEBRADO SUAVE (FUNCIONA NO IONIC)
-===================================================== */
-
-body.mobile ion-item:nth-of-type(odd) {
-    background: #f8f9fa;
+/* =========================================
+6. SEPARAÇÃO VISUAL LEVE
+========================================= */
+html.ionic8 ion-item {
+    border-bottom: 1px solid #f1f1f1;
 }
 
-/* =====================================================
-7. ÍCONES (DEIXAR MAIS SUAVE)
-===================================================== */
-
-body.mobile ion-item ion-icon,
-body.mobile .item ion-icon {
+/* =========================================
+7. ÍCONES MAIS SUAVES
+========================================= */
+html.ionic8 ion-item ion-icon {
     opacity: 0.7;
-}
-
-/* =====================================================
-8. TOTAL (LINHAS COM ∑)
-===================================================== */
-
-body.mobile .item:has(.icon:contains("∑")) {
-    font-weight: 700;
-}
-
-/* =====================================================
-OCULTAR PÁGINA INICIAL NO MOODLE APP
-===================================================== */
-
-/* Container principal da página inicial */
-body.mobile page-core-sitehome,
-body.mobile .core-sitehome,
-body.mobile .sitehome {
-    display: none !important;
-}
-
-/* Conteúdo interno vazio */
-body.mobile .core-sitehome-content,
-body.mobile .course-content {
-    display: none !important;
-}
-
-/* Evita espaço em branco */
-body.mobile ion-content {
-    --background: #ffffff;
 }
