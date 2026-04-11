@@ -212,9 +212,10 @@ ion-content {
   --ion-color-primary: #0C4E9C;
   --ion-color-primary-rgb: 12,78,156;
 
-  /* 🔥 ESSA É A CHAVE */
-  --ion-color-secondary: #0C4E9C;
-  --ion-color-secondary-rgb: 12,78,156;
+/* TESTE DO TOKEN REAL (BARRA / INDICADOR) */
+:root {
+  --ion-color-success: #0C4E9C;
+  --ion-color-success-rgb: 12,78,156;
 }
 
 /* =====================================================
