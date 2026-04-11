@@ -205,23 +205,29 @@ ion-content {
 }
 
 
-
 /* =====================================================
-🎨 1. BRANDING GLOBAL (LIGHT MODE - APP)
+🎨 BRANDING (APP LIGHT)
 ===================================================== */
 :root {
   --ion-color-primary: #0C4E9C;
   --ion-color-primary-rgb: 12,78,156;
 }
 
-/* só onde estava verde */
+/* =====================================================
+🔘 BOTÕES VERDES → AZUL
+===================================================== */
 ion-button[color="success"] {
   --background: #0C4E9C;
   --color: #ffffff;
 }
 
-/* indicação de aba de uso */
+/* =====================================================
+📍 ABA ATIVA (INDICADOR + TEXTO)
+===================================================== */
+ion-segment {
+  --indicator-color: #0C4E9C;
+}
+
 ion-segment-button.segment-button-checked {
-  color: #0C4E9C !important;
-  --indicator-color: #0C4E9C !important;
+  color: #0C4E9C;
 }
