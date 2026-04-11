@@ -231,24 +231,114 @@ ion-segment-button.segment-button-checked {
   color: #0C4E9C;
 }
 
+/* =====================================================
+GRADEBOOK MOBILE (EQUIVALENTE AO WEB)
+Base: addon-grades (Moodle App)
+===================================================== */
+
 
 /* =====================================================
-🎯 5. NOTA EM DESTAQUE
+1. BASE DA TELA
+===================================================== */
+
+ion-content[class*="addon-grades"] {
+  --background: #ffffff;
+  padding: 8px;
+}
+
+
+/* =====================================================
+2. CATEGORIAS (equivalente .category)
+Ex: Unidade I, Unidade II
+===================================================== */
+
+ion-content[class*="addon-grades"] ion-item-divider {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0C4E9C;
+  background: #f1f6fb;
+  border-radius: 6px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+
+/* =====================================================
+3. ITENS (equivalente linhas da tabela)
+===================================================== */
+
+ion-content[class*="addon-grades"] ion-item {
+  --background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+}
+
+
+/* =====================================================
+4. NOME DA ATIVIDADE (.itemname)
+===================================================== */
+
+ion-content[class*="addon-grades"] ion-label {
+  font-size: 14px;
+  color: #333;
+  white-space: normal;
+}
+
+
+/* =====================================================
+5. NOTA (equivalente .grade)
 ===================================================== */
 
 ion-content[class*="addon-grades"] ion-note {
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 15px;
   color: #0C4E9C;
 }
 
 
 /* =====================================================
-📦 6. ORGANIZAÇÃO DO LAYOUT
+6. ZEBRADO (equivalente table tr:nth-child)
+===================================================== */
+
+ion-content[class*="addon-grades"] ion-item:nth-of-type(even) {
+  --background: #f8f9fa;
+}
+
+
+/* =====================================================
+7. INTERAÇÃO (equivalente hover)
+===================================================== */
+
+ion-content[class*="addon-grades"] ion-item:active {
+  --background: #e3f2fd;
+}
+
+
+/* =====================================================
+8. ITENS MENOS RELEVANTES
+(simulação de .dimmed / hidden)
+===================================================== */
+
+ion-content[class*="addon-grades"] .dimmed,
+ion-content[class*="addon-grades"] .text-muted {
+  opacity: 0.6;
+}
+
+
+/* =====================================================
+9. ESPAÇAMENTO GERAL (equivalente td/th)
 ===================================================== */
 
 ion-content[class*="addon-grades"] ion-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  margin: 0;
+}
+
+
+/* =====================================================
+10. RESPONSIVIDADE (já é nativo do app)
+Apenas garantindo largura total
+===================================================== */
+
+ion-content[class*="addon-grades"] {
+  width: 100%;
 }
