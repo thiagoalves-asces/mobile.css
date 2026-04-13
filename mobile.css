@@ -256,32 +256,6 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
   margin-top: 10px;
 }
 
-
-/* =====================================================
-3. ITENS DE NOTA (linhas)
-===================================================== */
-
-[class*="grades"] [class*="item"] {
-  border-bottom: 1px solid #e5e7eb;
-  padding: 10px;
-}
-
-/* =====================================================
-4. NOME DA ATIVIDADE
-===================================================== */
-
-[class*="grades"] h2 {
-  font-size: 14px;
-  color: #333;
-  font-weight: 500;
-}
-
-   [class*="grades"] h3 {
-  font-size: 14px;
-  color: #FFD700;
-  font-weight: 500;
-}
-
 /* =====================================================
 5. NOTA (VALOR)
 ===================================================== */
@@ -290,7 +264,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 [class*="grades"] [class*="grade"] {
   font-weight: 700;
   font-size: 15px;
-  color: #FF00D7;
+  color: #FFD700;
 }
 
    
@@ -320,16 +294,14 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
   border-radius: 6px;
 }
 
-   /* =====================================================
-🎯 REMOVER TEXTO "Média das notas / Incluir notas vazias"
+
+/* =====================================================
+🎯 REMOVER DESCRIÇÃO DE AGREGAÇÃO (BASE REAL DO MOODLE)
 ===================================================== */
 
-/* remove parágrafos dentro das notas */
-[class*="grades"] ion-label p {
-  display: none !important;
-}
-
-/* fallback (caso seja span) */
-[class*="grades"] ion-label span {
+/* remove textos que acompanham agregações (média, soma, etc) */
+[class*="grades"] [class*="aggregation"],
+[class*="grades"] [class*="agg"],
+[class*="grades"] img[src*="agg_"] {
   display: none !important;
 }
