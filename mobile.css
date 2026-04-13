@@ -235,68 +235,25 @@ ion-segment-button.segment-button-checked {
 GRADEBOOK MOBILE (VERSÃO FUNCIONAL REAL)
 ===================================================== */
 
-
 /* =====================================================
-1. CATEGORIAS (ion-item-divider)
+🎯 TESTE REAL - GRADEBOOK (SELETORES INTERNOS)
 ===================================================== */
 
-ion-item-divider {
-  font-weight: 700 !important;
-  font-size: 16px !important;
+/* itens de nota */
+[class*="grades"] {
+  background: rgba(255, 0, 0, 0.05) !important;
+}
+
+/* nomes */
+[class*="grade"] h2,
+[class*="grade"] strong {
   color: #0C4E9C !important;
-  background: #f1f6fb !important;
-  border-radius: 6px;
-  margin-top: 12px;
-  margin-bottom: 6px;
 }
 
-
-/* =====================================================
-2. ITENS DE NOTA (ion-item)
-===================================================== */
-
-ion-item {
-  --background: #0C4E9C;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 10px;
-}
-
-
-/* =====================================================
-3. NOME DA ATIVIDADE
-===================================================== */
-
-ion-item ion-label {
-  font-size: 14px;
-  color: #333;
-  white-space: normal;
-}
-
-
-/* =====================================================
-4. NOTA (ion-note)
-===================================================== */
-
-ion-item ion-note {
+/* valor da nota */
+[class*="grade"] ion-note,
+[class*="grade"] .grade {
+  color: #0C4E9C !important;
   font-weight: 700;
-  font-size: 15px;
-  color: #0C4E9C;
 }
 
-/* =====================================================
-6. INTERAÇÃO (TOQUE)
-===================================================== */
-
-ion-item:active {
-  --background: #e3f2fd;
-}
-
-
-/* =====================================================
-7. ITENS MENOS RELEVANTES
-===================================================== */
-
-.dimmed,
-.text-muted {
-  opacity: 0.6;
-}
