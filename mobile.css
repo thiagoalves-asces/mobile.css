@@ -240,7 +240,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 ===================================================== */
 
 [class*="grades"] {
-  background: #167ac6  !important;
+  background: #fff;
 }
 
 /* =====================================================
@@ -264,9 +264,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 [class*="grades"] [class*="item"] {
   border-bottom: 1px solid #e5e7eb;
   padding: 10px;
-  background: #ffffff;
 }
-
 
 /* =====================================================
 4. NOME DA ATIVIDADE
