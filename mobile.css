@@ -231,81 +231,25 @@ ion-segment-button.segment-button-checked {
   color: #0C4E9C;
 }
 
-/* =====================================================
-GRADE MOBILE  (Notas)
-===================================================== */
 
 /* =====================================================
-1. CONTAINER REAL
+🎯 GRADE MOBILE  (Notas)
 ===================================================== */
 
-[class*="grades"],
-.core-format-text {
-  font-size: 14px;
-}
-
-
-/* =====================================================
-2. REMOVER DESCRIÇÕES TÉCNICAS
-===================================================== */
-
-.core-format-text p,
-[class*="grades"] p {
-  display: none !important;
-}
-
-
-/* =====================================================
-3. CATEGORIAS (section-name do emulator)
-===================================================== */
-
-.core-format-text .section-name,
-[class*="grades"] .section-name {
-  background: #f1f6fb !important;
-  color: #0C4E9C !important;
-  font-weight: 700;
-  padding: 8px;
-  border-radius: 6px;
-}
-
-
-/* =====================================================
-4. ITENS DE NOTA
-===================================================== */
-
-.core-format-text tr,
-[class*="grades"] tr {
-  border-bottom: 1px solid #e5e7eb;
-}
-
-
-/* =====================================================
-5. NOME DA ATIVIDADE
-===================================================== */
-
-.core-format-text td:first-child,
-[class*="grades"] td:first-child {
-  color: #333;
-}
-
-
-/* =====================================================
-6. NOTA (VALOR)
-===================================================== */
-
-.core-format-text td:last-child,
+/* cor das notas */
 [class*="grades"] .grade {
-  color: #0C4E9C !important;
+  color: #0C4E9C;
   font-weight: 700;
 }
 
+/* títulos (categorias) */
+[class*="grades"] .b1t {
+  font-weight: 700;
+  color: #0C4E9C;
+}
 
-/* =====================================================
-7. ZEBRADO REAL
-===================================================== */
-
-.core-format-text tr:nth-child(even),
-[class*="grades"] tr:nth-child(even) {
-  background: #f8f9fa;
+/* remover texto técnico */
+[class*="grades"] .baggt .feedbacktext {
+  display: none !important;
 }
 
