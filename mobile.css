@@ -232,56 +232,81 @@ ion-segment-button.segment-button-checked {
 }
 
 /* =====================================================
-GRADEBOOK MOBILE (EQUIVALENTE AO WEB)
-Base: addon-grades (Moodle App)
+GRADEBOOK MOBILE (VERSÃO FUNCIONAL REAL)
 ===================================================== */
+
 
 /* =====================================================
-🎯 ITEM DE NOTA (REAL DO APP)
+1. CATEGORIAS (ion-item-divider)
 ===================================================== */
 
-.addon-grades-item {
+ion-item-divider {
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  color: #0C4E9C !important;
+  background: #f1f6fb !important;
+  border-radius: 6px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+}
+
+
+/* =====================================================
+2. ITENS DE NOTA (ion-item)
+===================================================== */
+
+ion-item {
+  --background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
   padding: 10px;
 }
 
 
 /* =====================================================
-📝 NOME DA ATIVIDADE
+3. NOME DA ATIVIDADE
 ===================================================== */
 
-.addon-grades-item ion-label h2 {
+ion-item ion-label {
   font-size: 14px;
   color: #333;
-  font-weight: 500;
+  white-space: normal;
 }
 
 
 /* =====================================================
-🎯 NOTA (DESTAQUE REAL)
+4. NOTA (ion-note)
 ===================================================== */
 
-.addon-grades-item ion-note {
-  font-size: 16px;
+ion-item ion-note {
   font-weight: 700;
+  font-size: 15px;
   color: #0C4E9C;
 }
 
 
 /* =====================================================
-📊 ZEBRADO (AGORA FUNCIONA)
+5. ZEBRADO
 ===================================================== */
 
-.addon-grades-item:nth-child(even) {
-  background: #f8f9fa;
+ion-item:nth-of-type(even) {
+  --background: #f8f9fa;
 }
 
 
 /* =====================================================
-👆 INTERAÇÃO
+6. INTERAÇÃO (TOQUE)
 ===================================================== */
 
-.addon-grades-item:active {
-  background: #e3f2fd;
+ion-item:active {
+  --background: #e3f2fd;
 }
-   
+
+
+/* =====================================================
+7. ITENS MENOS RELEVANTES
+===================================================== */
+
+.dimmed,
+.text-muted {
+  opacity: 0.6;
+}
