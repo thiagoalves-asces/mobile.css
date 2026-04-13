@@ -232,28 +232,80 @@ ion-segment-button.segment-button-checked {
 }
 
 /* =====================================================
-GRADEBOOK MOBILE (VERSÃO FUNCIONAL REAL)
+GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 ===================================================== */
 
 /* =====================================================
-🎯 TESTE REAL - GRADEBOOK (SELETORES INTERNOS)
+1. BASE (remove fundo estranho)
 ===================================================== */
 
-/* itens de nota */
 [class*="grades"] {
-  background: rgba(255, 0, 0, 0.05) !important;
+  background: #ffffff !important;
 }
 
-/* nomes */
-[class*="grade"] h2,
-[class*="grade"] strong {
-  color: #0C4E9C !important;
-}
 
-/* valor da nota */
-[class*="grade"] ion-note,
-[class*="grade"] .grade {
-  color: #0C4E9C !important;
+/* =====================================================
+2. CATEGORIAS (ex: Unidade I)
+===================================================== */
+
+[class*="grades"] [class*="category"] {
   font-weight: 700;
+  font-size: 16px;
+  color: #0C4E9C;
+  background: #f1f6fb;
+  border-radius: 6px;
+  padding: 8px;
+  margin-top: 10px;
 }
 
+
+/* =====================================================
+3. ITENS DE NOTA (linhas)
+===================================================== */
+
+[class*="grades"] [class*="item"] {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 10px;
+  background: #ffffff;
+}
+
+
+/* =====================================================
+4. NOME DA ATIVIDADE
+===================================================== */
+
+[class*="grades"] h2 {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+5. NOTA (VALOR)
+===================================================== */
+
+[class*="grades"] ion-note,
+[class*="grades"] [class*="grade"] {
+  font-weight: 700;
+  font-size: 15px;
+  color: #0C4E9C;
+}
+
+
+/* =====================================================
+6. ZEBRADO
+===================================================== */
+
+[class*="grades"] [class*="item"]:nth-child(even) {
+  background: #f8f9fa;
+}
+
+
+/* =====================================================
+7. INTERAÇÃO
+===================================================== */
+
+[class*="grades"] [class*="item"]:active {
+  background: #e3f2fd;
+}
