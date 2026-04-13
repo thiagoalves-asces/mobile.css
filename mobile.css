@@ -233,28 +233,105 @@ ion-segment-button.segment-button-checked {
 
 
 /* =====================================================
-🎯 GRADE MOBILE (CORRETO E ISOLADO)
+🎯 GRADEBOOK REAL (MOBILE APP - CORRETO)
+Baseado no HTML gerado via _createTable
 ===================================================== */
 
-/* nota (valor numérico) */
-[class*="grades"] ion-note {
-  color: #0C4E9C !important;
+/* tabela geral */
+.user-grade {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* linhas */
+.user-grade tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* células */
+.user-grade th,
+.user-grade td {
+  padding: 10px;
+  text-align: left;
+}
+
+/* =====================================================
+🎯 NOME DA ATIVIDADE
+===================================================== */
+
+.user-grade th.item {
+  font-weight: 500;
+  color: #333;
+}
+
+/* =====================================================
+🎯 NOTA (FINALMENTE O CERTO)
+===================================================== */
+
+.user-grade .grade {
   font-weight: 700;
+  color: #0C4E9C;
 }
 
-/* títulos (Unidade, Avaliação) */
-[class*="grades"] ion-label h2,
-[class*="grades"] ion-label h3 {
-  color: #0C4E9C !important;
-  font-weight: 600;
+/* =====================================================
+🎯 RANGE / PERCENTUAL (MENOS IMPORTANTE)
+===================================================== */
+
+.user-grade .range,
+.user-grade .percentage {
+  opacity: 0.7;
+  font-size: 13px;
 }
 
-/* interação ao clicar */
-[class*="grades"] ion-item:active {
-  --background: #e3f2fd;
-}
+/* =====================================================
+🎯 REMOVER TEXTO TÉCNICO (AGORA CERTO)
+===================================================== */
 
-/* 🎯 remover apenas texto técnico das notas */
-[class*="grades"] ion-label p {
+.user-grade .feedback {
   display: none !important;
+}
+
+/* =====================================================
+🎯 CATEGORIAS
+===================================================== */
+
+.user-grade .b1t {
+  font-weight: 700;
+  color: #0C4E9C;
+  background: #f1f6fb;
+}
+
+/* =====================================================
+🎯 TOTAIS (Category total / Course total)
+===================================================== */
+
+.user-grade .baggt {
+  font-weight: 700;
+  color: #0C4E9C;
+}
+
+/* =====================================================
+🎯 ZEBRADO (AGORA FUNCIONA)
+===================================================== */
+
+.user-grade .oddd1,
+.user-grade .oddd3,
+.user-grade .evend3 {
+  background-color: #f8f9fa;
+}
+
+.user-grade .oddd2,
+.user-grade .evend2,
+.user-grade .oddd4,
+.user-grade .evend4 {
+  background-color: #ffffff;
+}
+
+/* =====================================================
+🎯 INTERAÇÃO
+===================================================== */
+
+.user-grade tr:active {
+  background: #e3f2fd;
 }
