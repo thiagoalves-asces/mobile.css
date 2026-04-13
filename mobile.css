@@ -236,20 +236,25 @@ ion-segment-button.segment-button-checked {
 🎯 GRADE MOBILE  (Notas)
 ===================================================== */
 
-/* cor das notas */
-[class*="grades"] .grade {
-  color: #0C4E9C;
+/* itens da lista */
+ion-content ion-item {
+  --color: #0C4E9C;
+}
+
+/* títulos maiores (Unidade, Avaliação) */
+ion-content ion-item h2,
+ion-content ion-item h3 {
+  color: #0C4E9C !important;
+  font-weight: 600;
+}
+
+/* nota (lado direito) */
+ion-content ion-item ion-note {
+  color: #0C4E9C !important;
   font-weight: 700;
 }
 
-/* títulos (categorias) */
-[class*="grades"] .b1t {
-  font-weight: 700;
-  color: #0C4E9C;
-}
-
-/* remover texto técnico */
-[class*="grades"] .baggt .feedbacktext {
+/* TEXTO TÉCNICO (finalmente atacar certo) */
+ion-content ion-item p {
   display: none !important;
 }
-
