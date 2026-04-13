@@ -272,7 +272,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 
 [class*="grades"] h2 {
   font-size: 14px;
-  color: #333;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -298,17 +298,6 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 }
 
 
-/* =====================================================
-🎯 2. REMOVER “INCLUIR NOTAS VAZIAS” E TEXTOS TÉCNICOS
-===================================================== */
-
-[class*="grades"] .core-grades-note,
-[class*="grades"] .core-grades-aggregation,
-[class*="grades"] ion-text,
-[class*="grades"] small {
-  display: none !important;
-}
-
 
 /* =====================================================
 🎯 3. TOTAL (ajustar visual, não remover)
@@ -317,4 +306,25 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 [class*="grades"] [class*="total"] {
   font-weight: 700;
   color: #0C4E9C;
+}
+   
+   /* remove aquele fundo cinza pesado dos totais */
+[class*="grades"] [class*="total"] {
+  background: #f1f6fb !important;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+   /* =====================================================
+🎯 REMOVER TEXTO "Média das notas / Incluir notas vazias"
+===================================================== */
+
+/* remove parágrafos dentro das notas */
+[class*="grades"] ion-label p {
+  display: none !important;
+}
+
+/* fallback (caso seja span) */
+[class*="grades"] ion-label span {
+  display: none !important;
 }
