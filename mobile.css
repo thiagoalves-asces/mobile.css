@@ -272,10 +272,15 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 
 [class*="grades"] h2 {
   font-size: 14px;
-  color: #fff;
+  color: #333;
   font-weight: 500;
 }
 
+   [class*="grades"] h3 {
+  font-size: 14px;
+  color: #FFD700;
+  font-weight: 500;
+}
 
 /* =====================================================
 5. NOTA (VALOR)
@@ -285,7 +290,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 [class*="grades"] [class*="grade"] {
   font-weight: 700;
   font-size: 15px;
-  color: #0C4E9C;
+  color: #FF00D7;
 }
 
    
@@ -305,7 +310,7 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 
 [class*="grades"] [class*="total"] {
   font-weight: 700;
-  color: #0C4E9C;
+  color: #D7FF00;
 }
    
    /* remove aquele fundo cinza pesado dos totais */
