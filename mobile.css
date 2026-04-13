@@ -232,76 +232,80 @@ ion-segment-button.segment-button-checked {
 }
 
 /* =====================================================
-GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
+GRADE MOBILE  (Notas)
 ===================================================== */
 
 /* =====================================================
-1. BASE 
+1. CONTAINER REAL
 ===================================================== */
 
-[class*="grades"] {
-  background: #fff;
-}
-
-/* =====================================================
-2. CATEGORIAS (ex: Unidade I)
-===================================================== */
-
-[class*="grades"] [class*="category"] {
-  font-weight: 700;
-  font-size: 16px;
-  color: #0C4E9C;
-  border-radius: 6px;
-  padding: 8px;
-  margin-top: 10px;
-}
-
-/* =====================================================
-5. NOTA (VALOR)
-===================================================== */
-
-[class*="grades"] ion-note,
-[class*="grades"] [class*="grade"] {
-  font-weight: 700;
-  font-size: 15px;
-  color: #FFD700;
-}
-
-   
-/* =====================================================
-7. INTERAÇÃO
-===================================================== */
-
-[class*="grades"] [class*="item"]:active {
-  background: #e3f2fd;
-}
-
-
-
-/* =====================================================
-🎯 3. TOTAL (ajustar visual, não remover)
-===================================================== */
-
-[class*="grades"] [class*="total"] {
-  font-weight: 700;
-  color: #D7FF00;
-}
-   
-   /* remove aquele fundo cinza pesado dos totais */
-[class*="grades"] [class*="total"] {
-  background: #f1f6fb !important;
-  padding: 10px;
-  border-radius: 6px;
+[class*="grades"],
+.core-format-text {
+  font-size: 14px;
 }
 
 
 /* =====================================================
-🎯 REMOVER DESCRIÇÃO DE AGREGAÇÃO (BASE REAL DO MOODLE)
+2. REMOVER DESCRIÇÕES TÉCNICAS
 ===================================================== */
 
-/* remove textos que acompanham agregações (média, soma, etc) */
-[class*="grades"] [class*="aggregation"],
-[class*="grades"] [class*="agg"],
-[class*="grades"] img[src*="agg_"] {
+.core-format-text p,
+[class*="grades"] p {
   display: none !important;
 }
+
+
+/* =====================================================
+3. CATEGORIAS (section-name do emulator)
+===================================================== */
+
+.core-format-text .section-name,
+[class*="grades"] .section-name {
+  background: #f1f6fb !important;
+  color: #0C4E9C !important;
+  font-weight: 700;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+
+/* =====================================================
+4. ITENS DE NOTA
+===================================================== */
+
+.core-format-text tr,
+[class*="grades"] tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =====================================================
+5. NOME DA ATIVIDADE
+===================================================== */
+
+.core-format-text td:first-child,
+[class*="grades"] td:first-child {
+  color: #333;
+}
+
+
+/* =====================================================
+6. NOTA (VALOR)
+===================================================== */
+
+.core-format-text td:last-child,
+[class*="grades"] .grade {
+  color: #0C4E9C !important;
+  font-weight: 700;
+}
+
+
+/* =====================================================
+7. ZEBRADO REAL
+===================================================== */
+
+.core-format-text tr:nth-child(even),
+[class*="grades"] tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
