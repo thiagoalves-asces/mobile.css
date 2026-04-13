@@ -236,13 +236,12 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
 ===================================================== */
 
 /* =====================================================
-1. BASE (remove fundo estranho)
+1. BASE 
 ===================================================== */
 
 [class*="grades"] {
-  background: #ffffff !important;
+  background: #167ac6  !important;
 }
-
 
 /* =====================================================
 2. CATEGORIAS (ex: Unidade I)
@@ -252,7 +251,6 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
   font-weight: 700;
   font-size: 16px;
   color: #0C4E9C;
-  background: #f1f6fb;
   border-radius: 6px;
   padding: 8px;
   margin-top: 10px;
@@ -292,37 +290,13 @@ GRADEBOOK MOBILE (BASEADO EM [class*="grades"])
   color: #0C4E9C;
 }
 
-
-/* =====================================================
-6. ZEBRADO
-===================================================== */
-
-[class*="grades"] [class*="item"]:nth-child(even) {
-  background: #f8f9fa;
-}
-
-
+   
 /* =====================================================
 7. INTERAÇÃO
 ===================================================== */
 
 [class*="grades"] [class*="item"]:active {
   background: #e3f2fd;
-}
-
-
-/* =====================================================
-🎯 1. ZEBRADO REAL (forçando nos blocos internos)
-===================================================== */
-
-[class*="grades"] ion-item:nth-child(odd),
-[class*="grades"] div:nth-child(odd) {
-  background: #ffffff !important;
-}
-
-[class*="grades"] ion-item:nth-child(even),
-[class*="grades"] div:nth-child(even) {
-  background: #f8f9fa !important;
 }
 
 
