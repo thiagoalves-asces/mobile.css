@@ -239,7 +239,7 @@ Baseado no HTML gerado via _createTable
 
 /* tentativa direta baseada no template activities */
 
-[class*="grades"]*, [class*="grade"]* {
+[class="grades"] [class="grade"] {
 
   color: #0C4E9C;
 }
