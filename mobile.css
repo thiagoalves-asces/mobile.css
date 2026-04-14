@@ -257,49 +257,46 @@ ion-fab-button {
 }
 
 /* =====================================================
-📍 ABAS INTERNAS
+📍 ABAS INTERNAS (FIX REAL)
 ===================================================== */
-ion-segment {
-  --indicator-color: #0C4E9C;
-}
-
-ion-segment-button {
-  --color-checked: #0C4E9C;
+ion-segment-button.segment-button-checked,
+ion-segment-button.ion-activated {
+  color: #0C4E9C !important;
 }
 
 ion-segment-button::part(indicator) {
   background: #0C4E9C !important;
 }
 
+
 /* =====================================================
-📱 MENU INFERIOR
+📂 CATEGORIAS DE CURSO
 ===================================================== */
-ion-tab-bar {
-  --color-selected: #0C4E9C;
+ion-chip[color="success"] {
+  --background: #e3f2fd;
+  --color: #0C4E9C;
 }
 
-ion-tab-button.tab-selected {
-  color: #0C4E9C;
+/* =====================================================
+👤 BADGES (PERFIL / STATUS)
+===================================================== */
+ion-badge[color="success"] {
+  --background: #e3f2fd;
+  --color: #0C4E9C;
 }
 
 /* =====================================================
 📚 ÍNDICE DO CURSO (SELEÇÃO)
 ===================================================== */
-ion-item {
-  --background-activated: #e3f2fd;
-  --background-focused: #e3f2fd;
+
+.core-course-index-item {
+  --background-hover: #e3f2fd;
 }
 
-/* Item selecionado fixo */
-ion-item.item-selected {
-  --background: #e3f2fd !important;
-}
-
-/* Moodle específico (caso use essa classe) */
 .core-course-index-item.current {
   background: #e3f2fd !important;
+  color: #0C4E9C !important;
 }
-
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
