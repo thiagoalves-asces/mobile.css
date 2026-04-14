@@ -231,32 +231,3 @@ ion-segment-button.segment-button-checked {
   color: #0C4E9C;
 }
 
-
-/* =====================================================
-🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
-===================================================== */
-
- /* 1. Pinta o Título Principal (links) de VERMELHO */
-.core-grades-table-gradeitem a {
-    color: red !important;
-    font-size: 18px !important;
-}
-
-/* 2. Pinta tags do Ionic (geralmente notas ou rótulos) de AZUL */
-[class*="grades"] ion-label {
-    color: blue !important;
-}
-
-/* 3. Pinta textos secundários (spans, divs pequenas) com FUNDO AMARELO */
-/* É aqui que provavelmente o texto chato da "Média das notas" vai cair */
-.core-grades-table-gradeitem span,
-.core-grades-table-gradeitem div {
-    background-color: yellow !important;
-    color: black !important;
-}
-
-/* 4. Pinta tags específicas "small" ou textos apagados de VERDE LIMÃO */
-.core-grades-table-gradeitem small,
-.core-grades-table-gradeitem .dimmed_text {
-    background-color: lime !important;
-}
