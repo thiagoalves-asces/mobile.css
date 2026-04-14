@@ -244,9 +244,9 @@ Baseado no HTML gerado via _createTable
   color: #0C4E9C;
 }
 
-/* TESTE REAL — PEGAR O TEXTO TÉCNICO */
+/* TESTE MAIS PRECISO */
 
-ion-item ion-label p {
+page-addon-grades ion-item ion-label p,
+[class*="addon-grades"] ion-item ion-label p {
   background: red !important;
-  color: white !important;
 }
