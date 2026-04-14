@@ -236,16 +236,8 @@ ion-segment-button.segment-button-checked {
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 
-   /* Esconde as descrições de agregação dentro da célula de nome da atividade na tabela */
-.core-grades-table-gradeitem .itemdescription,
-.core-grades-table-gradeitem .gradeitemdescription,
-.core-grades-table-gradeitem .gradeitemheader,
-.core-grades-table-gradeitem small,
-.core-grades-table-gradeitem p {
+/* Esconde o texto de agregação (Média das notas, etc) injetado pelo servidor no App */
+.core-grades-table-gradeitem .dimmed_text,
+.core-grades-table-gradeitem .small {
     display: none !important;
-}
-
-/* Oculta textos secundários soltos que não tenham formatação de título */
-.core-grades-table-gradeitem span:not(.item-heading):not(.core-grades-table-gradeitem-name) {
-    font-size: 0 !important;
 }
