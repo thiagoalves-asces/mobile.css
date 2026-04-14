@@ -252,20 +252,24 @@ ion-segment-button::part(indicator) {
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 /* =====================================================
-1. Cor do texto
+1. CONFIGURAÇÃO DE COR (Fonte e Ícones) 
 ===================================================== */
 
-[class*="grades"] ion-note,
-[class*="grades"] [class*="grade"] {
-
-  color: #0C4E9C;
+/* Aplica o azul nos textos e ícones da tabela de notas */
+.core-grades-table-gradeitem, 
+.core-grades-table-gradeitem span, 
+.core-grades-table-gradeitem div, 
+.core-grades-table-gradeitem ion-icon,
+.core-grades-table-gradeitem svg {
+    color: #0C4E9C !important;
+    fill: #0C4E9C !important; /* Garante que ícones SVG também mudem de cor */
 }
 
   /* =====================================================
-2. Ocultar agregação de notas 
+2. LIMPEZA DA DESCRIÇÃO (Ocultar agregação de nota)
 ===================================================== */
- 
-/* 1. Limita a altura APENAS do texto (mostra 1 linha) e esconde o que vazar */
+
+/* Limita a altura para mostrar apenas a primeira linha de texto */
 .core-grades-table-gradeitem span,
 .core-grades-table-gradeitem div {
     display: inline-block !important;
@@ -274,7 +278,7 @@ ion-segment-button::part(indicator) {
     vertical-align: middle !important;
 }
 
-/* 2. O 'br' cria o abismo gigante DENTRO do texto, empurrando a média pra fora da área visível */
+/* Cria o espaçamento que joga a descrição para fora da área visível */
 .core-grades-table-gradeitem br {
     display: block !important;
     content: " " !important;
