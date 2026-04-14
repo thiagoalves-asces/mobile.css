@@ -232,35 +232,114 @@ ion-segment-button.segment-button-checked {
 }
 
 
+
+
 /* =====================================================
-🎯 GRADEBOOK REAL (MOBILE APP - CORRETO)
-Baseado no HTML gerado via _createTable
+🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 
-/* tentativa direta baseada no template activities */
 
- [class*="grade"] [class*="grade"] {
+/* =====================================================
+1. BASE DA TABELA
+===================================================== */
 
+.user-grade {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+
+/* =====================================================
+2. CATEGORIAS (equivalente .category)
+===================================================== */
+
+.user-grade th.b1t,
+.user-grade .category {
+  font-weight: 700;
+  font-size: 16px;
+  color: #0C4E9C;
+  background: #f1f6fb;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+/* =====================================================
+3. ITENS (linhas)
+===================================================== */
+
+.user-grade tr {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+/* =====================================================
+4. NOME DA ATIVIDADE
+===================================================== */
+
+.user-grade th.item {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+
+/* =====================================================
+5. NOTA (VALOR)
+===================================================== */
+
+.user-grade .grade {
+  font-weight: 700;
+  font-size: 15px;
   color: #0C4E9C;
 }
 
-/* TESTE DE ÁREA: Se a mensagem ficar com fundo vermelho, o seletor está correto */
 
-/* 1. Esconde as mensagens de agregação no sumário de categorias */
-addon-grades-category-summary ion-item ion-label p,
-.addon-grades-category-summary .core-detailed-item-description {
-    display: none !important;
+/* =====================================================
+6. ZEBRADO (AGORA FUNCIONA)
+===================================================== */
+
+.user-grade tr:nth-child(even) {
+  background-color: #f8f9fa;
 }
 
-/* 2. Remove as descrições técnicas em todos os itens de nota (Unidade I total, etc) */
-.addon-grades-grade-item .addon-grades-aggregation,
-.addon-grades-grade-item .core-detailed-item-description,
-[class*="addon-grades"] .item-description {
-    display: none !important;
-    height: 0 !important;
+
+/* =====================================================
+7. INTERAÇÃO (toque)
+===================================================== */
+
+.user-grade tr:active {
+  background-color: #e3f2fd;
 }
 
-/* 3. Ajuste para o "Unidade I total" e outros textos de rodapé no Ionic 7 */
-ion-item ion-label p:nth-child(n+2) {
-    display: none !important;
+
+/* =====================================================
+8. ITENS OCULTOS / MENOS RELEVANTES
+===================================================== */
+
+.user-grade .hidden,
+.user-grade .dimmed_text {
+  opacity: 0.6;
+}
+
+
+/* =====================================================
+9. ESPAÇAMENTO
+===================================================== */
+
+.user-grade td,
+.user-grade th {
+  padding: 10px;
+}
+
+
+/* =====================================================
+🎯 10. LIMPEZA REAL (AGORA CORRETA)
+(remove "Incluir notas vazias" etc)
+===================================================== */
+
+.user-grade .feedbacktext,
+.user-grade td:nth-child(n+3) {
+  display: none !important;
 }
