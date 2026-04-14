@@ -209,11 +209,18 @@ ion-content {
 🎨 BRANDING GLOBAL (LIGHT MODE APP)
 ===================================================== */
 :root {
+  /* 🔵 Cor principal */
   --ion-color-primary: #0C4E9C;
   --ion-color-primary-rgb: 12,78,156;
 
-  /* PROGRESSO */
+  /*  Progresso (barra principal) */
   --core-progressbar-color: #0C4E9C;
+
+  /* Fundo do progresso (azul claro em vez de verde) */
+  --core-progressbar-background: #e3f2fd;
+
+  /*  Tabs inferiores (remove verde da seleção) */
+  --core-bottom-tabs-color-selected: #0C4E9C;
 }
 
 /* =====================================================
@@ -225,16 +232,32 @@ ion-button[color="success"] {
 }
 
 /* =====================================================
-🔘 BOTÕES (REMOVE VERDE AO CLICAR)
+🔘 BOTÕES (INTERAÇÃO)
 ===================================================== */
 ion-button {
-  --background-activated: #0C4E9C;
-  --background-focused: #0C4E9C;
-  --background-hover: #0C4E9C;
+  --background-activated: #0a3f7d;
+  --background-focused: #0a3f7d;
+  --background-hover: #1565c0;
 }
 
 /* =====================================================
-📍 ABAS (Curso / Participantes / Notas)
+➕ BOTÃO FLUTUANTE (FAB)
+===================================================== */
+ion-fab-button {
+  --background: #0C4E9C;
+  --background-activated: #0a3f7d;
+  --background-focused: #0a3f7d;
+}
+
+/* =====================================================
+📊 PROGRESSO (REFORÇO)
+===================================================== */
+.core-progressbar {
+  --background: #0C4E9C !important;
+}
+
+/* =====================================================
+📍 ABAS INTERNAS
 ===================================================== */
 ion-segment {
   --indicator-color: #0C4E9C;
@@ -249,20 +272,56 @@ ion-segment-button::part(indicator) {
 }
 
 /* =====================================================
+📱 MENU INFERIOR
+===================================================== */
+ion-tab-bar {
+  --color-selected: #0C4E9C;
+}
+
+ion-tab-button.tab-selected {
+  color: #0C4E9C;
+}
+
+/* =====================================================
+📚 ÍNDICE DO CURSO (SELEÇÃO)
+===================================================== */
+ion-item {
+  --background-activated: #e3f2fd;
+  --background-focused: #e3f2fd;
+}
+
+/* Item selecionado fixo */
+ion-item.item-selected {
+  --background: #e3f2fd !important;
+}
+
+/* Moodle específico (caso use essa classe) */
+.core-course-index-item.current {
+  background: #e3f2fd !important;
+}
+
+/* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 /* =====================================================
 1. CONFIGURAÇÃO DE COR (Fonte e Ícones) 
 ===================================================== */
 
-/* Aplica o azul nos textos e ícones da tabela de notas */
+/* 1.1 COR AZUL (#0C4E9C) - Aplica em tudo (Itens, Notas e Ícones) */
 .core-grades-table-gradeitem, 
-.core-grades-table-gradeitem span, 
-.core-grades-table-gradeitem div, 
-.core-grades-table-gradeitem ion-icon,
-.core-grades-table-gradeitem svg {
+.core-grades-table-grade,
+.core-grades-table-gradeitem *,
+.core-grades-table-grade * {
     color: #0C4E9C !important;
-    fill: #0C4E9C !important; /* Garante que ícones SVG também mudem de cor */
+    fill: #0C4E9C !important;
+}
+
+/* 1.2 NOTA VERDE (Aprovação) - Força a cor verde se a nota for de aprovação */
+/* O Moodle adiciona a classe 'gradepass' quando a nota atinge o critério */
+.gradepass, 
+.gradepass *, 
+.core-grades-table-grade.gradepass {
+    color: #28a745 !important; /* Verde padrão de sucesso */
 }
 
   /* =====================================================
