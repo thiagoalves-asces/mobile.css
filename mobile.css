@@ -248,9 +248,8 @@ ion-segment-button.segment-button-checked {
 2. Ocultar agregação de notas 
 ===================================================== */
  
-/* Oculta o segundo elemento em diante (as descrições), mantendo apenas o primeiro (o título) */
-.core-grades-table-gradeitem span:nth-of-type(n+2),
-.core-grades-table-gradeitem div:nth-of-type(n+2),
-.core-grades-table-gradeitem br {
-    display: none !important;
+/* remove colunas extras (range, %, feedback) */
+.user-grade td:nth-child(n+3),
+.user-grade th:nth-child(n+3) {
+  display: none !important;
 }
