@@ -238,10 +238,7 @@ ion-segment-button.segment-button-checked {
 
    /* Esconde as descrições de agregação dentro da célula de nome da atividade na tabela */
 
-.core-grades-table-gradeitem small,
-.core-grades-table-gradeitem p {
-    display: none !important;
-}
+
 
 /* Oculta textos secundários soltos que não tenham formatação de título */
 .core-grades-table-gradeitem span:not(.item-heading):not(.core-grades-table-gradeitem-name) {
