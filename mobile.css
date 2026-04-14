@@ -249,18 +249,10 @@ Baseado no HTML gerado via _createTable
 (remove "incluir notas vazias", descrições etc)
 ===================================================== */
 
-[class*="grades"] p,
-[class*="grades"] small,
-[class*="grades"] [class*="aggregation"],
-[class*="grades"] [class*="feedback"] {
-  display: none !important;
-}
-
-
-   /* TESTE — localizar texto técnico real */
-
-[class*="grade"] [class*="feedback"],
-   [class*="grade"]  [class*="aggregation"] {
-  background: red !important;
-  color: white !important;
+/* Tenta esconder a descrição do cálculo da nota no App */
+.addon-grades-table .aggregation,
+.addon-grades-grade-item .calculation-desc,
+.addon-grades-grade-item p:contains("Soma"),
+.addon-grades-grade-item p:contains("Média") {
+    display: none !important;
 }
