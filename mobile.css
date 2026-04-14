@@ -236,8 +236,14 @@ ion-segment-button.segment-button-checked {
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 
-/* TESTE 1 - esconder texto técnico REAL */
+/* Esconde informações secundárias (agregação/pesos) abaixo do título do item de nota */
+core-grades-course-page ion-item ion-label p:not(.item-heading),
+addon-grades-course-page ion-item ion-label p:not(.item-heading) {
+    display: none !important;
+}
 
-.user-grade .dimmed_text {
-  display: none !important;
+/* Garante a ocultação de elementos de texto sem formatação que o Moodle possa injetar como descrição extra */
+core-grades-course-page ion-item ion-label .text-margin-top,
+addon-grades-course-page ion-item ion-label .text-margin-top {
+    display: none !important;
 }
