@@ -248,10 +248,18 @@ ion-segment-button.segment-button-checked {
 2. Ocultar agregação de notas 
 ===================================================== */
  
+/* 1. Limita a altura APENAS do texto (mostra 1 linha) e esconde o que vazar */
+.core-grades-table-gradeitem span,
+.core-grades-table-gradeitem div {
+    display: inline-block !important;
+    max-height: 1.4em !important; /* Altura cravada para aparecer apenas a primeira linha */
+    overflow: hidden !important;
+    vertical-align: middle !important;
+}
 
-/* 2. Transforma a quebra de linha em um bloco gigante para empurrar a descrição para fora da caixa */
+/* 2. O 'br' cria o abismo gigante DENTRO do texto, empurrando a média pra fora da área visível */
 .core-grades-table-gradeitem br {
     display: block !important;
     content: " " !important;
-    height: 150px !important;
+    height: 100px !important;
 }
