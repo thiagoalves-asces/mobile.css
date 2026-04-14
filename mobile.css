@@ -231,3 +231,26 @@ ion-segment-button.segment-button-checked {
   color: #0C4E9C;
 }
 
+/* =====================================================
+🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
+===================================================== */
+/* =====================================================
+1. Cor do texto
+===================================================== */
+
+[class*="grades"] ion-note,
+[class*="grades"] [class*="grade"] {
+
+  color: #0C4E9C;
+}
+
+  /* =====================================================
+2. Ocultar agregação de notas 
+===================================================== */
+ 
+/* Oculta o segundo elemento em diante (as descrições), mantendo apenas o primeiro (o título) */
+.core-grades-table-gradeitem span:nth-of-type(n+2),
+.core-grades-table-gradeitem div:nth-of-type(n+2),
+.core-grades-table-gradeitem br {
+    display: none !important;
+}
