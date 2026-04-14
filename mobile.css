@@ -244,9 +244,19 @@ Baseado no HTML gerado via _createTable
   color: #0C4E9C;
 }
 
-/* TESTE MAIS PRECISO */
+/* TESTE DE ÁREA: Se a mensagem ficar com fundo vermelho, o seletor está correto */
 
-page-addon-grades ion-item ion-label p,
-[class*="addon-grades"] ion-item ion-label p {
-  background: red !important;
+/* Tenta atingir o parágrafo de descrição dentro do item de nota */
+[class*="grade"] ion-item ion-label p,
+[class*="grade"] .addon-grades-aggregation,
+[class*="grade"] .core-detailed-item-description {
+    background-color: red !important;
+    color: white !important;
+    display: block !important; /* Garante que ele apareça para o teste */
+}
+
+/* Caso o texto esteja em um componente de nota do Ionic 7 */
+[class*="grade"] ion-note {
+    background-color: red !important;
+    color: white !important;
 }
