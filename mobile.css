@@ -211,11 +211,13 @@ ion-content {
 :root {
   --ion-color-primary: #0C4E9C;
   --ion-color-primary-rgb: 12,78,156;
-   
+
+  /* PROGRESSO */
+  --core-progressbar-color: #0C4E9C;
 }
 
 /* =====================================================
-🔘 BOTÕES VERDES → AZUL
+🔘 BOTÕES SUCCESS → AZUL
 ===================================================== */
 ion-button[color="success"] {
   --background: #0C4E9C;
@@ -223,14 +225,27 @@ ion-button[color="success"] {
 }
 
 /* =====================================================
-📍 ABA ATIVA (INDICADOR + TEXTO)
+🔘 BOTÕES (REMOVE VERDE AO CLICAR)
+===================================================== */
+ion-button {
+  --background-activated: #0C4E9C;
+  --background-focused: #0C4E9C;
+  --background-hover: #0C4E9C;
+}
+
+/* =====================================================
+📍 ABAS (Curso / Participantes / Notas)
 ===================================================== */
 ion-segment {
   --indicator-color: #0C4E9C;
 }
 
-ion-segment-button.segment-button-checked {
-  color: #0C4E9C;
+ion-segment-button {
+  --color-checked: #0C4E9C;
+}
+
+ion-segment-button::part(indicator) {
+  background: #0C4E9C !important;
 }
 
 /* =====================================================
