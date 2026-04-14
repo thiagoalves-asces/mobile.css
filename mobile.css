@@ -248,12 +248,6 @@ ion-segment-button.segment-button-checked {
 2. Ocultar agregação de notas 
 ===================================================== */
  
-/* 1. Transforma a célula num bloco com altura limitada e corta o que vazar (overflow) */
-.core-grades-table-gradeitem {
-    display: block !important;
-    max-height: 2.6em !important; /* Altura segura para até 2 linhas de título */
-    overflow: hidden !important;
-}
 
 /* 2. Transforma a quebra de linha em um bloco gigante para empurrar a descrição para fora da caixa */
 .core-grades-table-gradeitem br {
