@@ -246,23 +246,22 @@ Baseado no HTML gerado via _createTable
 
 /* TESTE DE ÁREA: Se a mensagem ficar com fundo vermelho, o seletor está correto */
 
-/* 1. Esconde a descrição de agregação nos itens de nota e totais */
-.addon-grades-grade-item .addon-grades-item-description,
-.addon-grades-grade-item .addon-grades-aggregation,
-.addon-grades-grade-item p.addon-grades-aggregation {
+/* 1. Esconde a agregação em todos os itens de nota */
+.addon-grades-grade-item ion-item ion-label p,
+.addon-grades-category-summary ion-item ion-label p {
     display: none !important;
 }
 
-/* 2. Remove o texto secundário que aparece abaixo do nome da categoria (Média das notas...) */
-/* No Ionic 7, esses textos costumam usar a classe 'core-detailed-item-description' */
-.core-detailed-item-description,
-.addon-grades-category-summary p {
+/* 2. Remove o texto secundário que insiste em aparecer nos totais */
+.core-detailed-item-description, 
+.addon-grades-aggregation {
     display: none !important;
 }
 
-/* 3. Ajuste para o 'Unidade I total' que aparece no final da lista */
-ion-item p:contains("vazias"),
-ion-item p:contains("Média") {
+/* 3. Ajuste para o Ionic 7: Esconde parágrafos que não são títulos */
+/* Isso mira no texto azul claro da imagem */
+ion-label p {
     display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
 }
-
