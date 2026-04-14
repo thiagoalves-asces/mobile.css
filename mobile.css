@@ -255,3 +255,12 @@ Baseado no HTML gerado via _createTable
 [class*="grades"] [class*="feedback"] {
   display: none !important;
 }
+
+
+   /* TESTE — localizar texto técnico real */
+
+[class*="grade"] [class*="feedback"],
+   [class*="grade"]  [class*="aggregation"] {
+  background: red !important;
+  color: white !important;
+}
