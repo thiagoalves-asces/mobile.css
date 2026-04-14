@@ -241,5 +241,17 @@ Baseado no HTML gerado via _createTable
 
  [class*="grade"] {
 
-  color: #FFD700;
+  color: #0C4E9C;
+}
+
+   /* =====================================================
+2. LIMPEZA DE ELEMENTOS TÉCNICOS
+(remove "incluir notas vazias", descrições etc)
+===================================================== */
+
+[class*="grades"] p,
+[class*="grades"] small,
+[class*="grades"] [class*="aggregation"],
+[class*="grades"] [class*="feedback"] {
+  display: none !important;
 }
