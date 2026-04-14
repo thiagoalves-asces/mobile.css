@@ -246,22 +246,21 @@ Baseado no HTML gerado via _createTable
 
 /* TESTE DE ÁREA: Se a mensagem ficar com fundo vermelho, o seletor está correto */
 
-/* 1. Esconde a agregação em todos os itens de nota */
-.addon-grades-grade-item ion-item ion-label p,
-.addon-grades-category-summary ion-item ion-label p {
+/* 1. Esconde as mensagens de agregação no sumário de categorias */
+addon-grades-category-summary ion-item ion-label p,
+.addon-grades-category-summary .core-detailed-item-description {
     display: none !important;
 }
 
-/* 2. Remove o texto secundário que insiste em aparecer nos totais */
-.core-detailed-item-description, 
-.addon-grades-aggregation {
-    display: none !important;
-}
-
-/* 3. Ajuste para o Ionic 7: Esconde parágrafos que não são títulos */
-/* Isso mira no texto azul claro da imagem */
-ion-label p {
+/* 2. Remove as descrições técnicas em todos os itens de nota (Unidade I total, etc) */
+.addon-grades-grade-item .addon-grades-aggregation,
+.addon-grades-grade-item .core-detailed-item-description,
+[class*="addon-grades"] .item-description {
     display: none !important;
     height: 0 !important;
-    margin: 0 !important;
+}
+
+/* 3. Ajuste para o "Unidade I total" e outros textos de rodapé no Ionic 7 */
+ion-item ion-label p:nth-child(n+2) {
+    display: none !important;
 }
