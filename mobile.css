@@ -246,17 +246,21 @@ Baseado no HTML gerado via _createTable
 
 /* TESTE DE ÁREA: Se a mensagem ficar com fundo vermelho, o seletor está correto */
 
-/* Tenta atingir o parágrafo de descrição dentro do item de nota */
-[class*="grade"] ion-item ion-label p,
-[class*="grade"] .addon-grades-aggregation,
-[class*="grade"] .core-detailed-item-description {
-    background-color: red !important;
+/* 1. Pinta o SEGUNDO parágrafo de VERDE (Geralmente é a Agregação/Média) */
+[class*="grade"] ion-label p:nth-of-type(1) {
+    background: green !important;
     color: white !important;
-    display: block !important; /* Garante que ele apareça para o teste */
 }
 
-/* Caso o texto esteja em um componente de nota do Ionic 7 */
-[class*="grade"] ion-note {
-    background-color: red !important;
+/* 2. Pinta o TERCEIRO parágrafo de AMARELO (Pode ser o Feedback ou Nota) */
+[class*="grade"] ion-label p:nth-of-type(2) {
+    background: yellow !important;
+    color: black !important;
+}
+
+/* 3. Tenta atingir especificamente a classe de agregação de VERMELHO */
+.addon-grades-aggregation, 
+.core-detailed-item-description {
+    background: red !important;
     color: white !important;
 }
