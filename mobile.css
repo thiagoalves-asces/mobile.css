@@ -266,31 +266,36 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
-📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas) - FORÇA BRUTA
+📍 ABAS DO MEIO DA TELA (Curso | Participantes | Notas) - OPÇÃO NUCLEAR
 ===================================================== */
 
-/* 1. Força a cor principal diretamente dentro do "esqueleto" da barra */
+/* 1. Altera a definição de "Verde (Success)" para Azul dentro das abas */
+body:not(.theme-dark) core-tabs,
+body:not(.theme-dark) ion-segment[color="success"],
 body:not(.theme-dark) ion-segment {
-    --ion-color-primary: #0C4E9C !important;
-    --ion-color-success: #0C4E9C !important; /* Engana o Moodle se ele estiver forçando verde */
+    --ion-color-success: #0C4E9C !important;
+    --ion-color-success-rgb: 12,78,156 !important;
+    --ion-color-base: #0C4E9C !important;
     --indicator-color: #0C4E9C !important;
 }
 
-/* 2. Garante o texto azul quando selecionado */
-body:not(.theme-dark) ion-segment-button.segment-button-checked {
-    color: #0C4E9C !important;
+/* 2. Ataca o componente próprio do Moodle (core-tabs) e seus estados */
+body:not(.theme-dark) core-tabs ion-segment-button,
+body:not(.theme-dark) core-course-format ion-segment-button {
     --color-checked: #0C4E9C !important;
-    border-bottom-color: #0C4E9C !important; /* Caso seja uma borda simples (Moodle antigo) */
+    --indicator-color: #0C4E9C !important;
 }
 
-/* 3. Ataca o tracinho específico (Android / Material Design) */
-body:not(.theme-dark) ion-segment-button.segment-button-checked::part(indicator),
-body:not(.theme-dark) ion-segment-button::part(indicator) {
-    background: #0C4E9C !important;
-    background-color: #0C4E9C !important;
+/* 3. Captura o texto e a borda inferior em versões antigas ou modificadas */
+body:not(.theme-dark) core-tabs .segment-button-checked,
+body:not(.theme-dark) core-tabs .tab-active,
+body:not(.theme-dark) core-tabs .is-active {
+    color: #0C4E9C !important;
+    border-bottom: 2px solid #0C4E9C !important;
+    border-bottom-color: #0C4E9C !important;
 }
 
-/* 4. Ataca o fundo seletor (iPhone / iOS) */
+/* 4. Força a parte nativa caso a renderização burle o Shadow DOM */
 body:not(.theme-dark) ion-segment-button.segment-button-checked::part(native) {
     color: #0C4E9C !important;
 }
@@ -300,14 +305,14 @@ body:not(.theme-dark) ion-segment-button.segment-button-checked::part(native) {
 ===================================================== */
 /* Separa as cores: Borda azul, mas conteúdo laranja */
 body:not(.theme-dark) ion-tab-button.tab-selected {
-  border-top: 5px solid #0C4E9C !important; /* Tracinho superior AZUL */
-  --color-selected: #fff !important;    /* Ícone/Texto LARANJA */
-  color: #fff !important;               /* Ícone/Texto LARANJA */
+  border-top: 5px solid #e3f2fd  !important; /* Tracinho superior AZUL */
+  --color-selected: #e3f2fd  !important;    /* Ícone/Texto LARANJA */
+  color: #e3f2fd  !important;               /* Ícone/Texto LARANJA */
 }
 
 /* Garante que a barra toda entenda que a seleção não é azul */
 body:not(.theme-dark) ion-tab-bar {
-  --color-selected: #fff !important;
+  --color-selected: #e3f2fd  !important;
 }
 
 
