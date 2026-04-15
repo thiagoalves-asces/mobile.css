@@ -266,6 +266,42 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
+📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
+===================================================== */
+/* Pinta o tracinho EMBAIXO do texto selecionado */
+body:not(.theme-dark) ion-segment-button::part(indicator),
+body:not(.theme-dark) ion-segment-button::part(indicator-background) {
+  background: #0C4E9C !important;
+}
+
+/* Garante que o texto selecionado fique azul */
+body:not(.theme-dark) ion-segment-button.segment-button-checked {
+  --color-checked: #0C4E9C !important;
+  color: #0C4E9C !important;
+}
+
+/* =====================================================
+📱 2. MENU INFERIOR / RODAPÉ (Painel | Mensagens | Calendário)
+===================================================== */
+/* Pinta o tracinho VERDE na parte SUPERIOR do ícone selecionado */
+body:not(.theme-dark) ion-tab-button.tab-selected {
+  border-top: 3px solid #0C4E9C !important; /* Força o azul no tracinho de cima */
+  --color-selected: #0C4E9C !important;
+  color: #0C4E9C !important;
+}
+
+/* Garante que o ícone e o texto da aba selecionada fiquem azuis */
+body:not(.theme-dark) ion-tab-bar {
+  --color-selected: #0C4E9C !important;
+}
+
+body:not(.theme-dark) ion-tab-button.tab-selected ion-icon,
+body:not(.theme-dark) ion-tab-button.tab-selected ion-label {
+  color: #0C4E9C !important;
+}
+
+
+/* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
 /* =====================================================
