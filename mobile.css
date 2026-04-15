@@ -206,105 +206,53 @@ ion-content {
 
 
 /* =====================================================
-🎨 BRANDING GLOBAL (LIGHT MODE - CORREÇÃO REAL)
-Substitui TODOS os verdes (success) por azul,
-sem afetar o modo dark
+🎨 OVERRIDE GLOBAL REAL (FUNCIONA NO MOODLE APP)
 ===================================================== */
-body.light {
 
-  /* 🔵 Cor principal */
-  --ion-color-primary: #0C4E9C;
-  --ion-color-primary-rgb: 12,78,156;
-
-  /* 🟢➡️🔵 Verde padrão → azul */
+/* 🔵 Substitui verde do sistema */
+:root {
   --ion-color-success: #0C4E9C;
   --ion-color-success-rgb: 12,78,156;
 
-  /* 🔵 Verde claro → azul claro (fundos/seleção) */
+  /* 🔵 tons derivados */
   --ion-color-success-tint: #e3f2fd;
-
-  /* 🔵 Verde escuro → azul escuro (interações) */
   --ion-color-success-shade: #0a3f7d;
-
-  /* 📊 Progresso */
-  --core-progressbar-color: #0C4E9C;
-  --core-progressbar-background: #e3f2fd;
-
-  /* 📱 Mantém menu inferior laranja */
-  --core-bottom-tabs-color-selected: #ff9800;
 }
 
 
 /* =====================================================
-🔘 BOTÕES (INTERAÇÃO)
-Remove qualquer “flash verde” ao clicar
+🔘 BOTÕES (REMOVE VERDE AO CLICAR)
 ===================================================== */
-body.light ion-button {
+ion-button {
   --background-activated: #0a3f7d;
   --background-focused: #0a3f7d;
-  --background-hover: #1565c0;
 }
 
 
 /* =====================================================
-➕ BOTÃO FLUTUANTE (FAB)
-Corrige botão "+"
+➕ BOTÃO FLUTUANTE
 ===================================================== */
-body.light ion-fab-button {
+ion-fab-button {
   --background: #0C4E9C;
   --background-activated: #0a3f7d;
-  --background-focused: #0a3f7d;
 }
 
 
 /* =====================================================
-📱 MENU INFERIOR (TABS)
-Garante ícones laranja (como padrão do app)
+📊 PROGRESSO
 ===================================================== */
-body.light ion-tab-button.tab-selected {
-  color: #ff9800 !important;
-}
-
-
-/* =====================================================
-📊 PROGRESSO (REFORÇO)
-Garante consistência visual
-===================================================== */
-body.light .core-progressbar {
+.core-progressbar {
   --background: #0C4E9C !important;
 }
 
 
 /* =====================================================
-🎯 GRADEBOOK (NOTAS)
-Azul padrão + verde apenas para aprovação
+📱 MENU INFERIOR (FORÇA LARANJA)
 ===================================================== */
-
-/* 🔵 Tudo azul */
-.core-grades-table-gradeitem, 
-.core-grades-table-grade,
-.core-grades-table-gradeitem *,
-.core-grades-table-grade * {
-    color: #0C4E9C !important;
-    fill: #0C4E9C !important;
+ion-tab-button.tab-selected {
+  color: #ff9800 !important;
 }
 
-/* 🟢 Apenas aprovados continuam verde */
-body.light .gradepass,
-body.light .gradepass *,
-body.light .core-grades-table-grade.gradepass {
-    color: #28a745 !important;
-}
-
-/* =====================================================
-📚 ÍNDICE DO CURSO (SELEÇÃO)
-===================================================== */
-body:not(.theme-dark) .core-course-index-item.item-current,
-body:not(.theme-dark) .core-course-index-item[aria-current="page"],
-body:not(.theme-dark) ion-item.item-current {
-    --ion-item-background: #e3f2fd !important; /* Fundo azul claro */
-    --color: #0C4E9C !important; /* Texto azul escuro */
-}
 
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
