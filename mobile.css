@@ -222,6 +222,23 @@ ion-content {
   /*  Tabs inferiores (remove verde da seleção) */
   --core-bottom-tabs-color-selected: #0C4E9C;
 }
+/* =====================================================
+🎨 OVERRIDE CORRETO (SOMENTE LIGHT MODE)
+===================================================== */
+
+body.light {
+
+  /* 🔵 substitui o verde principal */
+  --ion-color-success: #0C4E9C;
+  --ion-color-success-rgb: 12,78,156;
+
+  /* 🔵 substitui o verde claro (SEU PROBLEMA REAL) */
+  --ion-color-success-tint: #e3f2fd;
+
+  /* 🔵 substitui o verde escuro */
+  --ion-color-success-shade: #0a3f7d;
+
+}
 
 /* =====================================================
 🔘 BOTÕES SUCCESS → AZUL
