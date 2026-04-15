@@ -253,6 +253,22 @@ ion-tab-button.tab-selected {
   color: #ff9800 !important;
 }
 
+/* =====================================================
+📚 ÍNDICE DO CURSO - ITEM SELECIONADO (Apenas Modo Claro)
+===================================================== */
+/* Altera o fundo e a cor do texto do item ativo no menu de índice */
+body:not(.theme-dark) core-course-course-index ion-item.item-current,
+body:not(.theme-dark) .core-course-index-item.item-current {
+    --ion-item-background: #e3f2fd !important; /* Fundo azul claro */
+    --color: #0C4E9C !important; /* Texto em azul escuro */
+    color: #0C4E9C !important;
+}
+
+/* Garante que o ícone do item selecionado acompanhe o azul escuro */
+body:not(.theme-dark) core-course-course-index ion-item.item-current ion-icon,
+body:not(.theme-dark) .core-course-index-item.item-current ion-icon {
+    color: #0C4E9C !important;
+}
 
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
