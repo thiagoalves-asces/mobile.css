@@ -206,31 +206,94 @@ ion-content {
 
 
 /* =====================================================
-🎨 SUBSTITUIÇÃO GLOBAL DO VERDE PARA AZUL (APENAS MODO CLARO)
+🎨 BRANDING GLOBAL (LIGHT MODE - CORREÇÃO REAL)
+Substitui TODOS os verdes (success) por azul,
+sem afetar o modo dark
 ===================================================== */
-body:not(.theme-dark) {
-    --ion-color-success: #0C4E9C;
-    --ion-color-success-rgb: 12,78,156;
-    --ion-color-success-contrast: #ffffff;
-    --ion-color-success-contrast-rgb: 255,255,255;
-    --ion-color-success-shade: #0a4589;
-    --ion-color-success-tint: #245fa6;
+body.light {
+
+  /* 🔵 Cor principal */
+  --ion-color-primary: #0C4E9C;
+  --ion-color-primary-rgb: 12,78,156;
+
+  /* 🟢➡️🔵 Verde padrão → azul */
+  --ion-color-success: #0C4E9C;
+  --ion-color-success-rgb: 12,78,156;
+
+  /* 🔵 Verde claro → azul claro (fundos/seleção) */
+  --ion-color-success-tint: #e3f2fd;
+
+  /* 🔵 Verde escuro → azul escuro (interações) */
+  --ion-color-success-shade: #0a3f7d;
+
+  /* 📊 Progresso */
+  --core-progressbar-color: #0C4E9C;
+  --core-progressbar-background: #e3f2fd;
+
+  /* 📱 Mantém menu inferior laranja */
+  --core-bottom-tabs-color-selected: #ff9800;
 }
+
 
 /* =====================================================
-📍 ABAS INTERNAS (FIX REAL PARA ION-SEGMENT)
+🔘 BOTÕES (INTERAÇÃO)
+Remove qualquer “flash verde” ao clicar
 ===================================================== */
-body:not(.theme-dark) ion-segment {
-    --indicator-color: #0C4E9C !important;
+body.light ion-button {
+  --background-activated: #0a3f7d;
+  --background-focused: #0a3f7d;
+  --background-hover: #1565c0;
 }
 
-body:not(.theme-dark) ion-segment-button::part(indicator-background) {
-    background: #0C4E9C !important;
+
+/* =====================================================
+➕ BOTÃO FLUTUANTE (FAB)
+Corrige botão "+"
+===================================================== */
+body.light ion-fab-button {
+  --background: #0C4E9C;
+  --background-activated: #0a3f7d;
+  --background-focused: #0a3f7d;
 }
 
-body:not(.theme-dark) ion-segment-button.segment-button-checked {
-    --color: #0C4E9C !important;
-    --color-checked: #0C4E9C !important;
+
+/* =====================================================
+📱 MENU INFERIOR (TABS)
+Garante ícones laranja (como padrão do app)
+===================================================== */
+body.light ion-tab-button.tab-selected {
+  color: #ff9800 !important;
+}
+
+
+/* =====================================================
+📊 PROGRESSO (REFORÇO)
+Garante consistência visual
+===================================================== */
+body.light .core-progressbar {
+  --background: #0C4E9C !important;
+}
+
+
+/* =====================================================
+🎯 GRADEBOOK (NOTAS)
+Azul padrão + verde apenas para aprovação
+===================================================== */
+
+/* 🔵 Tudo azul */
+.core-grades-table-gradeitem, 
+.core-grades-table-grade,
+.core-grades-table-gradeitem *,
+.core-grades-table-grade * {
+    color: #0C4E9C !important;
+    fill: #0C4E9C !important;
+}
+
+/* 🟢 Apenas aprovados continuam verde */
+body.light .gradepass,
+body.light .gradepass *,
+body.light .core-grades-table-grade.gradepass {
+    color: #28a745 !important;
 }
 
 /* =====================================================
