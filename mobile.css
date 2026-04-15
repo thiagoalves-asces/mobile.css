@@ -204,54 +204,38 @@ ion-content {
     opacity:0.9;
 }
 
-
 /* =====================================================
-🎨 OVERRIDE GLOBAL REAL (FUNCIONA NO MOODLE APP)
+🎨 BRANDING GLOBAL E PROGRESSO (EXCLUSIVO MODO CLARO)
 ===================================================== */
+body:not(.theme-dark) {
+  /* Cor principal */
+  --ion-color-primary: #0C4E9C;
+  --ion-color-primary-rgb: 12,78,156;
 
-/* 🔵 Substitui verde do sistema */
-:root {
+  /* Progresso (Barra preenchida e fundo claro) */
+  --core-progressbar-color: #0C4E9C;
+  --core-progressbar-background: #e3f2fd;
+
+   /* Substitui verde do sistema (secundario) */
   --ion-color-success: #0C4E9C;
   --ion-color-success-rgb: 12,78,156;
 
-  /* 🔵 tons derivados */
+  /* tons derivados */
   --ion-color-success-tint: #e3f2fd;
   --ion-color-success-shade: #0a3f7d;
 }
 
-
 /* =====================================================
-🔘 BOTÕES (REMOVE VERDE AO CLICAR)
+🔘 BOTÕES SUCCESS → AZUL (EXCLUSIVO MODO CLARO)
 ===================================================== */
-ion-button {
-  --background-activated: #0a3f7d;
-  --background-focused: #0a3f7d;
-}
-
-
-/* =====================================================
-➕ BOTÃO FLUTUANTE
-===================================================== */
-ion-fab-button {
+body:not(.theme-dark) ion-button[color="success"] {
   --background: #0C4E9C;
-  --background-activated: #0a3f7d;
+  --color: #ffffff;
+  --background-activated: #0C4E9C;
+  --background-focused: #0C4E9C;
+  --background-hover: #0C4E9C;
 }
 
-
-/* =====================================================
-📊 PROGRESSO
-===================================================== */
-.core-progressbar {
-  --background: #0C4E9C !important;
-}
-
-
-/* =====================================================
-📱 MENU INFERIOR (FORÇA LARANJA)
-===================================================== */
-ion-tab-button.tab-selected {
-  color: #ff9800 !important;
-}
 
 /* =====================================================
 📚 ÍNDICE DO CURSO - CORREÇÃO DEFINITIVA (MODO CLARO)
@@ -263,13 +247,6 @@ body:not(.theme-dark) core-course-course-index .item-current {
     --ion-item-background: #e3f2fd !important;
     --color: #0C4E9C !important;
     color: #0C4E9C !important;
-}
-
-/* 2. Pinta a "Bola Verde" do botão de expansão com o seu Azul Escuro */
-body:not(.theme-dark) core-course-course-index .item-current ion-button {
-    --background: #0C4E9C !important; /* Troca o fundo verde por azul escuro */
-    --color: #ffffff !important;      /* Mantém a setinha branca */
-    --ripple-color: rgba(255, 255, 255, 0.3) !important;
 }
 
 /* 3. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
