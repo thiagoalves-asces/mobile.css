@@ -254,38 +254,27 @@ ion-tab-button.tab-selected {
 }
 
 /* =====================================================
-📚 ÍNDICE DO CURSO - CORREÇÃO COMPLETA (MODO CLARO)
+📚 ÍNDICE DO CURSO - CORREÇÃO DEFINITIVA (MODO CLARO)
 ===================================================== */
 
-/* 1. Fundo da Seleção e Cor do Texto Principal */
-body:not(.theme-dark) .core-course-index-item.item-current,
-body:not(.theme-dark) ion-item.item-current {
+/* 1. Fundo azul claro e texto azul escuro (Restrito APENAS ao índice) */
+body:not(.theme-dark) core-course-course-index .item-current {
     --background: #e3f2fd !important;
     --ion-item-background: #e3f2fd !important;
     --color: #0C4E9C !important;
     color: #0C4E9C !important;
 }
 
-/* 2. Remove a "Bola Verde" do Ícone de Expansão (Botão) */
-body:not(.theme-dark) .core-course-index-item.item-current ion-button,
-body:not(.theme-dark) .core-course-index-item ion-button[fill="clear"] {
-    --background: transparent !important;
-    --background-hover: rgba(12, 78, 156, 0.1) !important;
-    --background-focused: rgba(12, 78, 156, 0.1) !important;
-    --color: #0C4E9C !important;
+/* 2. Pinta a "Bola Verde" do botão de expansão com o seu Azul Escuro */
+body:not(.theme-dark) core-course-course-index .item-current ion-button {
+    --background: #0C4E9C !important; /* Troca o fundo verde por azul escuro */
+    --color: #ffffff !important;      /* Mantém a setinha branca */
+    --ripple-color: rgba(255, 255, 255, 0.3) !important;
 }
 
-/* 3. Troca a "Bola Cinza" (Ripple Effect) por um Azul Suave ao clicar */
-body:not(.theme-dark) .core-course-index-item.item-current,
-body:not(.theme-dark) .core-course-index-item ion-button {
-    --ripple-color: rgba(12, 78, 156, 0.2) !important;
-}
-
-/* 4. Garante que todos os Ícones (Seta/Chevron) fiquem Azuis */
-body:not(.theme-dark) .core-course-index-item.item-current ion-icon,
-body:not(.theme-dark) .core-course-index-item ion-button ion-icon {
+/* 3. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
+body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-button ion-icon) {
     color: #0C4E9C !important;
-    --color: #0C4E9C !important;
 }
 
 /* =====================================================
