@@ -216,24 +216,32 @@ body:not(.theme-dark) {
     --ion-color-success-shade: #0a4589;
     --ion-color-success-tint: #245fa6;
 }
+
 /* =====================================================
-🎨 BRANDING GLOBAL (LIGHT MODE APP)
+📍 ABAS INTERNAS (FIX REAL PARA ION-SEGMENT)
 ===================================================== */
-:root {
-  /* 🔵 Cor principal */
-  --ion-color-primary: #0C4E9C;
-  --ion-color-primary-rgb: 12,78,156;
-
-  /*  Progresso (barra principal) */
-  --core-progressbar-color: #0C4E9C;
-
-  /* Fundo do progresso (azul claro em vez de verde) */
-  --core-progressbar-background: #e3f2fd;
-
-  /*  Tabs inferiores (remove verde da seleção) */
-  --core-bottom-tabs-color-selected: #0C4E9C;
+body:not(.theme-dark) ion-segment {
+    --indicator-color: #0C4E9C !important;
 }
 
+body:not(.theme-dark) ion-segment-button::part(indicator-background) {
+    background: #0C4E9C !important;
+}
+
+body:not(.theme-dark) ion-segment-button.segment-button-checked {
+    --color: #0C4E9C !important;
+    --color-checked: #0C4E9C !important;
+}
+
+/* =====================================================
+📚 ÍNDICE DO CURSO (SELEÇÃO)
+===================================================== */
+body:not(.theme-dark) .core-course-index-item.item-current,
+body:not(.theme-dark) .core-course-index-item[aria-current="page"],
+body:not(.theme-dark) ion-item.item-current {
+    --ion-item-background: #e3f2fd !important; /* Fundo azul claro */
+    --color: #0C4E9C !important; /* Texto azul escuro */
+}
 
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
@@ -249,14 +257,6 @@ body:not(.theme-dark) {
 .core-grades-table-grade * {
     color: #0C4E9C !important;
     fill: #0C4E9C !important;
-}
-
-/* 1.2 NOTA VERDE (Aprovação) - Força a cor verde se a nota for de aprovação */
-/* O Moodle adiciona a classe 'gradepass' quando a nota atinge o critério */
-.gradepass, 
-.gradepass *, 
-.core-grades-table-grade.gradepass {
-    color: #28a745 !important; /* Verde padrão de sucesso */
 }
 
   /* =====================================================
