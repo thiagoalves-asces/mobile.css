@@ -290,9 +290,9 @@ body:not(.theme-dark) core-tabs .tab-active {
 ===================================================== */
 /* Separa as cores: Borda azul, mas conteúdo laranja */
 body:not(.theme-dark) ion-tab-button.tab-selected {
-  border-top: 3px solid #0C4E9C !important; /* Tracinho superior AZUL */
-  --color-selected: #F37021 !important;    /* Ícone/Texto LARANJA */
-  color: #F37021 !important;               /* Ícone/Texto LARANJA */
+  border-top: 5px solid #0C4E9C !important; /* Tracinho superior AZUL */
+  --color-selected: #fff !important;    /* Ícone/Texto LARANJA */
+  color: #fff !important;               /* Ícone/Texto LARANJA */
 }
 
 /* Garante que a barra toda entenda que a seleção não é azul */
