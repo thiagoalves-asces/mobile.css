@@ -268,36 +268,36 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 /* =====================================================
 📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
 ===================================================== */
-/* Pinta o tracinho EMBAIXO do texto selecionado */
-body:not(.theme-dark) ion-segment-button::part(indicator),
-body:not(.theme-dark) ion-segment-button::part(indicator-background) {
-  background: #0C4E9C !important;
+/* Tática 1: Usando variáveis nativas do Ionic */
+body:not(.theme-dark) ion-segment {
+  --indicator-color: #0C4E9C !important;
 }
 
-/* Garante que o texto selecionado fique azul */
-body:not(.theme-dark) ion-segment-button.segment-button-checked {
+body:not(.theme-dark) ion-segment-button {
   --color-checked: #0C4E9C !important;
+  --indicator-color: #0C4E9C !important;
+  color: var(--color-checked) !important;
+}
+
+/* Tática 2: Plano B (Caso o Moodle use abas antigas) */
+body:not(.theme-dark) core-tabs .tab-active {
   color: #0C4E9C !important;
+  border-bottom-color: #0C4E9C !important;
 }
 
 /* =====================================================
-📱 2. MENU INFERIOR / RODAPÉ (Painel | Mensagens | Calendário)
+📱 2. MENU INFERIOR / RODAPÉ (Tracinho Azul + Ícone Laranja)
 ===================================================== */
-/* Pinta o tracinho VERDE na parte SUPERIOR do ícone selecionado */
+/* Separa as cores: Borda azul, mas conteúdo laranja */
 body:not(.theme-dark) ion-tab-button.tab-selected {
-  border-top: 3px solid #0C4E9C !important; /* Força o azul no tracinho de cima */
-  --color-selected: #0C4E9C !important;
-  color: #0C4E9C !important;
+  border-top: 3px solid #0C4E9C !important; /* Tracinho superior AZUL */
+  --color-selected: #F37021 !important;    /* Ícone/Texto LARANJA */
+  color: #F37021 !important;               /* Ícone/Texto LARANJA */
 }
 
-/* Garante que o ícone e o texto da aba selecionada fiquem azuis */
+/* Garante que a barra toda entenda que a seleção não é azul */
 body:not(.theme-dark) ion-tab-bar {
-  --color-selected: #0C4E9C !important;
-}
-
-body:not(.theme-dark) ion-tab-button.tab-selected ion-icon,
-body:not(.theme-dark) ion-tab-button.tab-selected ion-label {
-  color: #0C4E9C !important;
+  --color-selected: #F37021 !important;
 }
 
 
