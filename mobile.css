@@ -266,23 +266,33 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
-📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
+📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas) - FORÇA BRUTA
 ===================================================== */
-/* Tática 1: Usando variáveis nativas do Ionic */
+
+/* 1. Força a cor principal diretamente dentro do "esqueleto" da barra */
 body:not(.theme-dark) ion-segment {
-  --indicator-color: #0C4E9C !important;
+    --ion-color-primary: #0C4E9C !important;
+    --ion-color-success: #0C4E9C !important; /* Engana o Moodle se ele estiver forçando verde */
+    --indicator-color: #0C4E9C !important;
 }
 
-body:not(.theme-dark) ion-segment-button {
-  --color-checked: #0C4E9C !important;
-  --indicator-color: #0C4E9C !important;
-  color: var(--color-checked) !important;
+/* 2. Garante o texto azul quando selecionado */
+body:not(.theme-dark) ion-segment-button.segment-button-checked {
+    color: #0C4E9C !important;
+    --color-checked: #0C4E9C !important;
+    border-bottom-color: #0C4E9C !important; /* Caso seja uma borda simples (Moodle antigo) */
 }
 
-/* Tática 2: Plano B (Caso o Moodle use abas antigas) */
-body:not(.theme-dark) core-tabs .tab-active {
-  color: #0C4E9C !important;
-  border-bottom-color: #0C4E9C !important;
+/* 3. Ataca o tracinho específico (Android / Material Design) */
+body:not(.theme-dark) ion-segment-button.segment-button-checked::part(indicator),
+body:not(.theme-dark) ion-segment-button::part(indicator) {
+    background: #0C4E9C !important;
+    background-color: #0C4E9C !important;
+}
+
+/* 4. Ataca o fundo seletor (iPhone / iOS) */
+body:not(.theme-dark) ion-segment-button.segment-button-checked::part(native) {
+    color: #0C4E9C !important;
 }
 
 /* =====================================================
@@ -297,7 +307,7 @@ body:not(.theme-dark) ion-tab-button.tab-selected {
 
 /* Garante que a barra toda entenda que a seleção não é azul */
 body:not(.theme-dark) ion-tab-bar {
-  --color-selected: #F37021 !important;
+  --color-selected: #fff !important;
 }
 
 
