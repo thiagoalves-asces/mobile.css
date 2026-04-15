@@ -236,6 +236,17 @@ body:not(.theme-dark) ion-button[color="success"] {
   --background-hover: #0C4E9C;
 }
 
+/* camada extra */
+body:not(.theme-dark) ion-button {
+  --background-activated: #0a3f7d;
+  --background-focused: #0a3f7d;
+}
+
+/* BOTÃO FLUTUANTE */
+body:not(.theme-dark) ion-fab-button {
+  --background: #0C4E9C;
+  --background-activated: #0a3f7d;
+}
 
 /* =====================================================
 📚 ÍNDICE DO CURSO - CORREÇÃO DEFINITIVA (MODO CLARO)
