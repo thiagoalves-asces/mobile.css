@@ -206,6 +206,17 @@ ion-content {
 
 
 /* =====================================================
+🎨 SUBSTITUIÇÃO GLOBAL DO VERDE PARA AZUL (APENAS MODO CLARO)
+===================================================== */
+body:not(.theme-dark) {
+    --ion-color-success: #0C4E9C;
+    --ion-color-success-rgb: 12,78,156;
+    --ion-color-success-contrast: #ffffff;
+    --ion-color-success-contrast-rgb: 255,255,255;
+    --ion-color-success-shade: #0a4589;
+    --ion-color-success-tint: #245fa6;
+}
+/* =====================================================
 🎨 BRANDING GLOBAL (LIGHT MODE APP)
 ===================================================== */
 :root {
@@ -222,98 +233,8 @@ ion-content {
   /*  Tabs inferiores (remove verde da seleção) */
   --core-bottom-tabs-color-selected: #0C4E9C;
 }
-/* =====================================================
-🎨 OVERRIDE CORRETO (SOMENTE LIGHT MODE)
-===================================================== */
-
-body.light {
-
-  /* 🔵 substitui o verde principal */
-  --ion-color-success: #0C4E9C;
-  --ion-color-success-rgb: 12,78,156;
-
-  /* 🔵 substitui o verde claro (SEU PROBLEMA REAL) */
-  --ion-color-success-tint: #e3f2fd;
-
-  /* 🔵 substitui o verde escuro */
-  --ion-color-success-shade: #0a3f7d;
-
-}
-
-/* =====================================================
-🔘 BOTÕES SUCCESS → AZUL
-===================================================== */
-ion-button[color="success"] {
-  --background: #0C4E9C;
-  --color: #ffffff;
-}
-
-/* =====================================================
-🔘 BOTÕES (INTERAÇÃO)
-===================================================== */
-ion-button {
-  --background-activated: #0a3f7d;
-  --background-focused: #0a3f7d;
-  --background-hover: #1565c0;
-}
-
-/* =====================================================
-➕ BOTÃO FLUTUANTE (FAB)
-===================================================== */
-ion-fab-button {
-  --background: #0C4E9C;
-  --background-activated: #0a3f7d;
-  --background-focused: #0a3f7d;
-}
-
-/* =====================================================
-📊 PROGRESSO (REFORÇO)
-===================================================== */
-.core-progressbar {
-  --background: #0C4E9C !important;
-}
-
-/* =====================================================
-📍 ABAS INTERNAS (FIX REAL)
-===================================================== */
-ion-segment-button.segment-button-checked,
-ion-segment-button.ion-activated {
-  color: #0C4E9C !important;
-}
-
-ion-segment-button::part(indicator) {
-  background: #0C4E9C !important;
-}
 
 
-/* =====================================================
-📂 CATEGORIAS DE CURSO
-===================================================== */
-ion-chip[color="success"] {
-  --background: #e3f2fd;
-  --color: #0C4E9C;
-}
-
-/* =====================================================
-👤 BADGES (PERFIL / STATUS)
-===================================================== */
-ion-badge[color="success"] {
-  --background: #e3f2fd;
-  --color: #0C4E9C;
-}
-
-/* =====================================================
-📚 ÍNDICE DO CURSO (SELEÇÃO)
-===================================================== */
-
-.core-course-index-item {
-  --background-hover: #e3f2fd;
-}
-
-.core-course-index-item.current {
-  background: #e3f2fd !important;
-  color: #0C4E9C !important;
-}
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
 ===================================================== */
