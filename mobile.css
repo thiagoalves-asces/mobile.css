@@ -265,6 +265,26 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
     color: #0C4E9C !important;
 }
 
+/* 1. Ataca o ícone (seta) nativo do Ionic quando o menu sanfona está aberto */
+body:not(.theme-dark) ion-accordion.accordion-expanded ion-item ion-icon,
+body:not(.theme-dark) ion-accordion.accordion-expanding ion-item ion-icon {
+  color: #0C4E9C !important;
+}
+
+/* 2. Ataca os itens colapsáveis específicos do Moodle App (versões mais recentes e antigas) */
+body:not(.theme-dark) core-collapsible-item.expanded > ion-item ion-icon,
+body:not(.theme-dark) .item-expanded ion-icon.icon-expand,
+body:not(.theme-dark) core-course-course-index .item-expanded ion-icon {
+  color: #0C4E9C !important;
+}
+
+/* 3. Sequestro de variável caso a cor esteja embutida no componente pai */
+body:not(.theme-dark) core-course-course-index,
+body:not(.theme-dark) ion-accordion-group {
+  --ion-color-success: #0C4E9C !important;
+}
+
+
 /* =====================================================
 📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
 ===================================================== */
@@ -292,18 +312,14 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 }
 
 /* =====================================================
-🏷️ NOME DA CATEGORIA (Tela de Lista de Cursos)
+🏷️ NOME DA CATEGORIA (Fundo da Etiqueta / Badge)
 ===================================================== */
-/* 1. Ataca as classes específicas de categoria e notas dentro do cartão do curso */
+/* 1. Altera o fundo da classe de categoria e das "badges" nativas do Ionic */
 body:not(.theme-dark) core-courses-course-list-item .core-course-category,
-body:not(.theme-dark) core-courses-course-list-item .text-muted,
-body:not(.theme-dark) core-courses-course-list-item ion-note {
-  color: #0C4E9C !important;
-}
-
-/* 2. Força a alteração da variável nativa de "texto secundário" APENAS nos cartões de curso */
-body:not(.theme-dark) core-courses-course-list-item {
-  --subdued-text-color: #0C4E9C !important;
+body:not(.theme-dark) core-courses-course-list-item ion-badge {
+  background-color: #0C4E9C !important;
+  --background: #0C4E9C !important; /* Para componentes Ionic isolados */
+  color: #ffffff !important;        /* Força o texto a ficar branco */
 }
 
 /* =====================================================
