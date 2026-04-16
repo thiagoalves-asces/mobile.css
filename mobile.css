@@ -292,6 +292,21 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 }
 
 /* =====================================================
+🏷️ NOME DA CATEGORIA (Tela de Lista de Cursos)
+===================================================== */
+/* 1. Ataca as classes específicas de categoria e notas dentro do cartão do curso */
+body:not(.theme-dark) core-courses-course-list-item .core-course-category,
+body:not(.theme-dark) core-courses-course-list-item .text-muted,
+body:not(.theme-dark) core-courses-course-list-item ion-note {
+  color: #0C4E9C !important;
+}
+
+/* 2. Força a alteração da variável nativa de "texto secundário" APENAS nos cartões de curso */
+body:not(.theme-dark) core-courses-course-list-item {
+  --subdued-text-color: #0C4E9C !important;
+}
+
+/* =====================================================
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
 ===================================================== */
 /* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
