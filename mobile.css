@@ -266,29 +266,32 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
-🎯 ÍNDICE DO CURSO (Bolinha de Expandir Tópico Ativo)
+🎯 ÍNDICE DO CURSO (Bolinha Verde da Seta) - CORREÇÃO FINAL
 ===================================================== */
 
-/* 1. Ataca o fundo do botão/ícone no tópico ativo para Azul e força a setinha a ficar Branca */
+/* 1. Hackeia a paleta de "Sucesso" na raiz do índice. 
+      Qualquer botão ou fundo que o Moodle tentar pintar de verde, ficará Azul. */
+body:not(.theme-dark) core-course-course-index {
+    --ion-color-success: #0C4E9C !important;
+    --ion-color-success-rgb: 12, 78, 156 !important;
+    --ion-color-success-contrast: #ffffff !important;
+    --ion-color-success-shade: #0a458a !important;
+    --ion-color-success-tint: #245fa6 !important;
+}
+
+/* 2. Força o botão e o ícone da setinha a adotarem a seta branca para dar contraste */
+body:not(.theme-dark) core-course-course-index .item-current [color="success"],
 body:not(.theme-dark) core-course-course-index .item-current ion-button,
-body:not(.theme-dark) core-course-course-index .item-current [color="success"] {
-    --background: #0C4E9C !important;
-    --ion-color-base: #0C4E9C !important;
-    background-color: #0C4E9C !important;
+body:not(.theme-dark) core-course-course-index .item-current ion-icon[name*="chevron"] {
     --color: #ffffff !important;
     color: #ffffff !important;
 }
 
-/* 2. Força o componente interno do botão (Shadow DOM do Ionic) caso ele bloqueie o CSS acima */
-body:not(.theme-dark) core-course-course-index .item-current ion-button::part(native) {
+/* 3. Caso o fundo não seja um botão, mas sim uma "div" ou classe utilitária em volta do ícone */
+body:not(.theme-dark) core-course-course-index .item-current .bg-success,
+body:not(.theme-dark) core-course-course-index .item-current .core-course-index-icon,
+body:not(.theme-dark) core-course-course-index .item-current .icon-bg {
     background-color: #0C4E9C !important;
-    color: #ffffff !important;
-}
-
-/* 3. Sequestra a variável raiz de "sucesso" especificamente para o fundo de botões no índice */
-body:not(.theme-dark) core-course-course-index .item-current {
-    --ion-color-success: #0C4E9C !important;
-    --ion-color-success-contrast: #ffffff !important;
 }
 
 /* =====================================================
