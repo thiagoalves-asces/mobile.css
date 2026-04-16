@@ -263,6 +263,12 @@ body:not(.theme-dark) core-course-course-index .item-current {
 /* 2. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
 body:not(.theme-dark) core-course-course-index .item-current ion-icon {
     color: #0C4E9C !important;
+    fill: #0C4E9C !important;
+}
+
+body:not(.theme-dark) core-course-course-index .item-current ion-icon svg,
+body:not(.theme-dark) core-course-course-index .item-current ion-icon svg path {
+    fill: #0C4E9C !important;
 }
 
 /* =====================================================
