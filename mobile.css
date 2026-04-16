@@ -266,38 +266,15 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
-📍 ABAS DO MEIO DA TELA (Curso | Participantes | Notas) - OPÇÃO NUCLEAR
+📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
 ===================================================== */
-
-/* 1. Altera a definição de "Verde (Success)" para Azul dentro das abas */
-body:not(.theme-dark) core-tabs,
-body:not(.theme-dark) ion-segment[color="success"],
-body:not(.theme-dark) ion-segment {
-    --ion-color-success: #0C4E9C !important;
-    --ion-color-success-rgb: 12,78,156 !important;
-    --ion-color-base: #0C4E9C !important;
-    --indicator-color: #0C4E9C !important;
-}
-
-/* 2. Ataca o componente próprio do Moodle (core-tabs) e seus estados */
-body:not(.theme-dark) core-tabs ion-segment-button,
-body:not(.theme-dark) core-course-format ion-segment-button {
-    --color-checked: #0C4E9C !important;
-    --indicator-color: #0C4E9C !important;
-}
-
-/* 3. Captura o texto e a borda inferior em versões antigas ou modificadas */
-body:not(.theme-dark) core-tabs .segment-button-checked,
-body:not(.theme-dark) core-tabs .tab-active,
-body:not(.theme-dark) core-tabs .is-active {
-    color: #0C4E9C !important;
-    border-bottom: 2px solid #0C4E9C !important;
-    border-bottom-color: #0C4E9C !important;
-}
-
-/* 4. Força a parte nativa caso a renderização burle o Shadow DOM */
-body:not(.theme-dark) ion-segment-button.segment-button-checked::part(native) {
-    color: #0C4E9C !important;
+body:not(.theme-dark) core-tabs, 
+body:not(.theme-dark) core-tabs-outlet {
+  /* Altera a cor do texto da aba ativa */
+  --core-tab-color-active: #0C4E9C !important;
+  
+  /* Altera a cor do tracinho indicador da aba ativa */
+  --core-tab-border-color-active: #0C4E9C !important;
 }
 
 /* =====================================================
