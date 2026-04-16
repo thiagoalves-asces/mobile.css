@@ -260,38 +260,9 @@ body:not(.theme-dark) core-course-course-index .item-current {
     color: #0C4E9C !important;
 }
 
-/* 3. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
-body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-button ion-icon) {
+/* 2. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
+body:not(.theme-dark) core-course-course-index .item-current ion-icon {
     color: #0C4E9C !important;
-}
-
-/* =====================================================
-🎯 ÍNDICE DO CURSO (Bolinha Verde da Seta) - CORREÇÃO FINAL
-===================================================== */
-
-/* 1. Hackeia a paleta de "Sucesso" na raiz do índice. 
-      Qualquer botão ou fundo que o Moodle tentar pintar de verde, ficará Azul. */
-body:not(.theme-dark) core-course-course-index {
-    --ion-color-success: #0C4E9C !important;
-    --ion-color-success-rgb: 12, 78, 156 !important;
-    --ion-color-success-contrast: #ffffff !important;
-    --ion-color-success-shade: #0a458a !important;
-    --ion-color-success-tint: #245fa6 !important;
-}
-
-/* 2. Força o botão e o ícone da setinha a adotarem a seta branca para dar contraste */
-body:not(.theme-dark) core-course-course-index .item-current [color="success"],
-body:not(.theme-dark) core-course-course-index .item-current ion-button,
-body:not(.theme-dark) core-course-course-index .item-current ion-icon[name*="chevron"] {
-    --color: #ffffff !important;
-    color: #ffffff !important;
-}
-
-/* 3. Caso o fundo não seja um botão, mas sim uma "div" ou classe utilitária em volta do ícone */
-body:not(.theme-dark) core-course-course-index .item-current .bg-success,
-body:not(.theme-dark) core-course-course-index .item-current .core-course-index-icon,
-body:not(.theme-dark) core-course-course-index .item-current .icon-bg {
-    background-color: #0C4E9C !important;
 }
 
 /* =====================================================
