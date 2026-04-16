@@ -266,26 +266,29 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-bu
 }
 
 /* =====================================================
-📂 ÍNDICE DO CURSO (Setinha de Expandir) - RASTREAMENTO POR ESTADO
+🎯 ÍNDICE DO CURSO (Bolinha de Expandir Tópico Ativo)
 ===================================================== */
-/* 1. Ataca o ícone do tipo "setinha" (chevron) quando a aba relata estar aberta */
-body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon[name*="chevron"],
-body:not(.theme-dark) core-course-course-index .item-current ion-icon {
-  color: #0C4E9C !important;
-  --ion-color-success: #0C4E9C !important;
+
+/* 1. Ataca o fundo do botão/ícone no tópico ativo para Azul e força a setinha a ficar Branca */
+body:not(.theme-dark) core-course-course-index .item-current ion-button,
+body:not(.theme-dark) core-course-course-index .item-current [color="success"] {
+    --background: #0C4E9C !important;
+    --ion-color-base: #0C4E9C !important;
+    background-color: #0C4E9C !important;
+    --color: #ffffff !important;
+    color: #ffffff !important;
 }
 
-/* 2. Cobre a classe "current" (atual) que o Moodle usa para o tópico que você está lendo agora */
-body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon,
-body:not(.theme-dark) core-course-course-index .core-course-index-current .item-inner {
-  color: #0C4E9C !important;
-  --ion-color-success: #0C4E9C !important;
+/* 2. Força o componente interno do botão (Shadow DOM do Ionic) caso ele bloqueie o CSS acima */
+body:not(.theme-dark) core-course-course-index .item-current ion-button::part(native) {
+    background-color: #0C4E9C !important;
+    color: #ffffff !important;
 }
 
-/* 3. Força a cor do ícone de detalhe nativo das listas do Ionic */
-body:not(.theme-dark) core-course-course-index ion-item {
-  --detail-icon-color-active: #0C4E9C !important;
-  --ion-item-icon-color-active: #0C4E9C !important;
+/* 3. Sequestra a variável raiz de "sucesso" especificamente para o fundo de botões no índice */
+body:not(.theme-dark) core-course-course-index .item-current {
+    --ion-color-success: #0C4E9C !important;
+    --ion-color-success-contrast: #ffffff !important;
 }
 
 /* =====================================================
