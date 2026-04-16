@@ -260,31 +260,16 @@ body:not(.theme-dark) core-course-course-index .item-current {
     color: #0C4E9C !important;
 }
 
+/* 2. Pinta a "Bola Verde" do botão de expansão com o seu Azul Escuro */
+body:not(.theme-dark) core-course-course-index .item-current ion-button {
+    --background: #0C4E9C !important; /* Troca o fundo verde por azul escuro */
+    --color: #ffffff !important;      /* Mantém a setinha branca */
+    --ripple-color: rgba(255, 255, 255, 0.3) !important;
+
 /* 3. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
 body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-button ion-icon) {
     color: #0C4E9C !important;
 }
-
-/* 1. Ataca a seta caso o Moodle injete a cor rigidamente ao clicar (success ou primary) */
-body:not(.theme-dark) core-course-course-index ion-icon[color="success"],
-body:not(.theme-dark) core-course-course-index ion-icon[color="primary"],
-body:not(.theme-dark) core-collapsible-item ion-icon[color="success"] {
-  color: #0C4E9C !important;
-}
-
-/* 2. Ataca o ícone quando o container recebe a classe de aberto/ativo */
-body:not(.theme-dark) core-course-course-index ion-item.item-expanded ion-icon,
-body:not(.theme-dark) core-course-course-index ion-item.active ion-icon,
-body:not(.theme-dark) core-collapsible-item ion-icon.icon-expanded {
-  color: #0C4E9C !important;
-}
-
-/* 3. Ataca o cofre (Shadow DOM) caso seja uma sanfona nativa do Ionic */
-body:not(.theme-dark) ion-accordion.accordion-expanded::part(toggle-icon),
-body:not(.theme-dark) ion-accordion.accordion-expanding::part(toggle-icon) {
-  color: #0C4E9C !important;
-}
-
 
 /* =====================================================
 📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
