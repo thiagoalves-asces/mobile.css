@@ -252,26 +252,40 @@ body:not(.theme-dark) ion-fab-button {
 📚 ÍNDICE DO CURSO - CORREÇÃO DEFINITIVA (MODO CLARO)
 ===================================================== */
 
-/* Altera a variável mestre do índice do curso para a cor base Azul */
-body:not(.theme-dark) core-course-course-index {
-  --ion-color-success: #0C4E9C !important;
-  --ion-color-success-rgb: 12, 78, 156 !important;
-  --toggle-icon-color: #0C4E9C !important; /* Cobre sanfonas nativas Ionic */
+/* 1. Fundo azul claro e texto azul escuro (Restrito APENAS ao índice) */
+body:not(.theme-dark) core-course-course-index .item-current {
+    --background: #e3f2fd !important;
+    --ion-item-background: #e3f2fd !important;
+    --color: #0C4E9C !important;
+    color: #0C4E9C !important;
 }
 
-/* Pinta textos e ícones (incluindo a seta) se o tópico estiver selecionado/expandido */
-body:not(.theme-dark) core-course-course-index ion-item.item-current,
-body:not(.theme-dark) core-course-course-index ion-item.item-expanded {
-  --color: #0C4E9C !important;
-  --icon-color: #0C4E9C !important;
+/* 3. Garante que ícones soltos (como a bolinha do tópico) fiquem azuis */
+body:not(.theme-dark) core-course-course-index .item-current ion-icon:not(ion-button ion-icon) {
+    color: #0C4E9C !important;
 }
 
-/* Força bruta final para capturar a setinha através de classes do Moodle ou Shadow DOM */
-body:not(.theme-dark) core-course-course-index ion-item.item-current ion-icon,
-body:not(.theme-dark) core-course-course-index ion-item.item-expanded ion-icon,
-body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon,
-body:not(.theme-dark) core-course-course-index ion-item::part(detail-icon) {
+/* =====================================================
+📂 ÍNDICE DO CURSO (Setinha de Expandir) - RASTREAMENTO POR ESTADO
+===================================================== */
+/* 1. Ataca o ícone do tipo "setinha" (chevron) quando a aba relata estar aberta */
+body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon[name*="chevron"],
+body:not(.theme-dark) core-course-course-index .item-current ion-icon {
   color: #0C4E9C !important;
+  --ion-color-success: #0C4E9C !important;
+}
+
+/* 2. Cobre a classe "current" (atual) que o Moodle usa para o tópico que você está lendo agora */
+body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon,
+body:not(.theme-dark) core-course-course-index .core-course-index-current .item-inner {
+  color: #0C4E9C !important;
+  --ion-color-success: #0C4E9C !important;
+}
+
+/* 3. Força a cor do ícone de detalhe nativo das listas do Ionic */
+body:not(.theme-dark) core-course-course-index ion-item {
+  --detail-icon-color-active: #0C4E9C !important;
+  --ion-item-icon-color-active: #0C4E9C !important;
 }
 
 /* =====================================================
