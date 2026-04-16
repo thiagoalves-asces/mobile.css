@@ -277,21 +277,42 @@ body:not(.theme-dark) core-tabs-outlet {
   --core-tab-border-color-active: #0C4E9C !important;
 }
 
+
 /* =====================================================
-📱 2. MENU INFERIOR / RODAPÉ (Tracinho Azul + Ícone Laranja)
+📱 2. MENU INFERIOR / RODAPÉ (Tracinho Azul, Ícone Branco/Laranja)
 ===================================================== */
-/* Separa as cores: Borda azul, mas conteúdo laranja */
-body:not(.theme-dark) ion-tab-button.tab-selected {
-  border-top: 5px solid #e3f2fd  !important; /* Tracinho superior AZUL */
-  --color-selected: #e3f2fd  !important;    /* Ícone/Texto LARANJA */
-  color: #e3f2fd  !important;               /* Ícone/Texto LARANJA */
+/* 1. Define a cor do ícone selecionado (Ex: Branco. Se quiser laranja, use #F37021) */
+body:not(.theme-dark) ion-tab-bar.mainmenu-tabs {
+  --core-bottom-tabs-color-selected: #e3f2fd !important; 
 }
 
-/* Garante que a barra toda entenda que a seleção não é azul */
-body:not(.theme-dark) ion-tab-bar {
-  --color-selected: #e3f2fd  !important;
+/* 2. Força EXCLUSIVAMENTE o tracinho superior a ser Azul */
+body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
+  border-top: 5px solid #e3f2fd  !important;
 }
 
+/* =====================================================
+📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
+===================================================== */
+/* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
+body:not(.theme-dark) ion-item.item-current,
+body:not(.theme-dark) ion-item[aria-current="true"] {
+  border-left-color: #0C4E9C !important;
+  border-inline-start-color: #0C4E9C !important;
+}
+
+/* 2. Sequestra a cor "verde/sucesso" dentro das telas de Configuração e Sincronização */
+body:not(.theme-dark) page-core-settings-space-usage ion-item.item-current,
+body:not(.theme-dark) page-core-settings-sync ion-item.item-current,
+body:not(.theme-dark) core-login-sites ion-item.item-current {
+  --ion-color-success: #0C4E9C !important;
+}
+
+/* 3. Prevenção extra caso o Moodle use um pseudo-elemento (triângulo no canto) */
+body:not(.theme-dark) ion-item.item-current::before,
+body:not(.theme-dark) ion-item.item-current::after {
+  background-color: #0C4E9C !important;
+}
 
 /* =====================================================
 🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
