@@ -320,25 +320,26 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 
 /* =====================================================
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
+⚠️ Restrito apenas ao MODO CLARO (.theme-light)
 ===================================================== */
 
 /* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
- body:not(.theme-dark) ion-item.item-current,
- body:not(.theme-dark) ion-item[aria-current="true"] {
+.theme-light ion-item.item-current,
+.theme-light ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
 
 /* 2. Sequestra a cor "verde/sucesso" dentro das telas de Configuração e Sincronização */
-body:not(.theme-dark) page-core-settings-space-usage ion-item.item-current,
-body:not(.theme-dark) page-core-settings-sync ion-item.item-current,
-body:not(.theme-dark) core-login-sites ion-item.item-current {
+.theme-light page-core-settings-space-usage ion-item.item-current,
+.theme-light page-core-settings-sync ion-item.item-current,
+.theme-light core-login-sites ion-item.item-current {
   --ion-color-success: #0C4E9C !important;
 }
 
 /* 3. Prevenção extra caso o Moodle use um pseudo-elemento (triângulo no canto) */
-body:not(.theme-dark) ion-item.item-current::before,
-body:not(.theme-dark) ion-item.item-current::after {
+.theme-light ion-item.item-current::before,
+.theme-light ion-item.item-current::after {
   background-color: #0C4E9C !important;
 }
 
