@@ -322,43 +322,40 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
 ===================================================== */
 
-/* 1. Aplica o seu AZUL como padrão (Vai funcionar perfeitamente no Modo Claro) */
-ion-item.item-current,
-ion-item[aria-current="true"] {
+/* ☀️ 1. MODO CLARO (Base): Pinta de Azul */
+body ion-item.item-current,
+body ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
 
-page-core-settings-space-usage ion-item.item-current,
-page-core-settings-sync ion-item.item-current,
-core-login-sites ion-item.item-current {
+body page-core-settings-space-usage ion-item.item-current,
+body page-core-settings-sync ion-item.item-current,
+body core-login-sites ion-item.item-current {
   --ion-color-success: #0C4E9C !important;
 }
 
-ion-item.item-current::before,
-ion-item.item-current::after {
+body ion-item.item-current::before,
+body ion-item.item-current::after {
   background-color: #0C4E9C !important;
 }
 
-/* -----------------------------------------------------
-🌙 2. CONTRA-ATAQUE: MODO ESCURO
-Se o tema escuro for ativado, desfazer o azul e devolver o verde
------------------------------------------------------ */
-.theme-dark ion-item.item-current,
-.theme-dark ion-item[aria-current="true"] {
-  border-left-color: #2dd36f !important; /* Devolve a borda verde do Dark Mode */
-  border-inline-start-color: #2dd36f !important;
+/* 🌙 2. MODO ESCURO (Sobrescrita): Cancela o Azul e aplica o Laranja */
+body.theme-dark ion-item.item-current,
+body.theme-dark ion-item[aria-current="true"] {
+  border-left-color: #F37021 !important; /* Laranja do Dark Mode */
+  border-inline-start-color: #F37021 !important;
 }
 
-.theme-dark page-core-settings-space-usage ion-item.item-current,
-.theme-dark page-core-settings-sync ion-item.item-current,
-.theme-dark core-login-sites ion-item.item-current {
-  --ion-color-success: #2dd36f !important; /* Devolve a variável de Sucesso original */
+body.theme-dark page-core-settings-space-usage ion-item.item-current,
+body.theme-dark page-core-settings-sync ion-item.item-current,
+body.theme-dark core-login-sites ion-item.item-current {
+  --ion-color-success: #F37021 !important; /* Retorna ao destaque laranja/verde escuro */
 }
 
-.theme-dark ion-item.item-current::before,
-.theme-dark ion-item.item-current::after {
-  background-color: #2dd36f !important;
+body.theme-dark ion-item.item-current::before,
+body.theme-dark ion-item.item-current::after {
+  background-color: #F37021 !important;
 }
 
 /* =====================================================
