@@ -321,13 +321,12 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 /* =====================================================
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
 ===================================================== */
-@media (prefers-color-scheme: light) {
+
 /* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
-    ion-item.item-current,
-    ion-item[aria-current="true"] {
+ body:not(.theme-dark) ion-item.item-current,
+ body:not(.theme-dark) ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
-}
 }
 
 /* 2. Sequestra a cor "verde/sucesso" dentro das telas de Configuração e Sincronização */
