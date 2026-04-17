@@ -320,27 +320,45 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 
 /* =====================================================
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
-⚠️ Restrito apenas ao MODO CLARO (.theme-light)
 ===================================================== */
 
-/* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
-.theme-light ion-item.item-current,
-.theme-light ion-item[aria-current="true"] {
+/* 1. Aplica o seu AZUL como padrão (Vai funcionar perfeitamente no Modo Claro) */
+ion-item.item-current,
+ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
 
-/* 2. Sequestra a cor "verde/sucesso" dentro das telas de Configuração e Sincronização */
-.theme-light page-core-settings-space-usage ion-item.item-current,
-.theme-light page-core-settings-sync ion-item.item-current,
-.theme-light core-login-sites ion-item.item-current {
+page-core-settings-space-usage ion-item.item-current,
+page-core-settings-sync ion-item.item-current,
+core-login-sites ion-item.item-current {
   --ion-color-success: #0C4E9C !important;
 }
 
-/* 3. Prevenção extra caso o Moodle use um pseudo-elemento (triângulo no canto) */
-.theme-light ion-item.item-current::before,
-.theme-light ion-item.item-current::after {
+ion-item.item-current::before,
+ion-item.item-current::after {
   background-color: #0C4E9C !important;
+}
+
+/* -----------------------------------------------------
+🌙 2. CONTRA-ATAQUE: MODO ESCURO
+Se o tema escuro for ativado, desfazer o azul e devolver o verde
+----------------------------------------------------- */
+.theme-dark ion-item.item-current,
+.theme-dark ion-item[aria-current="true"] {
+  border-left-color: #2dd36f !important; /* Devolve a borda verde do Dark Mode */
+  border-inline-start-color: #2dd36f !important;
+}
+
+.theme-dark page-core-settings-space-usage ion-item.item-current,
+.theme-dark page-core-settings-sync ion-item.item-current,
+.theme-dark core-login-sites ion-item.item-current {
+  --ion-color-success: #2dd36f !important; /* Devolve a variável de Sucesso original */
+}
+
+.theme-dark ion-item.item-current::before,
+.theme-dark ion-item.item-current::after {
+  background-color: #2dd36f !important;
 }
 
 /* =====================================================
