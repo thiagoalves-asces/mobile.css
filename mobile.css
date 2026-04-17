@@ -287,16 +287,17 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 🔔 ÍCONES GERAIS (Sino, Mensagens, Cabeçalho)
 ===================================================== */
 
-/* 1. Ataca os ícones de ação (botões) que ficam no cabeçalho/topo do app */
-:root:not(.dark) ion-header ion-toolbar ion-buttons ion-button ion-icon {
-    color: #0C4E9C !important;
-}
-
-/* 2. Ataca ícones específicos (sino e mensagens) caso estejam soltos na página ou em listas */
+/* 2. Ataca os ícones de ação*/
 :root:not(.dark) ion-icon[name*="notifications"],
 :root:not(.dark) ion-icon[name*="chatbubble"],
-:root:not(.dark) ion-icon[name*="mail"],
-:root:not(.dark) ion-icon[name*="search"] {
+:root:not(.dark) ion-icon[name*="search"],
+:root:not(.dark) ion-icon[name*="settings"],
+:root:not(.dark) ion-icon[name*="cog"],
+:root:not(.dark) ion-icon[name*="funnel"],
+:root:not(.dark) ion-icon[name*="filter"],
+:root:not(.dark) ion-icon[name*="ellipsis"],
+:root:not(.dark) ion-icon[name*="person"],
+:root:not(.dark) ion-icon[name*="menu"] {
     color: #0C4E9C !important;
 }
 
