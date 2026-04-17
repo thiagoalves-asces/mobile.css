@@ -284,6 +284,15 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 }
 
 /* =====================================================
+🔔 ÍCONES GERAIS (Sino, Mensagens, Cabeçalho)
+===================================================== */
+
+/* 2. Ataca ícones específicos (sino e mensagens) caso estejam soltos na página ou em listas */
+:root:not(.dark) ion-icon {
+    color: #0C4E9C !important;
+}
+
+/* =====================================================
 📑 4. GRADEBOOK MOBILE - LIVRO DE NOTAS (user-grade)
 ===================================================== */
 
@@ -297,17 +306,28 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 }
 
 /* 4.2 ｡˚○ LIMPEZA DA DESCRIÇÃO (Ocultar agregação de nota)  */
-             /* 4.2.1 Limite de altura da grade */
+             /* 4.2.1 ↕️ Limite de altura da grade */
 .core-grades-table-gradeitem span,
 .core-grades-table-gradeitem div {
     display: inline-block !important;
-    max-height: 1.4em !important; /* Altura cravada para aparecer apenas a primeira linha */
+    max-height: 1.4em !important; /* ↕️ Altura cravada para aparecer apenas a primeira linha */
     overflow: hidden !important;
     vertical-align: middle !important;
 }
-           /* 4.2.2 Descrição da agregação de notas fora da área visível */
+           /* 4.2.2 ➕ Descrição da agregação de notas fora da área visível */
 .core-grades-table-gradeitem br {
     display: block !important;
     content: " " !important;
     height: 100px !important;
 }
+
+
+
+
+
+                                                                                                   /* =============================
+                                                                                                        👨‍💻 Customizações Moodle
+                                                                                                           Autor: Thiago Alves
+                                                                                                           Versão: 1.0
+                                                                                                           Atualização: 2026-04-17
+                                                                                                      ============================== */
