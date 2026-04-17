@@ -256,8 +256,8 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 
 /* 3.6 🏷️ NOME DA CATEGORIA (Fundo da Etiqueta / Badge) */
       /* 3.6.1 🟦 Altera o fundo da classe de categoria e das "badges" nativas do Ionic */
-body:not(.theme-dark) core-courses-course-list-item .core-course-category,
-body:not(.theme-dark) core-courses-course-list-item ion-badge {
+body:not(.dark) core-courses-course-list-item .core-course-category,
+body:not(.dark) core-courses-course-list-item ion-badge {
   background-color: #0C4E9C !important;
   --background: #0C4E9C !important; /* Para componentes Ionic isolados */
   color: #ffffff !important;        /* Força o texto a ficar branco */
