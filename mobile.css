@@ -284,26 +284,28 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 }
 
 /* =====================================================
-🔔 ÍCONES GERAIS (Sino, Mensagens, Cabeçalho)
+🔔 ÍCONES CINZAS (Sino, Lupa, Mensagens, etc.)
+⚠️ Restrito ao Modo Claro (:root:not(.dark))
 ===================================================== */
 
-/* 2. Ataca os ícones de ação*/
-:root:not(.dark) ion-icon[name*="notifications"],
-:root:not(.dark) ion-icon[name*="chatbubble"],
-:root:not(.dark) ion-icon[name*="search"],
-:root:not(.dark) ion-icon[name*="settings"],
-:root:not(.dark) ion-icon[name*="cog"],
-:root:not(.dark) ion-icon[name*="funnel"],
-:root:not(.dark) ion-icon[name*="filter"],
-:root:not(.dark) ion-icon[name*="ellipsis"],
-:root:not(.dark) ion-icon[name*="person"],
-:root:not(.dark) ion-icon[name*="menu"] {
+/* 1. Ataca diretamente qualquer ícone ou botão marcado com a cor "medium" (Cinza do Ionic) */
+:root:not(.dark) ion-icon[color="medium"],
+:root:not(.dark) ion-button[color="medium"] ion-icon,
+:root:not(.dark) .ion-color-medium {
+    color: #0C4E9C !important;
+    --ion-color-base: #0C4E9C !important;
+}
+
+/* 2. Ataca os botões padrão de cabeçalho que herdam o cinza do sistema */
+:root:not(.dark) ion-header ion-toolbar ion-buttons ion-button,
+:root:not(.dark) ion-header ion-toolbar ion-buttons ion-button ion-icon {
     color: #0C4E9C !important;
 }
 
-/* 3. Garante que os ícones do menu lateral/inferior inativos também fiquem azuis (se desejar) */
-:root:not(.dark) core-mainmenu ion-icon,
-:root:not(.dark) core-user-menu ion-icon {
+/* 3. Ataca as classes exclusivas do Moodle para itens "acinzentados" (Muted) */
+:root:not(.dark) .text-muted ion-icon,
+:root:not(.dark) .core-icon-muted,
+:root:not(.dark) ion-icon.text-muted {
     color: #0C4E9C !important;
 }
 
