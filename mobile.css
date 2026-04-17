@@ -270,7 +270,7 @@ body:not(.theme-dark) core-course-course-index .item-expanded ion-icon,
 body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon,
 body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon {
     background-color: #e3f2fd !important; /* Pinta a "parede" da bolinha de azul */
-    color: #ffffff !important;            /* Pinta o desenho da seta de branco */
+    color: #333 !important;            /* Pinta o desenho da seta de branco */
     border-radius: 50% !important;        /* Força o formato redondo para não virar um quadrado */
 }
 
@@ -323,20 +323,20 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 ===================================================== */
 
 /* ☀️ 1. MODO CLARO (Base): Pinta de Azul */
-body ion-item.item-current,
-body ion-item[aria-current="true"] {
+body .theme-light ion-item.item-current,
+body .theme-light ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
 
-body page-core-settings-space-usage ion-item.item-current,
-body page-core-settings-sync ion-item.item-current,
-body core-login-sites ion-item.item-current {
+body .theme-light page-core-settings-space-usage ion-item.item-current,
+body .theme-light page-core-settings-sync ion-item.item-current,
+body .theme-light core-login-sites ion-item.item-current {
   --ion-color-success: #0C4E9C !important;
 }
 
-body ion-item.item-current::before,
-body ion-item.item-current::after {
+body .theme-light ion-item.item-current::before,
+body .theme-light ion-item.item-current::after {
   background-color: #0C4E9C !important;
 }
 
