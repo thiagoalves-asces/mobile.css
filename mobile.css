@@ -1,17 +1,16 @@
 /* =========================
-   CONTROLE DE VISÃO
+🕹️ CONTROLE DE VISÃO APP WEB
 ========================= */
 
 .asces-web {
   display: none !important;
 }
-
 .asces-app {
   display: block !important;
 }
 
 /* =========================
-   CONTAINER PRINCIPAL
+  1. 📦 CONTAINER PRINCIPAL (Painel)
 ========================= */
 
 #asces-dashboard-app-final {
@@ -20,23 +19,15 @@
     background: #ffffff !important;
 }
 
-
-/* =========================
-   BOTÕES CENTRALIZADOS
-========================= */
-
+/* 1.1 🔘 BOTÕES CENTRALIZADOS */
 #section-recursos a {
     display: block;
-    width: 90%;
+    width: 100%;
     margin: 0 auto 15px auto;
     text-align: center;
 }
 
-
-/* =========================
-   REMOVER BORDA DO MOODLE APP
-========================= */
-
+/* 1.2  ❌ REMOVER BORDA DO MOODLE APP */
 #asces-app ion-card,
 #asces-app ion-card-content,
 #asces-app .card,
@@ -49,24 +40,16 @@
     padding: 0 !important;
 }
 
-
-/* =========================
-   GARANTIA EXTRA (ANDROID)
-========================= */
-
+/* 1.3  GARANTIA EXTRA (ANDROID) */
 ion-content {
     --background: transparent !important;
 }
 
-
 /* =========================
-   AJUSTES VISUAIS DA DISCIPLINA (APP)
+2. 🎨 AJUSTES VISUAIS DA DISCIPLINA (APP)
 ========================= */
 
-/* =========================
-   BASE / CONTAINER
-========================= */
-
+/* 2.1 📦 BASE / CONTAINER */
 .asces-bg {
     background: linear-gradient(135deg, #167ac6 0%, #0d47a1 100%);
     border-radius:16px;
@@ -75,10 +58,7 @@ ion-content {
     font-family:'Segoe UI', sans-serif;
 }
 
-/* =========================
-   BARRA PADRÃO
-========================= */
-
+/* 2.2  📊 BARRA PADRÃO */
 .asces-bar {
     height:8px;
     width:100%;
@@ -97,10 +77,7 @@ ion-content {
     );
 }
 
-/* =========================
-   CONTAINER INTERNO
-========================= */
-
+/* 2.3 📦 CONTAINER INTERNO */
 .asces-container {
     width:100%;
     padding:40px 15px;
@@ -108,10 +85,7 @@ ion-content {
     justify-content:center;
 }
 
-/* =========================
-   GRID
-========================= */
-
+/* 2.4   ⊞ GRID */
 .asces-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
@@ -120,10 +94,7 @@ ion-content {
     max-width:1000px;
 }
 
-/* =========================
-   BOTÃO PADRÃO
-========================= */
-
+/* 2.5 🔘 BOTÃO PADRÃO */
 .asces-btn {
     display:flex;
     flex-direction:column;
@@ -168,10 +139,7 @@ ion-content {
     stroke: currentColor;
 }
 
-/* =========================
-   BLOCO INFO (banner / recurso)
-========================= */
-
+/* 2.6 ❗ BLOCO INFO (banner / recurso) */
 .asces-card {
     background:rgba(255,255,255,0.1);
     border-radius:10px;
@@ -179,20 +147,13 @@ ion-content {
     border-left:4px solid rgba(249,115,22,0.9);
 }
 
-/* =========================
-   TEXTO PADRÃO
-========================= */
-
-.asces-text {
+/* 2.7 🆃 TEXTO PADRÃO */
     color:rgba(255,255,255,0.95);
     font-size:13px;
     line-height:1.4;
 }
 
-/* =========================
-   LOGO OVERLAY
-========================= */
-
+/* 2.8 ❖ LOGO OVERLAY */
 .asces-logo {
     position:absolute;
     right:15px;
@@ -205,29 +166,27 @@ ion-content {
 }
 
 /* =====================================================
-🎨 BRANDING GLOBAL E PROGRESSO (EXCLUSIVO MODO CLARO)
+3. 🎨 BRANDING GLOBAL (Bloco de customização do APP)
 ===================================================== */
-body:not(.theme-dark) {
-  /* Cor principal */
+
+/* 3.1 🟦🟧 Esquema de CORES */
+:root:not(.dark) {
+   /* 3.1.2 🟦 Cor principal */
   --ion-color-primary: #0C4E9C;
   --ion-color-primary-rgb: 12,78,156;
 
-  /* Progresso (Barra preenchida e fundo claro) */
+   /* 3.1.2 █████ Barra de progresso */
   --core-progressbar-color: #0C4E9C;
   --core-progressbar-background: #e3f2fd;
 
-   /* Substitui verde do sistema (secundario) */
+   /* 3.1.3 🔄 Substitui verde do sistema (secundario e derivados) */
   --ion-color-success: #0C4E9C;
   --ion-color-success-rgb: 12,78,156;
-
-  /* tons derivados */
   --ion-color-success-tint: #e3f2fd;
   --ion-color-success-shade: #0a3f7d;
 }
 
-/* =====================================================
-🔘 BOTÕES SUCCESS → AZUL (EXCLUSIVO MODO CLARO)
-===================================================== */
+/* 3.2 🔘 BOTÕES SUCCESS */
 body:not(.theme-dark) ion-button[color="success"] {
   --background: #0C4E9C;
   --color: #ffffff;
@@ -235,24 +194,20 @@ body:not(.theme-dark) ion-button[color="success"] {
   --background-focused: #0C4E9C;
   --background-hover: #0C4E9C;
 }
-
-/* camada extra */
+    /* 3.2.1 ➕ camada extra */
 body:not(.theme-dark) ion-button {
   --background-activated: #0a3f7d;
   --background-focused: #0a3f7d;
 }
-
-/* BOTÃO FLUTUANTE */
+   /* 3.2.2 🔘 BOTÃO FLUTUANTE */
 body:not(.theme-dark) ion-fab-button {
   --background: #0C4E9C;
   --background-activated: #0a3f7d;
 }
 
-/* =====================================================
-📚 ÍNDICE DO CURSO - CORREÇÃO DEFINITIVA (MODO CLARO)
-===================================================== */
+/* 3.3 📚 ÍNDICE DO CURSO */ 
 
-/* 1. Fundo azul claro e texto azul escuro (Restrito APENAS ao índice) */
+/*3.3.1 🟦 Fundo azul claro e texto azul escuro */
 body:not(.theme-dark) core-course-course-index .item-current {
     --background: #e3f2fd !important;
     --ion-item-background: #e3f2fd !important;
@@ -260,11 +215,8 @@ body:not(.theme-dark) core-course-course-index .item-current {
     color: #0C4E9C !important;
 }
 
-/* =====================================================
-🎯 ÍNDICE DO CURSO (Bolinha de Expandir Tópico)
-===================================================== */
-
-/* 1. Ataca diretamente o fundo do ícone quando o tópico é o atual ou está expandido */
+/*3.3.2 ◰ Expandir Tópico */
+      /* 3.3.2.1 🔳 Fundo do ícone quando o tópico está expandido */
 body:not(.theme-dark) core-course-course-index .item-current ion-icon,
 body:not(.theme-dark) core-course-course-index .item-expanded ion-icon,
 body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon,
@@ -274,43 +226,36 @@ body:not(.theme-dark) core-course-course-index .core-course-index-current ion-ic
     border-radius: 50% !important;        /* Força o formato redondo para não virar um quadrado */
 }
 
-/* 2. Sequestra as variáveis nativas APENAS dentro desses ícones, por garantia */
+   /* 3.3.2.2 ➕ Garantia de sequestro das variáveis nativas APENAS dentro desses ícones */
 body:not(.theme-dark) core-course-course-index .item-current ion-icon,
 body:not(.theme-dark) core-course-course-index .item-expanded ion-icon {
     --background: #e3f2fd !important;
     --ion-color-success: #e3f2fd !important;
 }
 
-/* =====================================================
-📍 1. ABAS DO MEIO DA TELA (Curso | Participantes | Notas)
-===================================================== */
+/* 3.4 ⚬⚬⚬ NAVEGAÇÃO NA DISCIPLINA (Curso | Participantes | Notas) */
+     /* 3.4.1 🟦 Altera a cor do texto da aba ativa */
 body:not(.theme-dark) core-tabs, 
 body:not(.theme-dark) core-tabs-outlet {
-  /* Altera a cor do texto da aba ativa */
   --core-tab-color-active: #0C4E9C !important;
   
-  /* Altera a cor do tracinho indicador da aba ativa */
+    /* 3.4.2 🟦 Altera a cor do tracinho indicador da aba ativa */
   --core-tab-border-color-active: #0C4E9C !important;
 }
 
-
-/* =====================================================
-📱 2. MENU INFERIOR / RODAPÉ (Tracinho Azul, Ícone Branco/Laranja)
-===================================================== */
-/* 1. Define a cor do ícone selecionado (Ex: Branco. Se quiser laranja, use #F37021) */
+/* 3.5 ☰ MENU INFERIOR de navegação do RODAPÉ do App */
+      /* 3.5.1 🟦 Define a cor do ícone quando selecionado */
 body:not(.theme-dark) ion-tab-bar.mainmenu-tabs {
   --core-bottom-tabs-color-selected: #e3f2fd !important; 
 }
 
-/* 2. Força EXCLUSIVAMENTE o tracinho superior a ser Azul */
+     /* 3.5.2 ⚏ Tracinho superior */
 body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
   border-top: 5px solid #e3f2fd  !important;
 }
 
-/* =====================================================
-🏷️ NOME DA CATEGORIA (Fundo da Etiqueta / Badge)
-===================================================== */
-/* 1. Altera o fundo da classe de categoria e das "badges" nativas do Ionic */
+/* 3.6 🏷️ NOME DA CATEGORIA (Fundo da Etiqueta / Badge) */
+      /* 3.6.1 🟦 Altera o fundo da classe de categoria e das "badges" nativas do Ionic */
 body:not(.theme-dark) core-courses-course-list-item .core-course-category,
 body:not(.theme-dark) core-courses-course-list-item ion-badge {
   background-color: #0C4E9C !important;
@@ -318,11 +263,8 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
   color: #ffffff !important;        /* Força o texto a ficar branco */
 }
 
-/* =====================================================
-📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
-===================================================== */
-
-/* ☀️ MODO CLARO: Aplica o Azul apenas na ausência do modo escuro na raiz */
+/* 3.7 🔖 Cartão de informações do usuário (Uso de Espaço / Sincronização) */
+      /* 3.7.1 🟦 Aplica o Azul apenas na ausência do modo escuro na raiz */
 :root:not(.dark) ion-item.item-current,
 :root:not(.dark) ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
@@ -335,20 +277,17 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
   --ion-color-success: #0C4E9C !important;
 }
 
-/* Prevenção de pseudo-elementos apenas no modo claro */
+/* ➕ Prevenção de pseudo-elementos apenas no modo claro */
 :root:not(.dark) ion-item.item-current::before,
 :root:not(.dark) ion-item.item-current::after {
   background-color: #0C4E9C !important;
 }
 
 /* =====================================================
-🎯 GRADEBOOK MOBILE (BASE REAL DO APP - user-grade)
-===================================================== */
-/* =====================================================
-1. CONFIGURAÇÃO DE COR (Fonte e Ícones) 
+📑 4. GRADEBOOK MOBILE - LIVRO DE NOTAS (user-grade)
 ===================================================== */
 
-/* 1.1 COR AZUL (#0C4E9C) - Aplica em tudo (Itens, Notas e Ícones) */
+/* 4.1 💧 CONFIGURAÇÃO DE COR (Aplica em Itens, Notas e Ícones)  */
 .core-grades-table-gradeitem, 
 .core-grades-table-grade,
 .core-grades-table-gradeitem *,
@@ -357,11 +296,8 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
     fill: #0C4E9C !important;
 }
 
-  /* =====================================================
-2. LIMPEZA DA DESCRIÇÃO (Ocultar agregação de nota)
-===================================================== */
-
-/* Limita a altura para mostrar apenas a primeira linha de texto */
+/* 4.2 ｡˚○ LIMPEZA DA DESCRIÇÃO (Ocultar agregação de nota)  */
+             /* 4.2.1 Limite de altura da grade */
 .core-grades-table-gradeitem span,
 .core-grades-table-gradeitem div {
     display: inline-block !important;
@@ -369,8 +305,7 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
     overflow: hidden !important;
     vertical-align: middle !important;
 }
-
-/* Cria o espaçamento que joga a descrição para fora da área visível */
+           /* 4.2.2 Descrição da agregação de notas fora da área visível */
 .core-grades-table-gradeitem br {
     display: block !important;
     content: " " !important;
