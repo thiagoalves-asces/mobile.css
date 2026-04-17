@@ -269,7 +269,7 @@ body:not(.theme-dark) core-course-course-index .item-current ion-icon,
 body:not(.theme-dark) core-course-course-index .item-expanded ion-icon,
 body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon,
 body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon {
-    background-color: #0C4E9C !important; /* Pinta a "parede" da bolinha de azul */
+    background-color: #e3f2fd !important; /* Pinta a "parede" da bolinha de azul */
     color: #ffffff !important;            /* Pinta o desenho da seta de branco */
     border-radius: 50% !important;        /* Força o formato redondo para não virar um quadrado */
 }
@@ -277,8 +277,8 @@ body:not(.theme-dark) core-course-course-index .core-course-index-current ion-ic
 /* 2. Sequestra as variáveis nativas APENAS dentro desses ícones, por garantia */
 body:not(.theme-dark) core-course-course-index .item-current ion-icon,
 body:not(.theme-dark) core-course-course-index .item-expanded ion-icon {
-    --background: #0C4E9C !important;
-    --ion-color-success: #0C4E9C !important;
+    --background: #e3f2fd !important;
+    --ion-color-success: #e3f2fd !important;
 }
 
 /* =====================================================
