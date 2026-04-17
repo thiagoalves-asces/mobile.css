@@ -187,56 +187,56 @@ ion-content {
 }
 
 /* 3.2 🔘 BOTÕES SUCCESS */
-body:not(.theme-dark) ion-button[color="success"] {
+:root:not(.dark) ion-button[color="success"] {
   --background: #0C4E9C;
   --color: #ffffff;
   --background-activated: #0C4E9C;
   --background-focused: #0C4E9C;
   --background-hover: #0C4E9C;
 }
-    /* 3.2.1 ➕ camada extra */
-body:not(.theme-dark) ion-button {
+        /* 3.2.1 ➕ camada extra */
+:root:not(.dark) ion-button {
   --background-activated: #0a3f7d;
   --background-focused: #0a3f7d;
 }
-   /* 3.2.2 🔘 BOTÃO FLUTUANTE */
-body:not(.theme-dark) ion-fab-button {
+       /* 3.2.2 🔘 BOTÃO FLUTUANTE */
+:root:not(.dark) ion-fab-button {
   --background: #0C4E9C;
   --background-activated: #0a3f7d;
 }
 
 /* 3.3 📚 ÍNDICE DO CURSO */ 
 
-/*3.3.1 🟦 Fundo azul claro e texto azul escuro */
-body:not(.theme-dark) core-course-course-index .item-current {
+    /*3.3.1 🟦 Fundo azul claro e texto azul escuro */
+:root:not(.dark) core-course-course-index .item-current {
     --background: #e3f2fd !important;
     --ion-item-background: #e3f2fd !important;
     --color: #0C4E9C !important;
     color: #0C4E9C !important;
 }
 
-/*3.3.2 ◰ Expandir Tópico */
+    /*3.3.2 ◰ Expandir Tópico */
       /* 3.3.2.1 🔳 Fundo do ícone quando o tópico está expandido */
-body:not(.theme-dark) core-course-course-index .item-current ion-icon,
-body:not(.theme-dark) core-course-course-index .item-expanded ion-icon,
-body:not(.theme-dark) core-course-course-index [aria-expanded="true"] ion-icon,
-body:not(.theme-dark) core-course-course-index .core-course-index-current ion-icon {
+:root:not(.dark) core-course-course-index .item-current ion-icon,
+:root:not(.dark) core-course-course-index .item-expanded ion-icon,
+:root:not(.dark) core-course-course-index [aria-expanded="true"] ion-icon,
+:root:not(.dark) core-course-course-index .core-course-index-current ion-icon {
     background-color: #e3f2fd !important; /* Pinta a "parede" da bolinha de azul */
     color: #333 !important;            /* Pinta o desenho da seta de branco */
     border-radius: 50% !important;        /* Força o formato redondo para não virar um quadrado */
 }
 
    /* 3.3.2.2 ➕ Garantia de sequestro das variáveis nativas APENAS dentro desses ícones */
-body:not(.theme-dark) core-course-course-index .item-current ion-icon,
-body:not(.theme-dark) core-course-course-index .item-expanded ion-icon {
+:root:not(.dark) core-course-course-index .item-current ion-icon,
+:root:not(.dark) core-course-course-index .item-expanded ion-icon {
     --background: #e3f2fd !important;
     --ion-color-success: #e3f2fd !important;
 }
 
 /* 3.4 ⚬⚬⚬ NAVEGAÇÃO NA DISCIPLINA (Curso | Participantes | Notas) */
      /* 3.4.1 🟦 Altera a cor do texto da aba ativa */
-body:not(.theme-dark) core-tabs, 
-body:not(.theme-dark) core-tabs-outlet {
+:root:not(.dark) core-tabs, 
+:root:not(.dark) core-tabs-outlet {
   --core-tab-color-active: #0C4E9C !important;
   
     /* 3.4.2 🟦 Altera a cor do tracinho indicador da aba ativa */
