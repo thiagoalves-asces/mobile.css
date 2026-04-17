@@ -15,15 +15,14 @@
 
 /* 1. Esconde o nome original "encolhendo" a fonte dele para zero */
 ion-header ion-title {
-    font-size: 0px !important; 
+  display: none !important; 
 }
 
 /* 2. Injeta o novo nome que vai aparecer no aplicativo */
-ion-header ion-title::after {
+ion-header ion-toolbar ion-title: {
     content: "MOODLE ASCES-UNITA" !important; /* Substitua pelo nome desejado */
-    font-size: 18px !important; /* Tamanho da fonte do novo texto */
+    font-size: 14px !important; /* Tamanho da fonte do novo texto */
     font-weight: bold !important; /* Deixa o texto em negrito (opcional) */
-    visibility: visible !important;
 }
 
 /* =========================
