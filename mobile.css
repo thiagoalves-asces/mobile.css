@@ -9,6 +9,40 @@
   display: block !important;
 }
 
+/* =====================================================
+0. 🏷️ TROCA DO NOME DO SITE E ADIÇÃO DE LOGO NO CABEÇALHO
+===================================================== */
+
+/* 1. Prepara a barra, esconde o texto original e alinha os itens */
+ion-header ion-title {
+    font-size: 0px !important; 
+    display: flex !important;
+    align-items: center !important; /* Alinha a logo e o texto na mesma linha */
+}
+
+/* 2. Injeta a LOGO ANTES do texto */
+ion-header ion-title::before {
+    content: "" !important;
+    display: inline-block !important;
+    width: 14px !important;  /* LARGURA do escudo: ajuste conforme precisar */
+    height: 14px !important; /* ALTURA do escudo: ajuste conforme precisar */
+    background-image: url("https://moodle.asces.edu.br/draftfile.php/463373/user/draft/628682860/Design%20sem%20nome%20%2810%29.png") !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    margin-right: 8px !important; /* Espaço entre o escudo e o texto */
+    visibility: visible !important;
+}
+
+/* 3. Injeta o NOVO NOME DEPOIS da logo */
+ion-header ion-title::after {
+    content: "MOODLE ASCES-UNITA" !important; 
+    font-size: 18px !important; 
+    font-weight: bold !important; 
+    visibility: visible !important;
+}
+
+
 /* =========================
   1. 📦 CONTAINER PRINCIPAL (Painel)
 ========================= */
