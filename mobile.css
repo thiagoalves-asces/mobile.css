@@ -323,8 +323,8 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 ===================================================== */
 @media (prefers-color-scheme: light) {
 /* 1. Altera a cor do "risquinho" (borda lateral) indicativo de conta ativa */
-body:not(.theme-dark) ion-item.item-current,
-body:not(.theme-dark) ion-item[aria-current="true"]
+    ion-item.item-current,
+    ion-item[aria-current="true"]
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
