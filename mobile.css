@@ -322,40 +322,23 @@ body:not(.theme-dark) core-courses-course-list-item ion-badge {
 📦 CARTÕES DE CONTA E SITE (Uso de Espaço / Sincronização)
 ===================================================== */
 
-/* ☀️ 1. MODO CLARO (Base): Pinta de Azul */
-body .theme-light ion-item.item-current,
-body .theme-light ion-item[aria-current="true"] {
+/* ☀️ MODO CLARO: Aplica o Azul apenas na ausência do modo escuro na raiz */
+:root:not(.dark) ion-item.item-current,
+:root:not(.dark) ion-item[aria-current="true"] {
   border-left-color: #0C4E9C !important;
   border-inline-start-color: #0C4E9C !important;
 }
 
-body .theme-light page-core-settings-space-usage ion-item.item-current,
-body .theme-light page-core-settings-sync ion-item.item-current,
-body .theme-light core-login-sites ion-item.item-current {
+:root:not(.dark) page-core-settings-space-usage ion-item.item-current,
+:root:not(.dark) page-core-settings-sync ion-item.item-current,
+:root:not(.dark) core-login-sites ion-item.item-current {
   --ion-color-success: #0C4E9C !important;
 }
 
-body .theme-light ion-item.item-current::before,
-body .theme-light ion-item.item-current::after {
+/* Prevenção de pseudo-elementos apenas no modo claro */
+:root:not(.dark) ion-item.item-current::before,
+:root:not(.dark) ion-item.item-current::after {
   background-color: #0C4E9C !important;
-}
-
-/* 🌙 2. MODO ESCURO (Sobrescrita): Cancela o Azul e aplica o Laranja */
-body.theme-dark ion-item.item-current,
-body.theme-dark ion-item[aria-current="true"] {
-  border-left-color: #F37021 !important; /* Laranja do Dark Mode */
-  border-inline-start-color: #F37021 !important;
-}
-
-body.theme-dark page-core-settings-space-usage ion-item.item-current,
-body.theme-dark page-core-settings-sync ion-item.item-current,
-body.theme-dark core-login-sites ion-item.item-current {
-  --ion-color-success: #F37021 !important; /* Retorna ao destaque laranja/verde escuro */
-}
-
-body.theme-dark ion-item.item-current::before,
-body.theme-dark ion-item.item-current::after {
-  background-color: #F37021 !important;
 }
 
 /* =====================================================
