@@ -10,33 +10,37 @@
 }
 
 /* =====================================================
-🏷️ CABEÇALHO PERSONALIZADO (FIX FINAL)
+🏷️ CABEÇALHO - TESTE DE SOBREPOSIÇÃO TOTAL
 ===================================================== */
 
-/* Remove o título padrão apenas na Home */
-[data-page-name="core-mainmenu-home"] ion-header ion-title .toolbar-title,
-[data-page-name="core-mainmenu-home"] ion-header ion-title .title-default {
-    display: none !important;
+/* 1. Esconde o texto original de forma agressiva */
+ion-toolbar ion-title {
+    --color: transparent !important;
+    color: transparent !important;
+    font-size: 0 !important;
 }
 
-/* Injeta o conteúdo no container do título */
-[data-page-name="core-mainmenu-home"] ion-header ion-title::before {
-    display: flex !important;
-    align-items: center !important;
-    height: 44px;
-    
-    /* TEXTO */
+/* 2. Injeta o novo conteúdo diretamente no toolbar */
+ion-toolbar::after {
     content: "MOODLE ASCES-UNITA" !important;
+    position: absolute;
+    left: 50px; /* Espaço para o botão de menu */
+    top: 50%;
+    transform: translateY(-50%);
     color: #FFFFFF !important;
     font-size: 16px !important;
     font-weight: bold !important;
+    z-index: 10;
+    pointer-events: none;
     
-    /* ÍCONE (CHAPÉU) */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
+    /* ÍCONE SVG */
+    display: flex !important;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: 22px;
     background-position: left center;
-    padding-left: 32px;
+    padding-left: 30px;
 }
 
 /* =========================
