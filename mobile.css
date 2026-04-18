@@ -10,22 +10,20 @@
 }
 
 /* =====================================================
-🏷️ SOLUÇÃO DEFINITIVA: NOME E LOGO NAS PÁGINAS INICIAIS
+🏷️ SOLUÇÃO ESCALÁVEL: NOME E LOGO (BASEADO NA NAVEGAÇÃO)
 ===================================================== */
 
-/* 1. Alvo 1: Cabeçalho restrito APENAS ao Painel, Meus Cursos e Início do Site */
-core-courses-dashboard ion-toolbar ion-title,
-core-courses-my-courses ion-toolbar ion-title,
-core-sitehome-index ion-toolbar ion-title {
-    --color: transparent !important;
-    color: transparent !important;
+/* 1. Alvo 1: Cabeçalhos que NÃO possuem botão de voltar (Páginas Iniciais) */
+/* Ataca diretamente o h1 dentro do título para não quebrar a barra */
+ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1 {
     font-size: 0px !important; 
+    color: transparent !important;
     display: flex !important;
     align-items: center !important; 
     justify-content: center !important; 
 }
 
-/* Alvo 2: Menu Lateral (o HTML que você confirmou que existe) */
+/* Alvo 2: Menu Lateral (Essa parte sempre funcionou bem) */
 .core-mainmenu-siteinfo h2 {
     font-size: 0px !important;
     color: transparent !important;
@@ -34,10 +32,8 @@ core-sitehome-index ion-toolbar ion-title {
     justify-content: flex-start !important;
 }
 
-/* 2. Injeção do Escudo (SVG) apenas nos locais corretos */
-core-courses-dashboard ion-toolbar ion-title::before,
-core-courses-my-courses ion-toolbar ion-title::before,
-core-sitehome-index ion-toolbar ion-title::before,
+/* 2. Injeção do Escudo (SVG) */
+ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::before,
 .core-mainmenu-siteinfo h2::before {
     content: "" !important;
     display: inline-block !important;
@@ -49,10 +45,8 @@ core-sitehome-index ion-toolbar ion-title::before,
     margin-right: 8px !important;
 }
 
-/* 3. Injeção do Novo Nome apenas nos locais corretos */
-core-courses-dashboard ion-toolbar ion-title::after,
-core-courses-my-courses ion-toolbar ion-title::after,
-core-sitehome-index ion-toolbar ion-title::after,
+/* 3. Injeção do Novo Nome (Moodle - ASCES - UNITA) */
+ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::after,
 .core-mainmenu-siteinfo h2::after {
     content: "Moodle - ASCES - UNITA" !important;
     font-size: 16px !important;
@@ -62,21 +56,17 @@ core-sitehome-index ion-toolbar ion-title::after,
 }
 
 /* 4. AJUSTE PARA O MODO ESCURO */
-.dark core-courses-dashboard ion-toolbar ion-title::after,
-.dark core-courses-my-courses ion-toolbar ion-title::after,
-.dark core-sitehome-index ion-toolbar ion-title::after,
+.dark ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::after,
 .dark .core-mainmenu-siteinfo h2::after {
     color: #ffffff !important;
 }
 
-.dark core-courses-dashboard ion-toolbar ion-title::before,
-.dark core-courses-my-courses ion-toolbar ion-title::before,
-.dark core-sitehome-index ion-toolbar ion-title::before,
+.dark ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::before,
 .dark .core-mainmenu-siteinfo h2::before {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
 }
 
-/* Opcional: Limpa a URL no menu lateral para não ficar redundante */
+/* Opcional: Limpa a URL no menu lateral */
 .core-mainmenu-siteinfo p {
     display: none !important;
 }
