@@ -10,39 +10,43 @@
 }
 
 /* =====================================================
-🏷️ CABEÇALHO PERSONALIZADO (ALINHAMENTO EM LINHA ÚNICA)
+🏷️ CABEÇALHO PERSONALIZADO (APENAS NA PÁGINA INICIAL)
 ===================================================== */
 
-/* 1. Esconde o texto original */
-ion-header ion-title {
+/* O segredo está no seletor :host-context ou na classe da página. 
+   No Moodle App, a página inicial costuma ser identificada por 'core-mainmenu-home' */
+
+:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title,
+[data-page-name="core-mainmenu-home"] ion-header ion-title {
     color: transparent !important;
     font-size: 0 !important;
-    display: flex !important; /* Transforma o título em um container flexível */
-    align-items: center !important; /* Alinha ícone e texto verticalmente no centro */
-    justify-content: flex-start !important; /* Alinha ao início (esquerda) */
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
 }
 
-/* 2. Injeta o ÍCONE BRANCO */
-ion-header ion-title::before {
+/* Injeta o ÍCONE BRANCO apenas na Home */
+:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title::before,
+[data-page-name="core-mainmenu-home"] ion-header ion-title::before {
     content: "";
     display: inline-block;
-    min-width: 30px; /* Garante que o ícone não suma */
+    min-width: 30px;
     height: 30px;
     margin-right: 10px;
-    
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-/* 3. Injeta o NOVO TEXTO BRANCO */
-ion-header ion-title::after {
+/* Injeta o TEXTO apenas na Home */
+:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title::after,
+[data-page-name="core-mainmenu-home"] ion-header ion-title::after {
     content: "MOODLE ASCES-UNITA" !important;
     font-size: 18px !important;
     font-weight: bold !important;
     color: #FFFFFF !important;
-    white-space: nowrap !important; /* Impede que o texto quebre linha */
+    white-space: nowrap !important;
     display: inline-block !important;
 }
 
