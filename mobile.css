@@ -10,6 +10,154 @@
 }
 
 /* =====================================================
+🎨 ASCES UNITA - SSO PREMIUM (TESTE)
+Afeta SOMENTE a tela de login SSO
+===================================================== */
+
+/* FUNDO (somente login) */
+.core-login-identityprovider ion-content {
+    --background: #ffffff;
+}
+
+/* 🔵 BARRA SUPERIOR */
+.core-login-identityprovider::before {
+    content: "";
+    position: fixed;
+    top: env(safe-area-inset-top);
+    left: 0;
+    width: 100%;
+    height: 8px;
+
+    background: linear-gradient(
+        to right,
+        #1976d2 0%,
+        #1976d2 28%,
+        #1565c0 28%,
+        #1565c0 50%,
+        #0d47a1 50%,
+        #0d47a1 65%,
+        #ff9800 65%,
+        #ff9800 82%,
+        #ff6f00 82%,
+        #ff6f00 100%
+    );
+
+    z-index: 9999;
+}
+
+/* 🔵 BARRA INFERIOR */
+.core-login-identityprovider::after {
+    content: "";
+    position: fixed;
+    bottom: env(safe-area-inset-bottom);
+    left: 0;
+    width: 100%;
+    height: 8px;
+
+    background: linear-gradient(
+        to right,
+        #1976d2 0%,
+        #1976d2 28%,
+        #1565c0 28%,
+        #1565c0 50%,
+        #0d47a1 50%,
+        #0d47a1 65%,
+        #ff9800 65%,
+        #ff9800 82%,
+        #ff6f00 82%,
+        #ff6f00 100%
+    );
+
+    z-index: 9999;
+}
+
+/* 📦 CONTAINER CENTRAL */
+.core-login-identityprovider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 🏛 LOGO PRINCIPAL */
+.core-login-identityprovider img {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* 📝 TEXTOS */
+.core-login-identityprovider h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1c1c1c;
+}
+
+/* URL */
+.core-login-identityprovider p:first-of-type {
+    font-size: 13px;
+    color: #6b7c93;
+    margin-bottom: 20px;
+}
+
+/* TEXTO CUSTOM */
+.core-login-identityprovider h2::after {
+    content: "Autenticar usando sua conta em:";
+    display: block;
+    font-size: 14px;
+    color: #6b7c93;
+    margin-top: 25px;
+    font-weight: 400;
+}
+
+/* 🔘 BOTÃO SSO (ISOLADO) */
+.core-login-identityprovider ion-button {
+    width: 100%;
+    max-width: 300px;
+    height: 52px;
+
+    --background: linear-gradient(135deg, #0057b8, #3b82f6);
+    color: #ffffff;
+
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 6px 20px rgba(59,130,246,0.3);
+}
+
+/* ÍCONE DE SAÍDA (ISOLADO) */
+.core-login-identityprovider ion-button::after {
+    content: "↗";
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+/* TEXTO REDIRECIONAMENTO */
+.core-login-identityprovider p:last-of-type {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-top: 15px;
+}
+
+/* ✨ LOGO NEON (SOMENTE NO LOGIN) */
+.core-login-identityprovider .asces-logo {
+    position: fixed !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    z-index: 10000;
+
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+/* =====================================================
 🏷️ ALVO ISOLADO E CORRIGIDO: APENAS INÍCIO, PAINEL E MEUS CURSOS
 ===================================================== */
 
