@@ -349,10 +349,10 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 ===================================================== */
 
 /* 4.1 💧 CONFIGURAÇÃO DE COR (Aplica em Itens, Notas e Ícones)  */
-.core-grades-table-gradeitem, 
-.core-grades-table-grade,
-.core-grades-table-gradeitem *,
-.core-grades-table-grade * {
+:root:not(.dark) .core-grades-table-gradeitem, 
+:root:not(.dark) .core-grades-table-grade,
+:root:not(.dark) .core-grades-table-gradeitem *,
+:root:not(.dark) .core-grades-table-grade * {
     color: #0C4E9C !important;
     fill: #0C4E9C !important;
 }
