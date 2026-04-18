@@ -13,16 +13,7 @@
 🏷️ CABEÇALHO - FILTRO PELA LUPA (HOME)
 ===================================================== */
 
-/* 1. Reset da Logo Overlay (Garantir que ela não suba) */
-.asces-logo {
-    position: fixed !important;
-    right: 15px !important;
-    bottom: 25px !important;
-    top: auto !important;
-    z-index: 9999 !important;
-}
-
-/* 2. Alvo: ion-title que está na mesma barra que o botão de busca (lupa)
+/* 1. Alvo: ion-title que está na mesma barra que o botão de busca (lupa)
    Isso evita que mude as páginas de Configurações, que não têm lupa. */
 
 ion-header:has(ion-button[core-search-box], .core-search-icon) ion-title {
@@ -31,7 +22,7 @@ ion-header:has(ion-button[core-search-box], .core-search-icon) ion-title {
     font-size: 0 !important;
 }
 
-/* 3. Injeta o ÍCONE + TEXTO apenas onde a regra acima se aplicou */
+/* 2. Injeta o ÍCONE + TEXTO apenas onde a regra acima se aplicou */
 ion-header:has(ion-button[core-search-box], .core-search-icon) ion-title::before {
     content: "MOODLE ASCES-UNITA" !important;
     display: flex !important;
@@ -198,10 +189,7 @@ ion-content {
     position: fixed !important;
     right: 15px !important;
     bottom: 25px !important;
-    /* Adicione as linhas abaixo para garantir que ela não suba */
-    top: auto !important; 
-    left: auto !important;
-    display: block !important;
+    top: auto !important;
     z-index: 9999 !important;
 }
 
