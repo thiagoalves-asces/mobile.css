@@ -10,14 +10,13 @@
 }
 
 /* =====================================================
-🏷️ CABEÇALHO PERSONALIZADO (APENAS NA PÁGINA INICIAL)
+🏷️ CABEÇALHO PERSONALIZADO (VERSÃO COMPATÍVEL)
 ===================================================== */
 
-/* O segredo está no seletor :host-context ou na classe da página. 
-   No Moodle App, a página inicial costuma ser identificada por 'core-mainmenu-home' */
-
-:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title,
-[data-page-name="core-mainmenu-home"] ion-header ion-title {
+/* 1. Alvo: ion-title dentro da página inicial ou do site plugin */
+.ion-page.mainmenu-home ion-title,
+.ion-page.core-siteplugins-index ion-title,
+ion-header ion-title:first-child {
     color: transparent !important;
     font-size: 0 !important;
     display: flex !important;
@@ -25,25 +24,27 @@
     justify-content: flex-start !important;
 }
 
-/* Injeta o ÍCONE BRANCO apenas na Home */
-:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title::before,
-[data-page-name="core-mainmenu-home"] ion-header ion-title::before {
+/* 2. Injeta o ÍCONE BRANCO */
+.ion-page.mainmenu-home ion-title::before,
+.ion-page.core-siteplugins-index ion-title::before,
+ion-header ion-title:first-child::before {
     content: "";
     display: inline-block;
-    min-width: 30px;
-    height: 30px;
+    min-width: 28px;
+    height: 28px;
     margin-right: 10px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
 }
 
-/* Injeta o TEXTO apenas na Home */
-:host-context([data-page-name="core-mainmenu-home"]) ion-header ion-title::after,
-[data-page-name="core-mainmenu-home"] ion-header ion-title::after {
+/* 3. Injeta o TEXTO BRANCO */
+.ion-page.mainmenu-home ion-title::after,
+.ion-page.core-siteplugins-index ion-title::after,
+ion-header ion-title:first-child::after {
     content: "MOODLE ASCES-UNITA" !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: bold !important;
     color: #FFFFFF !important;
     white-space: nowrap !important;
