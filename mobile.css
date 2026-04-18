@@ -346,9 +346,9 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 :root:not(.dark) .core-grades-table-gradeitem, 
 :root:not(.dark) .core-grades-table-grade,
 :root:not(.dark) .core-grades-table-gradeitem *,
-:root:not(.dark) .core-grades-table-grade * {
-    color: #0C4E9C !important;
-    fill: #0C4E9C !important;
+:root:not(.dark) .core-grades-table-grade  {
+    color: #0C4E9C;
+    fill: #0C4E9C;
 }
 
 /* 4.2 ｡˚○ LIMPEZA DA DESCRIÇÃO (Ocultar agregação de nota)  */
