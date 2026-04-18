@@ -309,7 +309,7 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
   color: #ffffff !important;        /* Força o texto a ficar branco */
 }
 
-/* 3.7 🔖 Cartão de informações do usuário (Uso de Espaço / Sincronização) */
+/* 3.7 🔖 CARTÃO de informações do usuário (Uso de Espaço / Sincronização) */
       /* 3.7.1 🟦 Aplica o Azul apenas na ausência do modo escuro na raiz */
 :root:not(.dark) ion-item.item-current,
 :root:not(.dark) ion-item[aria-current="true"] {
@@ -329,28 +329,25 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
   background-color: #0C4E9C !important;
 }
 
-/* =====================================================
-🎨 ÍCONES DOS MENUS (Três pontinhos e Configurações)
-⚠️ Aplica apenas quando o modo escuro NÃO está ativo
-===================================================== */
-
-/* Alvo: Ícones dentro de listas, menus de contexto e itens de configuração */
-body:not(.dark-mode) ion-list ion-item ion-icon,
-body:not(.dark-mode) ion-popover ion-item ion-icon,
-body:not(.dark-mode) .item-side ion-icon {
+/* 3.8 ☰ ÍCONES DOS MENUS (Configurações) */
+    /* 3.8.1 🟦 Ícones dentro de listas, menus de contexto e itens de configuração */
+:root:not(.dark) ion-list ion-item ion-icon,
+:root:not(.dark) ion-popover ion-item ion-icon,
+:root:not(.dark) .item-side ion-icon {
     color: #0C4E9C !important;
     --color: #0C4E9C !important;
 }
 
-/* Garante que o texto ao lado do ícone não mude, apenas o ícone */
-body:not(.dark-mode) ion-item ion-icon {
+  /* 3.8.2 ➕ Garante que o texto ao lado do ícone não mude, apenas o ícone */
+:root:not(.dark) ion-item ion-icon {
     fill: #0C4E9C !important;
 }
 
-/* Caso o Moodle use a classe específica de ícones de navegação/configuração */
-body:not(.dark-mode) .core-icon {
+  /* 3.8.3 ➕ Caso o Moodle use a classe específica de ícones de navegação/configuração */
+:root:not(.dark) .core-icon {
     color: #0C4E9C !important;
 }
+
 /* =====================================================
 📑 4. GRADEBOOK MOBILE - LIVRO DE NOTAS (user-grade)
 ===================================================== */
