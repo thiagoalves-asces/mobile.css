@@ -10,11 +10,13 @@
 }
 
 /* =====================================================
-🏷️ ALVO DEFINITIVO: CABEÇALHO DA TELA PRINCIPAL E CURSOS
+🏷️ ALVO ISOLADO: APENAS INÍCIO, PAINEL E MEUS CURSOS
 ===================================================== */
 
-/* 1. Esconde o título APENAS nas telas principais (que possuem abas no rodapé) */
-ion-tabs ion-toolbar ion-title {
+/* 1. Esconde o título APENAS nas 3 páginas principais */
+core-courses-dashboard ion-toolbar ion-title,
+core-sitehome-index ion-toolbar ion-title,
+core-courses-my-courses ion-toolbar ion-title {
     --color: transparent !important;
     color: transparent !important;
     font-size: 0px !important;
@@ -23,24 +25,29 @@ ion-tabs ion-toolbar ion-title {
     justify-content: center !important;
 }
 
-/* 2. Injeta o Escudo (SVG) no cabeçalho principal */
-ion-tabs ion-toolbar ion-title::before {
+/* 2. Injeta o Escudo (SVG) APENAS nestas páginas */
+core-courses-dashboard ion-toolbar ion-title::before,
+core-sitehome-index ion-toolbar ion-title::before,
+core-courses-my-courses ion-toolbar ion-title::before {
     content: "" !important;
     display: inline-block !important;
     width: 34px !important;
     height: 34px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fffff'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
+    /* Correção aplicada no hex do fill para branco puro (%23ffffff) */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     margin-right: 8px !important;
 }
 
-/* 3. Injeta o Novo Nome no cabeçalho principal */
-ion-tabs ion-toolbar ion-title::after {
+/* 3. Injeta o Novo Nome APENAS nestas páginas */
+core-courses-dashboard ion-toolbar ion-title::after,
+core-sitehome-index ion-toolbar ion-title::after,
+core-courses-my-courses ion-toolbar ion-title::after {
     content: "Moodle - ASCES - UNITA" !important;
     font-size: 16px !important;
     font-weight: bold !important;
-    color: #fff !important;
+    color: #ffffff !important;
     visibility: visible !important;
 }
 
