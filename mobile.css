@@ -14,6 +14,9 @@
 ===================================================== */
 
 /* 1. Esconde o título APENAS nas 3 páginas principais */
+page-core-courses-dashboard ion-toolbar ion-title,
+page-core-sitehome-index ion-toolbar ion-title,
+page-core-courses-my-courses ion-toolbar ion-title,
 core-courses-dashboard ion-toolbar ion-title,
 core-sitehome-index ion-toolbar ion-title,
 core-courses-my-courses ion-toolbar ion-title {
@@ -26,6 +29,9 @@ core-courses-my-courses ion-toolbar ion-title {
 }
 
 /* 2. Injeta o Escudo (SVG) APENAS nestas páginas */
+page-core-courses-dashboard ion-toolbar ion-title::before,
+page-core-sitehome-index ion-toolbar ion-title::before,
+page-core-courses-my-courses ion-toolbar ion-title::before,
 core-courses-dashboard ion-toolbar ion-title::before,
 core-sitehome-index ion-toolbar ion-title::before,
 core-courses-my-courses ion-toolbar ion-title::before {
@@ -33,7 +39,6 @@ core-courses-my-courses ion-toolbar ion-title::before {
     display: inline-block !important;
     width: 34px !important;
     height: 34px !important;
-    /* Correção aplicada no hex do fill para branco puro (%23ffffff) */
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
@@ -41,6 +46,9 @@ core-courses-my-courses ion-toolbar ion-title::before {
 }
 
 /* 3. Injeta o Novo Nome APENAS nestas páginas */
+page-core-courses-dashboard ion-toolbar ion-title::after,
+page-core-sitehome-index ion-toolbar ion-title::after,
+page-core-courses-my-courses ion-toolbar ion-title::after,
 core-courses-dashboard ion-toolbar ion-title::after,
 core-sitehome-index ion-toolbar ion-title::after,
 core-courses-my-courses ion-toolbar ion-title::after {
