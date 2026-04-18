@@ -9,6 +9,10 @@
   display: block !important;
 }
 
+/* =====================================================
+🏷️ CABEÇALHO PERSONALIZADO (FIX FINAL)
+===================================================== */
+
 /* Remove o título padrão apenas na Home */
 [data-page-name="core-mainmenu-home"] ion-header ion-title .toolbar-title,
 [data-page-name="core-mainmenu-home"] ion-header ion-title .title-default {
