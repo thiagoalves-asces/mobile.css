@@ -10,16 +10,16 @@
 }
 
 /* =====================================================
-🏷️ ALVO ISOLADO: APENAS INÍCIO, PAINEL E MEUS CURSOS
+🏷️ ALVO ISOLADO E CORRIGIDO: APENAS INÍCIO, PAINEL E MEUS CURSOS
 ===================================================== */
 
-/* 1. Esconde o título APENAS nas 3 páginas principais */
-page-core-courses-dashboard ion-toolbar ion-title,
-page-core-sitehome-index ion-toolbar ion-title,
-page-core-courses-my-courses ion-toolbar ion-title,
-core-courses-dashboard ion-toolbar ion-title,
-core-sitehome-index ion-toolbar ion-title,
-core-courses-my-courses ion-toolbar ion-title {
+/* 1. Esconde o título APENAS nas 3 páginas principais (Note os pontos na frente!) */
+.page-core-courses-dashboard ion-toolbar ion-title,
+.page-core-sitehome-index ion-toolbar ion-title,
+.page-core-courses-my-courses ion-toolbar ion-title,
+.core-courses-dashboard ion-toolbar ion-title,
+.core-sitehome-index ion-toolbar ion-title,
+.core-courses-my-courses ion-toolbar ion-title {
     --color: transparent !important;
     color: transparent !important;
     font-size: 0px !important;
@@ -29,12 +29,12 @@ core-courses-my-courses ion-toolbar ion-title {
 }
 
 /* 2. Injeta o Escudo (SVG) APENAS nestas páginas */
-page-core-courses-dashboard ion-toolbar ion-title::before,
-page-core-sitehome-index ion-toolbar ion-title::before,
-page-core-courses-my-courses ion-toolbar ion-title::before,
-core-courses-dashboard ion-toolbar ion-title::before,
-core-sitehome-index ion-toolbar ion-title::before,
-core-courses-my-courses ion-toolbar ion-title::before {
+.page-core-courses-dashboard ion-toolbar ion-title::before,
+.page-core-sitehome-index ion-toolbar ion-title::before,
+.page-core-courses-my-courses ion-toolbar ion-title::before,
+.core-courses-dashboard ion-toolbar ion-title::before,
+.core-sitehome-index ion-toolbar ion-title::before,
+.core-courses-my-courses ion-toolbar ion-title::before {
     content: "" !important;
     display: inline-block !important;
     width: 34px !important;
@@ -46,12 +46,12 @@ core-courses-my-courses ion-toolbar ion-title::before {
 }
 
 /* 3. Injeta o Novo Nome APENAS nestas páginas */
-page-core-courses-dashboard ion-toolbar ion-title::after,
-page-core-sitehome-index ion-toolbar ion-title::after,
-page-core-courses-my-courses ion-toolbar ion-title::after,
-core-courses-dashboard ion-toolbar ion-title::after,
-core-sitehome-index ion-toolbar ion-title::after,
-core-courses-my-courses ion-toolbar ion-title::after {
+.page-core-courses-dashboard ion-toolbar ion-title::after,
+.page-core-sitehome-index ion-toolbar ion-title::after,
+.page-core-courses-my-courses ion-toolbar ion-title::after,
+.core-courses-dashboard ion-toolbar ion-title::after,
+.core-sitehome-index ion-toolbar ion-title::after,
+.core-courses-my-courses ion-toolbar ion-title::after {
     content: "Moodle - ASCES - UNITA" !important;
     font-size: 16px !important;
     font-weight: bold !important;
