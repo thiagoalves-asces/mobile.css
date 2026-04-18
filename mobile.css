@@ -13,16 +13,17 @@
 🏷️ TROCA DO NOME DO SITE NO CABEÇALHO (Exclusivo do App)
 ===================================================== */
 
-/* 1. Esconde o nome original "encolhendo" a fonte dele para zero */
+/* 1. Esconde o texto original do título sem sumir com o container */
 ion-header ion-title {
-  display: none !important; 
+    font-size: 0 !important;
 }
 
-/* 2. Injeta o novo nome que vai aparecer no aplicativo */
-ion-header ion-toolbar ion-title: {
-    content: "MOODLE ASCES-UNITA" !important; /* Substitua pelo nome desejado */
-    font-size: 14px !important; /* Tamanho da fonte do novo texto */
-    font-weight: bold !important; /* Deixa o texto em negrito (opcional) */
+/* 2. Injeta o novo nome usando o pseudo-elemento ::after */
+ion-header ion-title::after {
+    content: "MOODLE ASCES-UNITA" !important; 
+    font-size: 14px !important; /* Define o tamanho do novo texto */
+    font-weight: bold !important;
+    display: block !important;
 }
 
 /* =========================
@@ -305,24 +306,9 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 ===================================================== */
 
 /* 1. Ataca diretamente qualquer ícone ou botão marcado com a cor "medium" (Cinza do Ionic) */
-:root:not(.dark) ion-icon[color="medium"],
-:root:not(.dark) ion-button[color="medium"] ion-icon,
-:root:not(.dark) .ion-color-medium {
+:root:not(.dark) ion-icon[color="sucess"] {
     color: #0C4E9C !important;
     --ion-color-base: #0C4E9C !important;
-}
-
-/* 2. Ataca os botões padrão de cabeçalho que herdam o cinza do sistema */
-:root:not(.dark) ion-header ion-toolbar ion-buttons ion-button,
-:root:not(.dark) ion-header ion-toolbar ion-buttons ion-button ion-icon {
-    color: #0C4E9C !important;
-}
-
-/* 3. Ataca as classes exclusivas do Moodle para itens "acinzentados" (Muted) */
-:root:not(.dark) .text-muted ion-icon,
-:root:not(.dark) .core-icon-muted,
-:root:not(.dark) ion-icon.text-muted {
-    color: #0C4E9C !important;
 }
 
 /* =====================================================
