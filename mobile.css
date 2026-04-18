@@ -10,20 +10,21 @@
 }
 
 /* =====================================================
-🎨 ASCES UNITA - SSO PREMIUM (TESTE)
-Afeta SOMENTE a tela de login SSO
+🎨 ASCES SSO - VERSÃO FUNCIONAL (CORRIGIDA)
 ===================================================== */
 
-/* FUNDO (somente login) */
-.core-login-identityprovider ion-content {
+/* FUNDO */
+page-core-login-site ion-content {
     --background: #ffffff;
 }
 
-/* 🔵 BARRA SUPERIOR */
-.core-login-identityprovider::before {
+/* =====================================================
+🔵 BARRA SUPERIOR
+===================================================== */
+page-core-login-site::before {
     content: "";
     position: fixed;
-    top: env(safe-area-inset-top);
+    top: 0;
     left: 0;
     width: 100%;
     height: 8px;
@@ -45,11 +46,13 @@ Afeta SOMENTE a tela de login SSO
     z-index: 9999;
 }
 
-/* 🔵 BARRA INFERIOR */
-.core-login-identityprovider::after {
+/* =====================================================
+🔵 BARRA INFERIOR
+===================================================== */
+page-core-login-site::after {
     content: "";
     position: fixed;
-    bottom: env(safe-area-inset-bottom);
+    bottom: 0;
     left: 0;
     width: 100%;
     height: 8px;
@@ -71,50 +74,32 @@ Afeta SOMENTE a tela de login SSO
     z-index: 9999;
 }
 
-/* 📦 CONTAINER CENTRAL */
-.core-login-identityprovider {
+/* =====================================================
+📦 CENTRALIZAÇÃO
+===================================================== */
+page-core-login-site ion-content::part(scroll) {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 85vh;
-    padding: 20px;
     text-align: center;
 }
 
-/* 🏛 LOGO PRINCIPAL */
-.core-login-identityprovider img {
-    max-width: 200px;
-    margin-bottom: 20px;
-}
-
-/* 📝 TEXTOS */
-.core-login-identityprovider h2 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #1c1c1c;
-}
-
-/* URL */
-.core-login-identityprovider p:first-of-type {
-    font-size: 13px;
-    color: #6b7c93;
-    margin-bottom: 20px;
-}
-
-/* TEXTO CUSTOM */
-.core-login-identityprovider h2::after {
+/* =====================================================
+📝 TEXTO CUSTOM
+===================================================== */
+page-core-login-site h2::after {
     content: "Autenticar usando sua conta em:";
     display: block;
     font-size: 14px;
     color: #6b7c93;
-    margin-top: 25px;
-    font-weight: 400;
+    margin-top: 20px;
 }
 
-/* 🔘 BOTÃO SSO (ISOLADO) */
-.core-login-identityprovider ion-button {
-    width: 100%;
+/* =====================================================
+🔘 BOTÃO SSO
+===================================================== */
+page-core-login-site ion-button {
+    width: 90%;
     max-width: 300px;
     height: 52px;
 
@@ -123,51 +108,38 @@ Afeta SOMENTE a tela de login SSO
 
     border-radius: 12px;
     font-weight: 600;
-    font-size: 15px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     box-shadow: 0 6px 20px rgba(59,130,246,0.3);
 }
 
-/* ÍCONE DE SAÍDA (ISOLADO) */
-.core-login-identityprovider ion-button::after {
+/* ÍCONE */
+page-core-login-site ion-button::after {
     content: "↗";
-    font-size: 18px;
-    margin-left: 10px;
+    margin-left: 8px;
 }
 
 /* TEXTO REDIRECIONAMENTO */
-.core-login-identityprovider p:last-of-type {
+page-core-login-site p {
     font-size: 12px;
     color: #94a3b8;
-    margin-top: 15px;
-}
-
-/* ✨ LOGO NEON (SOMENTE NO LOGIN) */
-.core-login-identityprovider .asces-logo {
-    position: fixed !important;
-    bottom: 16px !important;
-    right: 16px !important;
-    z-index: 10000;
-
-    pointer-events: none;
-    opacity: 0.9;
 }
 
 /* =====================================================
-🏷️ ALVO ISOLADO E CORRIGIDO: APENAS INÍCIO, PAINEL E MEUS CURSOS
+ LOGO NEON
+===================================================== */
+page-core-login-site .asces-logo {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    z-index: 10000;
+}
+
+/* =====================================================
+🏷️ ALVO: APENAS O CABEÇALHO DO MENU PRINCIPAL 
 ===================================================== */
 
-/* 1. Esconde o título APENAS nas 3 páginas principais (Note os pontos na frente!) */
-.page-core-courses-dashboard ion-toolbar ion-title,
-.page-core-sitehome-index ion-toolbar ion-title,
-.page-core-courses-my-courses ion-toolbar ion-title,
-.core-courses-dashboard ion-toolbar ion-title,
-.core-sitehome-index ion-toolbar ion-title,
-.core-courses-my-courses ion-toolbar ion-title {
+/* 1. Esconde o título apenas dentro da estrutura do menu principal */
+core-mainmenu ion-toolbar ion-title {
     --color: transparent !important;
     color: transparent !important;
     font-size: 0px !important;
@@ -176,13 +148,8 @@ Afeta SOMENTE a tela de login SSO
     justify-content: center !important;
 }
 
-/* 2. Injeta o Escudo (SVG) APENAS nestas páginas */
-.page-core-courses-dashboard ion-toolbar ion-title::before,
-.page-core-sitehome-index ion-toolbar ion-title::before,
-.page-core-courses-my-courses ion-toolbar ion-title::before,
-.core-courses-dashboard ion-toolbar ion-title::before,
-.core-sitehome-index ion-toolbar ion-title::before,
-.core-courses-my-courses ion-toolbar ion-title::before {
+/* 2. Injeta o Escudo (SVG) apenas no menu principal */
+core-mainmenu ion-toolbar ion-title::before {
     content: "" !important;
     display: inline-block !important;
     width: 34px !important;
@@ -193,13 +160,8 @@ Afeta SOMENTE a tela de login SSO
     margin-right: 8px !important;
 }
 
-/* 3. Injeta o Novo Nome APENAS nestas páginas */
-.page-core-courses-dashboard ion-toolbar ion-title::after,
-.page-core-sitehome-index ion-toolbar ion-title::after,
-.page-core-courses-my-courses ion-toolbar ion-title::after,
-.core-courses-dashboard ion-toolbar ion-title::after,
-.core-sitehome-index ion-toolbar ion-title::after,
-.core-courses-my-courses ion-toolbar ion-title::after {
+/* 3. Injeta o Novo Nome apenas no menu principal */
+core-mainmenu ion-toolbar ion-title::after {
     content: "Moodle - ASCES - UNITA" !important;
     font-size: 16px !important;
     font-weight: bold !important;
