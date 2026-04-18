@@ -10,45 +10,37 @@
 }
 
 /* =====================================================
-🏷️ CABEÇALHO PERSONALIZADO (VERSÃO COMPATÍVEL)
+🏷️ CABEÇALHO PERSONALIZADO (FIX FINAL)
 ===================================================== */
 
-/* 1. Alvo: ion-title dentro da página inicial ou do site plugin */
-.ion-page.mainmenu-home ion-title,
-.ion-page.core-siteplugins-index ion-title,
-ion-header ion-title:first-child {
+/* 1. Alvo específico para a tela inicial do App */
+.mainmenu-content ion-header ion-toolbar ion-title,
+[data-page-name="core-mainmenu-home"] ion-title {
+    --color: transparent !important;
     color: transparent !important;
     font-size: 0 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
 }
 
-/* 2. Injeta o ÍCONE BRANCO */
-.ion-page.mainmenu-home ion-title::before,
-.ion-page.core-siteplugins-index ion-title::before,
-ion-header ion-title:first-child::before {
-    content: "";
-    display: inline-block;
-    min-width: 28px;
-    height: 28px;
-    margin-right: 10px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-}
-
-/* 3. Injeta o TEXTO BRANCO */
-.ion-page.mainmenu-home ion-title::after,
-.ion-page.core-siteplugins-index ion-title::after,
-ion-header ion-title:first-child::after {
+/* 2. Injeta o ÍCONE e o TEXTO usando um único pseudo-elemento para evitar erros */
+.mainmenu-content ion-header ion-toolbar ion-title::before,
+[data-page-name="core-mainmenu-home"] ion-title::before {
     content: "MOODLE ASCES-UNITA" !important;
+    
+    /* Configurações do Texto */
+    color: #FFFFFF !important;
     font-size: 16px !important;
     font-weight: bold !important;
-    color: #FFFFFF !important;
-    white-space: nowrap !important;
-    display: inline-block !important;
+    text-transform: uppercase;
+    
+    /* Configurações do Ícone */
+    display: flex !important;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 24px;
+    background-position: left center;
+    padding-left: 35px; /* Abre espaço para o ícone aparecer antes do texto */
+    height: 44px; /* Altura padrão da toolbar */
 }
 
 /* =========================
