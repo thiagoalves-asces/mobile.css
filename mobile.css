@@ -15,7 +15,7 @@
 
 /* 1. Alvo 1: Cabeçalhos que NÃO possuem botão de voltar (Páginas Iniciais) */
 /* Ataca diretamente o h1 dentro do título para não quebrar a barra */
-ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1 {
+ion-toolbar ion-title h2 {
     font-size: 0px !important; 
     color: transparent !important;
     display: flex !important;
@@ -33,20 +33,20 @@ ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1 
 }
 
 /* 2. Injeção do Escudo (SVG) */
-ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::before,
+ion-toolbar ion-title h2::before,
 .core-mainmenu-siteinfo h2::before {
     content: "" !important;
     display: inline-block !important;
     width: 34px !important;
     height: 34px !important;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230C4E9C'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fffff'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     margin-right: 8px !important;
 }
 
 /* 3. Injeção do Novo Nome (Moodle - ASCES - UNITA) */
-ion-toolbar:not(:has(ion-back-button)):not(:has(.ion-back-button)) ion-title h1::after,
+ion-toolbar ion-title h2::after,
 .core-mainmenu-siteinfo h2::after {
     content: "Moodle ASCES-UNITA" !important;
     font-size: 16px !important;
