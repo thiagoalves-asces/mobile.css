@@ -189,14 +189,14 @@ ion-content {
 
 /* 2.8 ❖ LOGO OVERLAY */
 .asces-logo {
-    position:absolute;
-    right:15px;
-    bottom:25px;
-    pointer-events:none;
-    z-index:2;
-    font-family:'Montserrat', sans-serif;
-    line-height:1.02;
-    opacity:0.9;
+    position: fixed !important; /* Trocar absolute por fixed garante que ele foque na tela, não no cabeçalho */
+    right: 15px !important;
+    bottom: 25px !important;
+    left: auto !important; /* Garante que não haja conflito de alinhamento */
+    top: auto !important;  /* Garante que ele não suba para o topo */
+    pointer-events: none;
+    z-index: 999 !important; /* Aumentamos para garantir que fique acima de tudo */
+    opacity: 0.9;
 }
 
 /* =====================================================
