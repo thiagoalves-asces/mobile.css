@@ -9,53 +9,6 @@
   display: block !important;
 }
 
-/* =====================================================
-🏷️ PERSONALIZAÇÃO DO NOME E LOGO (EXCLUSIVO APP)
-Locais: Cabeçalho Superior e Menu de Informações do Site
-===================================================== */
-
-body.page-core-mainmenu ion-header ion-title,
-body.page-core-sitehome ion-header ion-title,
-body.page-core-course-view ion-header ion-title {
-    
-    font-size: 0px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* MENU LATERAL (esse pode manter global) */
-.core-mainmenu-siteinfo h2 {
-    font-size: 0px !important;
-    display: flex !important;
-    align-items: center !important;
-}
-
-/* LOGO */
-body.page-core-mainmenu ion-header ion-title::before,
-body.page-core-sitehome ion-header ion-title::before,
-body.page-core-course-view ion-header ion-title::before,
-.core-mainmenu-siteinfo h2::before {
-    content: "" !important;
-    display: inline-block !important;
-    width: 24px !important;
-    height: 24px !important;
-    background-image: url("data:image/svg+xml,...") !important;
-    background-size: contain !important;
-    background-repeat: no-repeat !important;
-    margin-right: 8px !important;
-}
-
-/* NOME */
-body.page-core-mainmenu ion-header ion-title::after,
-body.page-core-sitehome ion-header ion-title::after,
-body.page-core-course-view ion-header ion-title::after,
-.core-mainmenu-siteinfo h2::after {
-    content: "Moodle - ASCES - UNITA" !important;
-    font-size: 16px !important;
-    font-weight: bold !important;
-    color: #0C4E9C !important;
-}
 
 /* =========================
   1. 📦 CONTAINER PRINCIPAL (Painel)
