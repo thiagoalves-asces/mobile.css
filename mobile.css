@@ -10,37 +10,43 @@
 }
 
 /* =====================================================
-🏷️ CABEÇALHO - TESTE DE SOBREPOSIÇÃO TOTAL
+🏷️ CABEÇALHO - FILTRO PELA LUPA (HOME)
 ===================================================== */
 
-/* 1. Esconde o texto original de forma agressiva */
-ion-toolbar ion-title {
+/* 1. Reset da Logo Overlay (Garantir que ela não suba) */
+.asces-logo {
+    position: fixed !important;
+    right: 15px !important;
+    bottom: 25px !important;
+    top: auto !important;
+    z-index: 9999 !important;
+}
+
+/* 2. Alvo: ion-title que está na mesma barra que o botão de busca (lupa)
+   Isso evita que mude as páginas de Configurações, que não têm lupa. */
+
+ion-header:has(ion-button[core-search-box], .core-search-icon) ion-title {
     --color: transparent !important;
     color: transparent !important;
     font-size: 0 !important;
 }
 
-/* 2. Injeta o novo conteúdo diretamente no toolbar */
-ion-toolbar::after {
+/* 3. Injeta o ÍCONE + TEXTO apenas onde a regra acima se aplicou */
+ion-header:has(ion-button[core-search-box], .core-search-icon) ion-title::before {
     content: "MOODLE ASCES-UNITA" !important;
-    position: absolute;
-    left: 50px; /* Espaço para o botão de menu */
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex !important;
+    align-items: center !important;
+    height: 100%;
     color: #FFFFFF !important;
     font-size: 16px !important;
     font-weight: bold !important;
-    z-index: 10;
-    pointer-events: none;
     
     /* ÍCONE SVG */
-    display: flex !important;
-    align-items: center;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
     background-repeat: no-repeat;
     background-size: 22px;
     background-position: left center;
-    padding-left: 30px;
+    padding-left: 32px;
 }
 
 /* =========================
