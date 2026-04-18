@@ -9,31 +9,31 @@
   display: block !important;
 }
 
-/* ===============================
-🎯 APLICAR APENAS NA HOME / DASHBOARD
-=============================== */
+/* =====================================================
+🏷️ PERSONALIZAÇÃO DO NOME E LOGO (RESTRITO AO INÍCIO)
+Locais: APENAS Cabeçalho Principal (Início/Cursos) e Menu Lateral
+===================================================== */
 
-body.page-core-mainmenu ion-header ion-title,
-body.page-core-sitehome ion-header ion-title,
-body.page-core-course-view ion-header ion-title {
-    
-    font-size: 0px !important;
+/* 1. Alvo 1: Cabeçalho apenas nas páginas principais (Sniper) */
+core-mainmenu-page ion-header ion-title {
+    font-size: 0px !important; 
+    color: transparent !important;
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    align-items: center !important; 
+    justify-content: center !important; 
+    height: 100% !important;
 }
 
-/* MENU LATERAL (esse pode manter global) */
+/* Alvo 2: Menu lateral de informações do site */
 .core-mainmenu-siteinfo h2 {
     font-size: 0px !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: flex-start !important;
 }
 
-/* LOGO */
-body.page-core-mainmenu ion-header ion-title::before,
-body.page-core-sitehome ion-header ion-title::before,
-body.page-core-course-view ion-header ion-title::before,
+/* 2. Injeção do Escudo (SVG) */
+core-mainmenu-page ion-header ion-title::before, 
 .core-mainmenu-siteinfo h2::before {
     content: "" !important;
     display: inline-block !important;
@@ -45,16 +45,31 @@ body.page-core-course-view ion-header ion-title::before,
     margin-right: 8px !important;
 }
 
-/* NOME */
-body.page-core-mainmenu ion-header ion-title::after,
-body.page-core-sitehome ion-header ion-title::after,
-body.page-core-course-view ion-header ion-title::after,
+/* 3. Injeção do Nome da Instituição */
+core-mainmenu-page ion-header ion-title::after, 
 .core-mainmenu-siteinfo h2::after {
     content: "Moodle - ASCES - UNITA" !important;
     font-size: 16px !important;
     font-weight: bold !important;
-    color: #0C4E9C !important;
+    color: #0C4E9C !important; 
+    visibility: visible !important;
 }
+
+/* 4. AJUSTE PARA MODO ESCURO (Inverte para Branco) */
+.dark core-mainmenu-page ion-header ion-title::after, 
+.dark .core-mainmenu-siteinfo h2::after {
+    color: #ffffff !important;
+}
+.dark core-mainmenu-page ion-header ion-title::before, 
+.dark .core-mainmenu-siteinfo h2::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23FFFFFF'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
+}
+
+/* Opcional: Esconde a URL pequena embaixo do nome no menu */
+.core-mainmenu-siteinfo p {
+    display: none !important;
+}
+
 
 /* =========================
   1. 📦 CONTAINER PRINCIPAL (Painel)
