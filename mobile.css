@@ -158,12 +158,11 @@ ion-content {
 /* 2.8 ❖ LOGO OVERLAY */
 .asces-logo {
     position: absolute !important;
-    bottom: 20px !important; /* Ajustado para subir um pouco da barra inferior */
-    right: 20px !important;
-    text-align: right; /* Garante que os textos alinhem à direita */
+    bottom: 16px !important;
+    right: 16px !important;
+    text-align: right; /* Alinha os textos à direita */
     z-index: 99;
     pointer-events: none;
-    opacity: 0.8;
 }
 
 /* =====================================================
