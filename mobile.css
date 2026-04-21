@@ -9,46 +9,6 @@
   display: block !important;
 }
 
-/* 1. Alvo no container do título */
-core-mainmenu ion-toolbar ion-title {
-    /* Em vez de transparent, vamos garantir que o container aceite conteúdo novo */
-    --color: transparent !important;
-    overflow: visible !important;
-}
-
-/* 2. Injeta o Escudo e o Texto via ::after (combinados para facilitar o alinhamento) */
-core-mainmenu ion-toolbar ion-title::after {
-    /* Injeta o texto */
-    content: "Moodle - ASCES - UNITA" !important;
-    
-    /* Reseta as propriedades que você zerou no pai */
-    font-size: 16px !important;
-    font-weight: bold !important;
-    color: #ffffff !important;
-    
-    /* Configuração de Layout */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    height: 100% !important;
-    width: 100% !important;
-    position: absolute !important;
-    top: 0;
-    left: 0;
-    background-color: transparent !important;
-    
-    /* Injeta o ícone como background do próprio pseudo-elemento */
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 3L1 9l11 6 9-4.91V17h2V9L12 3z'%3E%3C/path%3E%3Cpath d='M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z'%3E%3C/path%3E%3C/svg%3E") !important;
-    background-repeat: no-repeat !important;
-    background-size: 24px !important; /* Tamanho do ícone */
-    background-position: left 10px center !important; /* Ajuste a posição conforme necessário */
-    padding-left: 40px !important; /* Espaço para o ícone não cobrir o texto */
-}
-
-/* 3. Esconde o texto original (o nó de texto interno) */
-/* Esta é a parte mais difícil sem JS, mas geralmente o ::after absoluto cobre o original */
-
-
 /* =========================
   1. 📦 CONTAINER PRINCIPAL (Painel)
 ========================= */
@@ -120,11 +80,11 @@ ion-content {
 
 /* 2.3 📦 CONTAINER INTERNO */
 .asces-container {
-    width:100%;
-    padding:40px 15px;
-    display:flex;
-    justify-content:center;
-    position: relative;
+    width: 100%;
+    padding: 40px 15px 60px 15px; /* Adicionei padding bottom maior para a logo não cobrir botões */
+    display: flex;
+    justify-content: center;
+    position: static; /* Mudamos para static para a logo olhar para o .asces-bg */
 }
 
 /* 2.4   ⊞ GRID */
@@ -198,11 +158,12 @@ ion-content {
 /* 2.8 ❖ LOGO OVERLAY */
 .asces-logo {
     position: absolute !important;
-    bottom: 16px !important;
-    right: 16px !important;
-    z-index: 10;
+    bottom: 20px !important; /* Ajustado para subir um pouco da barra inferior */
+    right: 20px !important;
+    text-align: right; /* Garante que os textos alinhem à direita */
+    z-index: 99;
     pointer-events: none;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 /* =====================================================
@@ -369,7 +330,6 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
     content: " " !important;
     height: 100px !important;
 }
-
 
 
 
