@@ -159,7 +159,7 @@ ion-content {
 /* 2.8 ❖ LOGO OVERLAY - SOLUÇÃO DE FORÇA BRUTA */
 .asces-logo {
     position: absolute !important;
-    bottom: 25px !important; /* Um pouco acima da barra inferior */
+    bottom: 35px !important; /* Um pouco acima da barra inferior */
     
     /* TRUQUE MATEMÁTICO: */
     /* Jogamos a logo para o limite direito (100%) e puxamos ela de volta */
