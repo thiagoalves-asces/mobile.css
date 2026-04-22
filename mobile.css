@@ -156,34 +156,35 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - POSIÇÃO ABSOLUTA REAL */
+/* 2.8 ❖ LOGO OVERLAY - SOLUÇÃO DE FORÇA BRUTA */
 .asces-logo {
-    /* Posicionamento */
     position: absolute !important;
-    bottom: 20px !important;
-    right: 20px !important;
+    bottom: 25px !important; /* Um pouco acima da barra inferior */
     
-    /* Reset total de interferências */
-    left: auto !important;
-    top: auto !important;
-    width: fit-content !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    /* TRUQUE MATEMÁTICO: */
+    /* Jogamos a logo para o limite direito (100%) e puxamos ela de volta */
+    left: 100% !important;
+    transform: translateX(calc(-100% - 20px)) !important; 
+
+    /* Garante que a caixa não estique */
+    width: max-content !important; 
+    height: auto !important;
 
     /* Alinhamento interno do texto */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important;
+    align-items: flex-end !important; 
     text-align: right !important;
     
-    z-index: 999 !important;
+    z-index: 9999 !important;
     pointer-events: none !important;
 }
 
-/* Garante que o texto dentro da logo siga o alinhamento */
+/* Força o texto interno a alinhar à direita dentro da logo */
 .asces-logo div {
     color: #ffffff !important;
     text-align: right !important;
+    width: 100% !important;
     line-height: 1.1 !important;
 }
 
