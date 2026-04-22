@@ -49,13 +49,13 @@ ion-content {
 2. 🎨 AJUSTES VISUAIS DA DISCIPLINA (APP)
 ========================= */
 
-/* 2.1 📦 BASE / CONTAINER */
+/* 2.1 📦 BASE / CONTAINER - O "Pai" que manda na posição */
 .asces-bg {
     background: linear-gradient(135deg, #167ac6 0%, #0d47a1 100%);
-    border-radius:16px;
-    position:relative;
-    overflow:hidden;
-    font-family:'Segoe UI', sans-serif;
+    border-radius: 16px;
+    position: relative; /* Mantém como relative para a logo ancorar aqui */
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
     min-height: 320px; 
 }
 
@@ -81,10 +81,10 @@ ion-content {
 /* 2.3 📦 CONTAINER INTERNO */
 .asces-container {
     width: 100%;
-    padding: 40px 15px 60px 15px; /* Adicionei padding bottom maior para a logo não cobrir botões */
+    padding: 40px 15px 60px 15px; 
     display: flex;
     justify-content: center;
-    position: static; /* Mudamos para static para a logo olhar para o .asces-bg */
+    /* Removi o position static para evitar bugs; o padrão já resolve */
 }
 
 /* 2.4   ⊞ GRID */
@@ -155,22 +155,24 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - REVISADO */
+/* 2.8 ❖ LOGO OVERLAY - VERSÃO FINAL */
 .asces-logo {
     position: absolute !important;
-    bottom: 16px !important; /* Ajustei para 25px para não ficar colado na barra inferior */
-    right: 0px !important;
-    left: auto !important;   /* Força a saída da esquerda */
+    bottom: 20px !important;    /* Distância do fundo */
+    right: 20px !important;     /* Distância da direita */
+    left: auto !important;      /* Bloqueia qualquer força vinda da esquerda */
+    width: auto !important;     /* Garante que a caixa não ocupe a largura toda */
     
-    /* Alinhamento interno */
+    /* Alinhamento do Texto */
     display: flex !important;
     flex-direction: column;
-    align-items: flex-end;   /* Alinha o conteúdo (Neon e textos) à direita */
+    align-items: flex-end;      /* Alinha o "Neon" e as frases pequenas no final (direita) */
     text-align: right; 
     
     z-index: 99;
-    pointer-events: none;
+    pointer-events: none;       /* Deixa clicar nos botões que estiverem "atrás" dela */
 }
+
 /* =====================================================
 3. 🎨 BRANDING GLOBAL (Bloco de customização do APP)
 ===================================================== */
