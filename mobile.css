@@ -155,22 +155,35 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - VERSÃO FINAL */
+/* 2.8 ❖ LOGO OVERLAY - VERSÃO FINAL CORRIGIDA */
 .asces-logo {
+    /* 1. Posicionamento Absoluto */
     position: absolute !important;
-    bottom: 20px !important;    /* Distância do fundo */
-    right: 20px !important;     /* Distância da direita */
-    left: auto !important;      /* Bloqueia qualquer força vinda da esquerda */
-    width: auto !important;     /* Garante que a caixa não ocupe a largura toda */
+    bottom: 20px !important;    
+    right: 20px !important;     
     
-    /* Alinhamento do Texto */
+    /* 2. Trava de Direção (O segredo para sair da esquerda) */
+    left: auto !important;      
+    margin: 0 !important;
+    width: fit-content !important; 
+    max-width: 200px !important;
+    
+    /* 3. Alinhamento Interno (Para o texto Neon ficar à direita) */
     display: flex !important;
-    flex-direction: column;
-    align-items: flex-end;      /* Alinha o "Neon" e as frases pequenas no final (direita) */
-    text-align: right; 
+    flex-direction: column !important;
+    align-items: flex-end !important; 
+    text-align: right !important; 
     
-    z-index: 99;
-    pointer-events: none;       /* Deixa clicar nos botões que estiverem "atrás" dela */
+    /* 4. Camada e Toque */
+    z-index: 999 !important;
+    pointer-events: none !important;
+}
+
+/* Ajuste fino nos textos internos para garantir o branco e alinhamento */
+.asces-logo div {
+    color: #ffffff !important;
+    text-align: right !important;
+    width: 100% !important;
 }
 
 /* =====================================================
