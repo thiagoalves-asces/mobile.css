@@ -150,40 +150,41 @@ ion-content {
 }
 
 /* 2.7 🆃 TEXTO PADRÃO */
+   .asces-text {
     color:rgba(255,255,255,0.95);
     font-size:13px;
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - SOLUÇÃO FINAL */
+/* 2.8 ❖ LOGO OVERLAY - POSIÇÃO ABSOLUTA REAL */
 .asces-logo {
-    /* 1. Posicionamento Estrutural */
+    /* Posicionamento */
     position: absolute !important;
-    bottom: 20px !important;    /* Distância da barra inferior */
-    right: 20px !important;     /* Distância da borda direita */
+    bottom: 20px !important;
+    right: 20px !important;
     
-    /* 2. Reset de Direção (Obrigatório para vencer o sistema) */
-    left: auto !important;      
-    width: fit-content !important; 
+    /* Reset total de interferências */
+    left: auto !important;
+    top: auto !important;
+    width: fit-content !important;
     margin: 0 !important;
-    
-    /* 3. Alinhamento Visual do Texto */
+    padding: 0 !important;
+
+    /* Alinhamento interno do texto */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important; /* Alinha o conteúdo à direita da "caixinha" */
-    text-align: right !important; 
+    align-items: flex-end !important;
+    text-align: right !important;
     
-    /* 4. Comportamento */
-    z-index: 99 !important;
+    z-index: 999 !important;
     pointer-events: none !important;
 }
 
-/* Garante que as divs internas da logo não herdem larguras estranhas */
+/* Garante que o texto dentro da logo siga o alinhamento */
 .asces-logo div {
-    width: auto !important;
+    color: #ffffff !important;
+    text-align: right !important;
     line-height: 1.1 !important;
-    margin: 0 !important;
-    padding: 0 !important;
 }
 
 /* =====================================================
