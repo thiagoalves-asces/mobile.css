@@ -155,12 +155,18 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY */
+/* 2.8 ❖ LOGO OVERLAY - AJUSTADO */
 .asces-logo {
     position: absolute !important;
     bottom: 16px !important;
     right: 16px !important;
-    text-align: right; /* Alinha os textos à direita */
+    left: auto !important;  /* CRUCIAL: Anula qualquer alinhamento à esquerda anterior */
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Garante que o conteúdo interno alinhe à direita */
+    
+    text-align: right; 
     z-index: 99;
     pointer-events: none;
 }
