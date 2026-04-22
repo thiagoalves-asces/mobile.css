@@ -155,35 +155,35 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - VERSÃO FINAL CORRIGIDA */
+/* 2.8 ❖ LOGO OVERLAY - SOLUÇÃO FINAL */
 .asces-logo {
-    /* 1. Posicionamento Absoluto */
+    /* 1. Posicionamento Estrutural */
     position: absolute !important;
-    bottom: 20px !important;    
-    right: 20px !important;     
+    bottom: 20px !important;    /* Distância da barra inferior */
+    right: 20px !important;     /* Distância da borda direita */
     
-    /* 2. Trava de Direção (O segredo para sair da esquerda) */
+    /* 2. Reset de Direção (Obrigatório para vencer o sistema) */
     left: auto !important;      
-    margin: 0 !important;
     width: fit-content !important; 
-    max-width: 200px !important;
+    margin: 0 !important;
     
-    /* 3. Alinhamento Interno (Para o texto Neon ficar à direita) */
+    /* 3. Alinhamento Visual do Texto */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-end !important; 
+    align-items: flex-end !important; /* Alinha o conteúdo à direita da "caixinha" */
     text-align: right !important; 
     
-    /* 4. Camada e Toque */
-    z-index: 999 !important;
+    /* 4. Comportamento */
+    z-index: 99 !important;
     pointer-events: none !important;
 }
 
-/* Ajuste fino nos textos internos para garantir o branco e alinhamento */
+/* Garante que as divs internas da logo não herdem larguras estranhas */
 .asces-logo div {
-    color: #ffffff !important;
-    text-align: right !important;
-    width: 100% !important;
+    width: auto !important;
+    line-height: 1.1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 /* =====================================================
