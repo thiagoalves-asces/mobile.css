@@ -155,22 +155,22 @@ ion-content {
     line-height:1.4;
 }
 
-/* 2.8 ❖ LOGO OVERLAY - AJUSTADO */
+/* 2.8 ❖ LOGO OVERLAY - REVISADO */
 .asces-logo {
     position: absolute !important;
-    bottom: 16px !important;
+    bottom: 25px !important; /* Ajustei para 25px para não ficar colado na barra inferior */
     right: 16px !important;
-    left: auto !important;  /* CRUCIAL: Anula qualquer alinhamento à esquerda anterior */
+    left: auto !important;   /* Força a saída da esquerda */
     
-    display: flex;
+    /* Alinhamento interno */
+    display: flex !important;
     flex-direction: column;
-    align-items: flex-end; /* Garante que o conteúdo interno alinhe à direita */
-    
+    align-items: flex-end;   /* Alinha o conteúdo (Neon e textos) à direita */
     text-align: right; 
+    
     z-index: 99;
     pointer-events: none;
 }
-
 /* =====================================================
 3. 🎨 BRANDING GLOBAL (Bloco de customização do APP)
 ===================================================== */
