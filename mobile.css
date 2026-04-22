@@ -158,8 +158,8 @@ ion-content {
 /* 2.8 ❖ LOGO OVERLAY - REVISADO */
 .asces-logo {
     position: absolute !important;
-    bottom: 25px !important; /* Ajustei para 25px para não ficar colado na barra inferior */
-    right: 16px !important;
+    bottom: 16px !important; /* Ajustei para 25px para não ficar colado na barra inferior */
+    right: 0px !important;
     left: auto !important;   /* Força a saída da esquerda */
     
     /* Alinhamento interno */
