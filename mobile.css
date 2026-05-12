@@ -361,27 +361,29 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 5.1 🔎 COR DA BUSCA (SOLUÇÃO DEFINITIVA)
 ===================================================== */
 
-/* 1. Alvo: A linha/sombra que aparece embaixo do texto ao focar */
-:root:not(.dark) ion-searchbar .searchbar-input-container {
-    box-shadow: none !important;
+/* 1. Esconde a linha original (verde) que o Moodle injeta */
+:root:not(.dark) ion-searchbar .searchbar-bottom-line {
+    display: none !important;
+    background: transparent !important;
+    opacity: 0 !important;
 }
 
-/* 2. Alvo: A variável de destaque "invisível" que o componente injeta no input */
-:root:not(.dark) .searchbar-input {
-    --highlight-color: #0C4E9C !important;
+/* 2. Força a cor de destaque interna do componente para o seu azul */
+:root:not(.dark) ion-searchbar {
+    --highlight-height: 2px;
     --highlight-color-focused: #0C4E9C !important;
+    --highlight-color: #0C4E9C !important;
 }
 
-/* 3. "Força Bruta": Sobrescreve a cor 'success' apenas para componentes de busca */
-:root:not(.dark) ion-searchbar.ion-color-success,
-:root:not(.dark) ion-searchbar[color="success"] {
-    --ion-color-base: #0C4E9C !important;
-    --ion-color-primary: #0C4E9C !important;
-}
-
-/* 4. Remove qualquer borda verde residual no foco */
-:root:not(.dark) .searchbar-has-focus .searchbar-input {
+/* 3. Aplica o azul na borda do container que segura o input */
+:root:not(.dark) .searchbar-has-focus .searchbar-input-container {
     border-bottom: 2px solid #0C4E9C !important;
+}
+
+/* 4. Remove qualquer sombra (box-shadow) verde residual */
+:root:not(.dark) .searchbar-input {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
 }
 
 /* =====================================================
