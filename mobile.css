@@ -357,38 +357,24 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 /* =====================================================
 📑 TESTE TESTE TESTE 
 ===================================================== */
-
-/* =====================================================
-5. 🔍 AJUSTES FINAIS (Busca e Badges de Nota)
-===================================================== */
-
 /* =====================================================
 5.1 🔎 COR DA BUSCA (SOLUÇÃO DEFINITIVA)
 ===================================================== */
 
-/* O Moodle App usa o componente ion-searchbar. 
-   Para mudar a cor de destaque (o verde), precisamos atingir as variáveis do componente e o estado focado. */
-
+/* 5.1 🔎 BARRA DE BUSCA (Linha de foco) */
+/* Atacamos o componente diretamente para injetar a cor no Shadow DOM */
 ion-searchbar {
-  /* Altera a cor da linha inferior e dos detalhes de foco */
-  --color: #333 !important;
-  --placeholder-color: #999 !important;
-  --icon-color: #0C4E9C !important;
-  
-  /* ESTA É A LINHA CHAVE: Altera a cor do destaque/border quando clica */
-  --highlight-color-focused: #0C4E9C !important;
-  --ion-color-primary: #0C4E9C !important;
+    --ion-color-primary: #0C4E9C !important; /* Cor do foco/linha */
+    --highlight-color-focused: #0C4E9C !important;
 }
 
-/* Força a cor no container interno que o Ionic gera */
-.searchbar-input-container.sc-ion-searchbar-md {
-  --highlight-color: #0C4E9C !important;
+/* Força a cor azul na barra de busca especificamente quando está ativa */
+.searchbar-has-focus .searchbar-input-container {
+    --background: transparent !important;
+    border-bottom-color: #0C4E9C !important;
 }
 
-/* Força o ícone de lupa a ficar azul quando você clica na barra */
-.searchbar-has-focus .searchbar-search-icon {
-  color: #0C4E9C !important;
-}
+
 
 /* =====================================================
 5.2 🏷️ BADGES DE NOTAS (SOLUÇÃO DEFINITIVA)
