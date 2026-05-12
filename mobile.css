@@ -358,23 +358,46 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 📑 TESTE TESTE TESTE 
 ===================================================== */
 
-/* Ataca a variável de foco do componente de busca */
+/* =====================================================
+5. 🔍 AJUSTES FINAIS (Busca e Badges de Nota)
+===================================================== */
+
+/* 5.1 🔎 COR DA BUSCA (Ao selecionar/focar) */
+/* O ion-searchbar usa variáveis internas para a cor de destaque */
 ion-searchbar {
-    --primary: #0056b3 !important;
-    --ion-color-primary: #0056b3 !important;
+  --ion-color-primary: #0C4E9C !important;
+  --placeholder-color: #666 !important;
 }
 
-/* Força a cor da linha/borda inferior que fica verde */
+/* Força a cor da barra inferior e do ícone quando focado */
 .searchbar-has-focus .searchbar-input-container {
-    border-bottom: 2px solid #0056b3 !important;
+  border-bottom: 2px solid #0C4E9C !important;
 }
 
-/* Caso seja o estilo arredondado (MD) */
-.searchbar-has-focus .searchbar-input {
-    box-shadow: 0 2px 2px 0 rgba(0, 86, 179, 0.2) !important;
+.searchbar-has-focus .searchbar-search-icon {
+  color: #0C4E9C !important;
 }
 
+/* 5.2 🏷️ NOTAS E ATIVIDADES (De Verde para Azul) */
+/* Altera as pílulas de notas (Nota 21, Nota 30, etc) que o Moodle pinta de verde */
+:root:not(.dark) ion-badge[color="success"], 
+:root:not(.dark) .badge-success,
+:root:not(.dark) .core-grade-value {
+    --background: #0C4E9C !important;
+    background-color: #0C4E9C !important;
+    color: #ffffff !important;
+}
 
+/* Garante que o texto de notas no painel também mude */
+:root:not(.dark) ion-note[color="success"] {
+    color: #0C4E9C !important;
+}
+
+/* Ajuste para o contorno do balão de notas caso exista */
+:root:not(.dark) .item-note.badge-success {
+    background: #0C4E9C !important;
+    border: none !important;
+}
                                                                                                    /* =============================
                                                                                                         👨‍💻 Customizações Moodle
                                                                                                            Autor: Thiago Alves
