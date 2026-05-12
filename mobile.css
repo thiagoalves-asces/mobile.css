@@ -358,9 +358,16 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 📑 TESTE TESTE TESTE 
 ===================================================== */
 
-ion-searchbar {
-    --highlight-color-focused: #0C4E9C !important;
-    --color-focused: #0C4E9C !important;
+/* Altera a cor da borda do campo de busca ao ganhar foco */
+.item-input-focused, 
+.searchbar-has-focus .searchbar-input-container {
+    --border-color: #0C4E9C !important; /* Substitua pelo seu azul */
+    border-color: #0C4E9C !important;
+}
+
+/* Garante que o ícone de lupa da busca também acompanhe o azul */
+.searchbar-has-focus .searchbar-search-icon {
+    color: #0C4E9C !important;
 }
 
 
