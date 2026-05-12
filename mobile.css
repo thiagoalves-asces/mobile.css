@@ -361,23 +361,28 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 5.1 🔎 COR DA BUSCA (SOLUÇÃO DEFINITIVA)
 ===================================================== */
 
-/* Remove a sombra/linha verde de seleção da barra de busca (Apenas Light Mode) */
-:root:not(.dark) ion-searchbar {
-    --side-spacing: 0;
-    --ion-color-primary: #0C4E9C !important;
+/* 1. Alvo: A linha/sombra que aparece embaixo do texto ao focar */
+:root:not(.dark) ion-searchbar .searchbar-input-container {
+    box-shadow: none !important;
+}
+
+/* 2. Alvo: A variável de destaque "invisível" que o componente injeta no input */
+:root:not(.dark) .searchbar-input {
+    --highlight-color: #0C4E9C !important;
     --highlight-color-focused: #0C4E9C !important;
 }
 
-/* Força a cor azul na borda inferior animada do componente */
-:root:not(.dark) .searchbar-has-focus .searchbar-input-container {
-    --highlight-color: #0C4E9C !important;
+/* 3. "Força Bruta": Sobrescreve a cor 'success' apenas para componentes de busca */
+:root:not(.dark) ion-searchbar.ion-color-success,
+:root:not(.dark) ion-searchbar[color="success"] {
+    --ion-color-base: #0C4E9C !important;
+    --ion-color-primary: #0C4E9C !important;
 }
 
-/* Garante que o ícone de busca acompanhe o azul no foco */
-:root:not(.dark) .searchbar-has-focus .searchbar-search-icon {
-    color: #0C4E9C !important;
+/* 4. Remove qualquer borda verde residual no foco */
+:root:not(.dark) .searchbar-has-focus .searchbar-input {
+    border-bottom: 2px solid #0C4E9C !important;
 }
-
 
 /* =====================================================
 5.2 🏷️ BADGES DE NOTAS (SOLUÇÃO DEFINITIVA)
