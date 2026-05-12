@@ -358,16 +358,20 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 📑 TESTE TESTE TESTE 
 ===================================================== */
 
-/* Altera a cor da borda do campo de busca ao ganhar foco */
-.item-input-focused, 
-.searchbar-has-focus .searchbar-input-container {
-    --border-color: #0C4E9C !important; /* Substitua pelo seu azul */
-    border-color: #0C4E9C !important;
+/* Ataca a variável de foco do componente de busca */
+ion-searchbar {
+    --primary: #0056b3 !important;
+    --ion-color-primary: #0056b3 !important;
 }
 
-/* Garante que o ícone de lupa da busca também acompanhe o azul */
-.searchbar-has-focus .searchbar-search-icon {
-    color: #0C4E9C !important;
+/* Força a cor da linha/borda inferior que fica verde */
+.searchbar-has-focus .searchbar-input-container {
+    border-bottom: 2px solid #0056b3 !important;
+}
+
+/* Caso seja o estilo arredondado (MD) */
+.searchbar-has-focus .searchbar-input {
+    box-shadow: 0 2px 2px 0 rgba(0, 86, 179, 0.2) !important;
 }
 
 
