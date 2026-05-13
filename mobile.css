@@ -358,32 +358,34 @@ body:not(.theme-dark) ion-tab-bar.mainmenu-tabs ion-tab-button.tab-selected {
 📑 TESTE TESTE TESTE 
 ===================================================== */
 /* =====================================================
-5.1 🔎 COR DA BUSCA (SOLUÇÃO DEFINITIVA)
+5.1 🔎 COR DE CONTORNO DA BUSCA (SOLUÇÃO DEFINITIVA)
 ===================================================== */
 
-/* 1. Esconde a linha original (verde) que o Moodle injeta */
-:root:not(.dark) ion-searchbar .searchbar-bottom-line {
-    display: none !important;
-    background: transparent !important;
-    opacity: 0 !important;
-}
-
-/* 2. Força a cor de destaque interna do componente para o seu azul */
+/* 7.1 Mata o contorno verde (Light) / Laranja (Dark) 
+   focando na variável de destaque do componente */
 :root:not(.dark) ion-searchbar {
-    --highlight-height: 2px;
+    --ion-color-primary: #0C4E9C !important;
     --highlight-color-focused: #0C4E9C !important;
     --highlight-color: #0C4E9C !important;
 }
 
-/* 3. Aplica o azul na borda do container que segura o input */
-:root:not(.dark) .searchbar-has-focus .searchbar-input-container {
-    border-bottom: 2px solid #0C4E9C !important;
+/* 7.2 No iOS e Android moderno, o contorno verde é um 'box-shadow' 
+   ou uma 'border' no elemento interno .searchbar-input */
+:root:not(.dark) .searchbar-has-focus .searchbar-input {
+    box-shadow: 0 0 0 2px rgba(12, 78, 156, 0.2) !important; /* Sombra em Azul suave */
+    border: 1px solid #0C4E9C !important; /* Borda em Azul */
 }
 
-/* 4. Remove qualquer sombra (box-shadow) verde residual */
-:root:not(.dark) .searchbar-input {
-    box-shadow: none !important;
-    -webkit-box-shadow: none !important;
+/* 7.3 Remove especificamente a linha animada do Material Design 
+   que insiste em ficar verde/laranja */
+:root:not(.dark) .searchbar-bottom-line {
+    background: #0C4E9C !important;
+}
+
+/* 7.4 Garante que o container da busca não projete sombra externa verde */
+:root:not(.dark) .searchbar-input-container {
+    --ripple-color: #0C4E9C !important;
+    border-color: #0C4E9C !important;
 }
 
 /* =====================================================
